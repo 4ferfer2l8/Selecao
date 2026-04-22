@@ -1,0 +1,32 @@
+{
+  "regras": [
+    {
+      "atributo": "potencialProteico",
+      "operador": "entre",
+      "valorMin": 5.5,
+      "valorMax": 7.5,
+      "destino": ""
+    },
+    {
+      "atributo": "taxaCooperacao",
+      "operador": "entre",
+      "valorMin": 6.5,
+      "valorMax": 8.0,
+      "destino": ""
+    },
+    {
+      "atributo": "indiceCrescimento",
+      "operador": "menor",
+      "valorMin": 5.0,
+      "valorMax": 0.0,
+      "destino": ""
+    },
+    {
+      "atributo": "eficienciaMetabolica",
+      "operador": "maior",
+      "valorMin": 7.5,
+      "valorMax": 0.0,
+      "destino": ""
+    }
+  ]
+}
