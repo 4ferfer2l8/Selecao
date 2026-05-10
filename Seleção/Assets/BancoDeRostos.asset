@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c45386c11e7584241b93769014e444d8, type: 3}
+  m_Name: BancoDeRostos
+  m_EditorClassIdentifier: Assembly-CSharp::BancoDeRostos
+  corpos:
+  - {fileID: 21300000, guid: 7313ae9437539cc4b92beb458ab50044, type: 3}
+  - {fileID: 21300000, guid: a2c8c2d5ead903243b67cf82d45dbfed, type: 3}
+  - {fileID: 21300000, guid: c008e33ad29371c42a9ff93e34bb0138, type: 3}
+  - {fileID: 21300000, guid: 51bf746cb946a4a4c8d4fa02a6cd13f3, type: 3}
+  - {fileID: 21300000, guid: fb4575efc754b5146862e14d54f25ff1, type: 3}
+  olhos:
+  - {fileID: 21300000, guid: dc61d51dc5e5f9b4c8d5960da3b3a11f, type: 3}
+  - {fileID: 21300000, guid: c68171ee1d78e96479b24e0ff2da66c6, type: 3}
+  - {fileID: 21300000, guid: 3471bf4e4233dbd44aac0a427cfda6be, type: 3}
+  - {fileID: 21300000, guid: df60753f1b5d5f040894fee8427541c2, type: 3}
+  - {fileID: 21300000, guid: 2ba00ab2ce8c83a419e841e4fcbc79d6, type: 3}
+  narizes:
+  - {fileID: 21300000, guid: 27af8f6efca4e6c43bf90d276e3c49f0, type: 3}
+  - {fileID: 21300000, guid: 3e96dd1de55f50546af69ff893bd888d, type: 3}
+  - {fileID: 21300000, guid: 36045237ae8d3304b809a50c0ff76ccf, type: 3}
+  - {fileID: 21300000, guid: 6b34d2bd2b7517e47b9f7cbf1fd3090d, type: 3}
+  - {fileID: 21300000, guid: ddd1b8d05119c4043b2b3ffda6532bb4, type: 3}
+  bocas:
+  - {fileID: 21300000, guid: 2733a244c8077d64ea3a73c2bc913e6f, type: 3}
+  - {fileID: 21300000, guid: d42bd7c8149d41141bea3bf041f24f98, type: 3}
+  - {fileID: 21300000, guid: 77e90114f061ad640ada4fe475f93dd9, type: 3}
+  - {fileID: 21300000, guid: 1e337ccf215b7374586eafe38f8d5050, type: 3}
+  - {fileID: 21300000, guid: a0525f50ac7594c48bd6e53530827575, type: 3}
