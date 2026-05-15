@@ -15,7 +15,11 @@ MonoBehaviour:
   Path: FMOD2/Desktop/SFX2.bank
   Name: SFX2
   StudioPath: bank:/SFX2
+<<<<<<< Updated upstream
   lastModified: 639144333040017419
+=======
+  lastModified: 639144351980384335
+>>>>>>> Stashed changes
   FileSizes: []
   Exists: 1
 --- !u!114 &-4020410395130121230
@@ -190,7 +194,11 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 8712617680878237101}
   cacheVersion: 131859
+<<<<<<< Updated upstream
   cacheTime: 639144333040017419
+=======
+  cacheTime: 639144351980384335
+>>>>>>> Stashed changes
   SerializableEventsDict:
   - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Mouse_Pronto_1"
     index: 0
