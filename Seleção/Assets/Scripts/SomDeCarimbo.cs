@@ -10,6 +10,7 @@ public class SomDeCarimbo : MonoBehaviour, IPointerEnterHandler, IPointerDownHan
     [SerializeField] private string eventoCarimbar = "event:/Seleção_Audios/SFX/Carimbo/Carimbo_Click_1.1";
     [SerializeField] private string eventoPosar    = "event:/Seleção_Audios/SFX/Carimbo/Carimbo_Colocar_1";
 
+
     private bool estaSendoSeguro = false;
     private Vector3 posicaoOriginal;
     private Camera cam;
