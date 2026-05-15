@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using FMODUnity;
 
-public class ClickSound : MonoBehaviour {
+public class CickSound : MonoBehaviour {
     [SerializeField] private EventReference soundEvent;
 
     void Update() {
