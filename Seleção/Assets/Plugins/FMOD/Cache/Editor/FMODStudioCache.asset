@@ -123,7 +123,7 @@ MonoBehaviour:
   Path: "FMOD/Desktop/Sele\xE7\xE3o_Bank.bank"
   Name: "Sele\xE7\xE3o_Bank"
   StudioPath: "bank:/Sele\xE7\xE3o_Bank"
-  lastModified: 639143007294239910
+  lastModified: 639143978251223292
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -161,7 +161,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 3079130536339765620}
   cacheVersion: 131859
-  cacheTime: 639143007294239910
+  cacheTime: 639143978251223292
   SerializableEventsDict:
   - key: "event:/Sele\xE7\xE3o_Audios/Ambiencia/Ambiencie_Escritorio_Pronto_1"
     index: 0
@@ -256,7 +256,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639143007272536544
+  lastModified: 639143978251161964
   FileSizes:
   - Name: 
     Value: 1480
@@ -357,7 +357,7 @@ MonoBehaviour:
   Path: FMOD/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639143007272481612
+  lastModified: 639143978251161964
   FileSizes: []
   Exists: 1
 --- !u!114 &8409788296589926238
