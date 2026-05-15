@@ -1,31 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8064997891826133522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-<<<<<<< Updated upstream
-  Path: "FMOD/Desktop/Sele\xE7\xE3o_Bank.bank"
-  Name: "Sele\xE7\xE3o_Bank"
-  StudioPath: "bank:/Sele\xE7\xE3o_Bank"
-  lastModified: 639143997345883923
-=======
-  Path: FMOD2/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 639144068168673986
->>>>>>> Stashed changes
-  FileSizes: []
-  Exists: 1
---- !u!114 &-5586641212050666476
+--- !u!114 &-9000455159971280862
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -35,16 +10,250 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX__Papel_Pegar_3
+  m_Name: "event:/Sele\xE7\xE3o_Audios/Ambiencia/Ambiencie_Escritorio_Pronto_1"
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/SFX__Papel_Pegar_3
+  Path: "event:/Sele\xE7\xE3o_Audios/Ambiencia/Ambiencie_Escritorio_Pronto_1"
   Guid:
-    Data1: -289914339
-    Data2: 1125629500
-    Data3: 1306704786
-    Data4: -459900455
+    Data1: 211989762
+    Data2: 1144551199
+    Data3: 792616323
+    Data4: -1675068829
   Banks:
-  - {fileID: 3340104712977810069}
+  - {fileID: -8935629586874823676}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-8935629586874823676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: "bank:/Sele\xE7\xE3o_Bank.bank"
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: "FMOD/Desktop/Sele\xE7\xE3o_Bank.bank"
+  Name: "Sele\xE7\xE3o_Bank"
+  StudioPath: "bank:/Sele\xE7\xE3o_Bank"
+  lastModified: 639143978251223292
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-6483167472780349744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sele\xE7\xE3o_Audios/SFX/Carimbo/Carimbo_Click_1.1"
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: "event:/Sele\xE7\xE3o_Audios/SFX/Carimbo/Carimbo_Click_1.1"
+  Guid:
+    Data1: -472651555
+    Data2: 1226779377
+    Data3: -44998488
+    Data4: 1148307325
+  Banks:
+  - {fileID: -8935629586874823676}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5317022565737238028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Papel_Pegar_1"
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Papel_Pegar_1"
+  Guid:
+    Data1: 1909236548
+    Data2: 1195807350
+    Data3: 2101640
+    Data4: -1151866800
+  Banks:
+  - {fileID: -8935629586874823676}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3587848411573131629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Cart\xE3o_Pegar_1"
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Cart\xE3o_Pegar_1"
+  Guid:
+    Data1: -560440588
+    Data2: 1139922027
+    Data3: -1302577480
+    Data4: 123137382
+  Banks:
+  - {fileID: -8935629586874823676}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-3500148165242109558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Papel_Pegar_2"
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Papel_Pegar_2"
+  Guid:
+    Data1: 1645880164
+    Data2: 1220532246
+    Data3: 899735714
+    Data4: -1622140265
+  Banks:
+  - {fileID: -8935629586874823676}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2035916867635425987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sele\xE7\xE3o_Audios/SFX/Carimbo/Carimbo_Pegar_1"
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: "event:/Sele\xE7\xE3o_Audios/SFX/Carimbo/Carimbo_Pegar_1"
+  Guid:
+    Data1: -906257074
+    Data2: 1099633297
+    Data3: -13595482
+    Data4: 1110182253
+  Banks:
+  - {fileID: -8935629586874823676}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-764741173511123748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Papel_Rasgar_R\xE1pido_1"
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Papel_Rasgar_R\xE1pido_1"
+  Guid:
+    Data1: 1291401164
+    Data2: 1105705449
+    Data3: -1806949969
+    Data4: 2009833799
+  Banks:
+  - {fileID: -8935629586874823676}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-484657737446344147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sele\xE7\xE3o_Audios/SFX/Carimbo/Carimbo_Colocar_1"
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: "event:/Sele\xE7\xE3o_Audios/SFX/Carimbo/Carimbo_Colocar_1"
+  Guid:
+    Data1: -1438272689
+    Data2: 1277873343
+    Data3: 2054802825
+    Data4: 1084213310
+  Banks:
+  - {fileID: -8935629586874823676}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-452155290316789023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sele\xE7\xE3o_Audios/SFX/Grito_Esteira/Esteira_1_Pronto"
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: "event:/Sele\xE7\xE3o_Audios/SFX/Grito_Esteira/Esteira_1_Pronto"
+  Guid:
+    Data1: 1946834043
+    Data2: 1148656024
+    Data3: -1041274197
+    Data4: -1177100844
+  Banks:
+  - {fileID: -8935629586874823676}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -65,29 +274,154 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EventCache
   EditorBanks:
-  - {fileID: 2480406253563521363}
-  - {fileID: -8064997891826133522}
-  - {fileID: 3340104712977810069}
+  - {fileID: 8662683810338947779}
+  - {fileID: 7464015417427671863}
+  - {fileID: -8935629586874823676}
   EditorEvents:
-  - {fileID: -5586641212050666476}
-  - {fileID: 5891119139226242198}
+  - {fileID: -9000455159971280862}
+  - {fileID: -5317022565737238028}
+  - {fileID: -2035916867635425987}
+  - {fileID: -484657737446344147}
+  - {fileID: -3500148165242109558}
+  - {fileID: -452155290316789023}
+  - {fileID: -764741173511123748}
+  - {fileID: 976560466618876552}
+  - {fileID: 7214541193273982923}
+  - {fileID: -6483167472780349744}
+  - {fileID: 7782093177316478057}
+  - {fileID: -3587848411573131629}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -8064997891826133522}
+  - {fileID: 7464015417427671863}
   StringsBanks:
-  - {fileID: 2480406253563521363}
+  - {fileID: 8662683810338947779}
   cacheVersion: 131859
-<<<<<<< Updated upstream
-  cacheTime: 639143997345883923
-=======
-  cacheTime: 639144068171171191
->>>>>>> Stashed changes
+  cacheTime: 639143978251223292
   SerializableEventsDict:
-  - key: event:/SFX__Papel_Pegar_3
+  - key: "event:/Sele\xE7\xE3o_Audios/Ambiencia/Ambiencie_Escritorio_Pronto_1"
     index: 0
-  - key: event:/SFX_Teclado
+  - key: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Papel_Pegar_1"
     index: 1
---- !u!114 &2480406253563521363
+  - key: "event:/Sele\xE7\xE3o_Audios/SFX/Carimbo/Carimbo_Pegar_1"
+    index: 2
+  - key: "event:/Sele\xE7\xE3o_Audios/SFX/Carimbo/Carimbo_Colocar_1"
+    index: 3
+  - key: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Papel_Pegar_2"
+    index: 4
+  - key: "event:/Sele\xE7\xE3o_Audios/SFX/Grito_Esteira/Esteira_1_Pronto"
+    index: 5
+  - key: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Papel_Rasgar_R\xE1pido_1"
+    index: 6
+  - key: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Papel_Amassar_1"
+    index: 7
+  - key: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Mouse_Pronto_1"
+    index: 8
+  - key: "event:/Sele\xE7\xE3o_Audios/SFX/Carimbo/Carimbo_Click_1.1"
+    index: 9
+  - key: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Papel_Rasgar_Lento_1"
+    index: 10
+  - key: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Cart\xE3o_Pegar_1"
+    index: 11
+--- !u!114 &976560466618876552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Papel_Amassar_1"
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Papel_Amassar_1"
+  Guid:
+    Data1: 1436471247
+    Data2: 1243978146
+    Data3: 1407097271
+    Data4: 966167860
+  Banks:
+  - {fileID: -8935629586874823676}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7214541193273982923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Mouse_Pronto_1"
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Mouse_Pronto_1"
+  Guid:
+    Data1: 2104288723
+    Data2: 1130289136
+    Data3: 380730763
+    Data4: -182859886
+  Banks:
+  - {fileID: -8935629586874823676}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7464015417427671863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: FMOD/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 639143978251161964
+  FileSizes: []
+  Exists: 1
+--- !u!114 &7782093177316478057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Papel_Rasgar_Lento_1"
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Papel_Rasgar_Lento_1"
+  Guid:
+    Data1: 1033138419
+    Data2: 1185278503
+    Data3: 1191789979
+    Data4: -290193934
+  Banks:
+  - {fileID: -8935629586874823676}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8662683810338947779
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,67 +433,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: FMOD2/Desktop/Master.strings.bank
+  Path: FMOD/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-<<<<<<< Updated upstream
-  lastModified: 639143997345813397
-=======
-  lastModified: 639144068168745852
->>>>>>> Stashed changes
+  lastModified: 639143978251161964
   FileSizes:
   - Name: 
-    Value: 876
+    Value: 1480
   Exists: 1
---- !u!114 &3340104712977810069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX2.bank
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-<<<<<<< Updated upstream
-  Path: FMOD/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 639143997345813397
-=======
-  Path: FMOD2/Desktop/SFX2.bank
-  Name: SFX2
-  StudioPath: bank:/SFX2
-  lastModified: 639144068171171191
->>>>>>> Stashed changes
-  FileSizes: []
-  Exists: 1
---- !u!114 &5891119139226242198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX_Teclado
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/SFX_Teclado
-  Guid:
-    Data1: 104723811
-    Data2: 1287158766
-    Data3: -1286678365
-    Data4: 1016494569
-  Banks:
-  - {fileID: 3340104712977810069}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
