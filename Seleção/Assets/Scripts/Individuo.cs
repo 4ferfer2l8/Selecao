@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [System.Serializable]
-public class Individuo : MonoBehaviour
+public class Individuo
 {
     public string codigo;
     public Sprite rosto;
@@ -13,15 +13,5 @@ public class Individuo : MonoBehaviour
 
     public string destino; // "Reproducao", "Descarte", "Reprocessamento"
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+ 
 }
