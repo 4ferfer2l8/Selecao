@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: FMOD2/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639144340987477050
+  lastModified: 639153173564609523
   FileSizes:
   - Name: 
     Value: 1546
@@ -237,7 +237,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: -8243808229468468371}
   cacheVersion: 131859
-  cacheTime: 639144359981021127
+  cacheTime: 639153173564743622
   SerializableEventsDict:
   - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Mouse_Pronto_1"
     index: 0
@@ -267,7 +267,25 @@ MonoBehaviour:
     index: 12
   - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Rasgar_Lento_1"
     index: 13
---- !u!114 &259765063030017377
+--- !u!114 &989872859230405112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: FMOD2/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 639153173564599447
+  FileSizes: []
+  Exists: 1
+--- !u!114 &1745439268618342306
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -348,7 +366,25 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &4643268694104734095
+--- !u!114 &4215501030711953605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX2.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: FMOD2/Desktop/SFX2.bank
+  Name: SFX2
+  StudioPath: bank:/SFX2
+  lastModified: 639153173564743622
+  FileSizes: []
+  Exists: 1
+--- !u!114 &6247543157662654767
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
