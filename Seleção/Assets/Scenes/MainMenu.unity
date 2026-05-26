@@ -378,7 +378,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.071}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.8938, y: -29}
+  m_AnchoredPosition: {x: -2.8937988, y: -29.00003}
   m_SizeDelta: {x: -304.8142, y: 27.813}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &302672403
@@ -598,11 +598,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIClickSound
   soundEvent:
     Guid:
-      Data1: 2104288723
-      Data2: 1130289136
-      Data3: 380730763
-      Data4: -182859886
-    Path: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Mouse_Pronto_1"
+      Data1: -1318214645
+      Data2: 1207279157
+      Data3: 445999502
+      Data4: 1546000426
+    Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Mouse_Pronto_1"
 --- !u!4 &992793863
 Transform:
   m_ObjectHideFlags: 0

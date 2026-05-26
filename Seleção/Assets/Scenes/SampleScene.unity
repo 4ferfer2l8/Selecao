@@ -224,9 +224,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57a6d9c3a79336d429c986b49ded3974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SomDePapel
-  eventoHover: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Papel_Pegar_1"
-  eventoAbrir: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Papel_Pegar_2"
-  eventoFechar: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Cart\xE3o_Pegar_1"
+  eventoHover: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Pegar_1"
+  eventoAbrir: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Pegar_2"
+  eventoFechar: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Cart\xE3o_Pegar_1"
   painelDocumento: {fileID: 2032200323}
 --- !u!61 &338776938
 BoxCollider2D:
@@ -472,11 +472,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ClickSound
   soundEvent:
     Guid:
-      Data1: 2104288723
-      Data2: 1130289136
-      Data3: 380730763
-      Data4: -182859886
-    Path: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Mouse_Pronto_1"
+      Data1: -1318214645
+      Data2: 1207279157
+      Data3: 445999502
+      Data4: 1546000426
+    Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Mouse_Pronto_1"
 --- !u!61 &413479790
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -610,7 +610,7 @@ Transform:
   m_GameObject: {fileID: 474946557}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -501.11, y: -273.03, z: 0}
+  m_LocalPosition: {x: -732.37, y: -367.17, z: 0}
   m_LocalScale: {x: 0.16265434, y: 0.1665757, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -629,9 +629,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62bcea8dfc9657b43a362b79261423d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SomDeCarimbo
-  eventoPegar: "event:/Sele\xE7\xE3o_Audios/SFX/Carimbo/Carimbo_Pegar_1"
-  eventoCarimbar: "event:/Sele\xE7\xE3o_Audios/SFX/Carimbo/Carimbo_Click_1.1"
-  eventoPosar: "event:/Sele\xE7\xE3o_Audios/SFX/Carimbo/Carimbo_Colocar_1"
+  eventoPegar: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Pegar_1"
+  eventoCarimbar: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Click_1.1"
+  eventoPosar: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Colocar_1"
 --- !u!61 &474946561
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1781,7 +1781,7 @@ MonoBehaviour:
       Data2: 1287158766
       Data3: -1286678365
       Data4: 1016494569
-    Path: event:/SFX_Teclado
+    Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Teclado_1"
 --- !u!1 &2032200323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1871,7 +1871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2172947ab7478c740840bcd321bdb080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FecharDocumento
-  eventoFechar: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Cart\xE3o_Pegar_1"
+  eventoFechar: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Cart\xE3o_Pegar_1"
   somDePapel: {fileID: 338776937}
 --- !u!1 &2092872546
 GameObject:
