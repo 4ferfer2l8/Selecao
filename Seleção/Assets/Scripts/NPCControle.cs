@@ -40,10 +40,4 @@ public class NPCControle : MonoBehaviour {
     public void Liberar() {
         liberado = true;
     }
-
-    void Awake() {
-        pontoParada = GameObject.Find("PontoParada").transform;
-        pontoSaida = GameObject.Find("PontoSaida").transform;
-        documento = FindObjectOfType<Document>(true); // true = acha mesmo desativado
-    }
 }
