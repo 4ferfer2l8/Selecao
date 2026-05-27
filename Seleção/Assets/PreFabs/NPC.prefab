@@ -161,6 +161,7 @@ MonoBehaviour:
   velocidade: 2
   pontoParada: {fileID: 0}
   pontoSaida: {fileID: 0}
+  documento: {fileID: 0}
 --- !u!212 &4752212567157617872
 SpriteRenderer:
   serializedVersion: 2
