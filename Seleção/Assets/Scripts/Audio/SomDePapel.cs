@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using FMODUnity;
+using UnityEngine.UI;
 
 public class SomDePapel : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler {
     [Header("Eventos FMOD")]
