@@ -7,12 +7,13 @@ public class NPCControle : MonoBehaviour {
     public Transform pontoSaida;
     private bool liberado = false;
     private bool chegouNaParada = false;
-
+    public Document documento;
     void Update() {
         if (!chegouNaParada) {
             MoverPara(pontoParada.position);
             if (Vector2.Distance(transform.position, pontoParada.position) < 0.1f) {
                 chegouNaParada = true;
+                documento.ResetarCarimbo();
             }
         } else if (!liberado) {
             if (Keyboard.current.eKey.wasPressedThisFrame) {

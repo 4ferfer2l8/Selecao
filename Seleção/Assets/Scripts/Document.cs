@@ -30,4 +30,10 @@ public class Document : MonoBehaviour, IPointerClickHandler {
         RuntimeManager.PlayOneShot(eventoCarimbo);
         Debug.Log("Carimbou com: " + StampManager.instance.currentStamp);
     }
+
+    public void ResetarCarimbo() {
+        seloAprovado.SetActive(false);
+        seloRejeitado.SetActive(false);
+        StampManager.instance.jaCarimbou = false;
+    }
 }
