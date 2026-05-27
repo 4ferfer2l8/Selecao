@@ -24,6 +24,7 @@ public class NPCControle : MonoBehaviour {
             }
         } else {
             MoverPara(pontoSaida.position);
+            Destroy(gameObject, 8f); // destrói o NPC após 5 segundos para evitar acúmulo
         }
     }
 

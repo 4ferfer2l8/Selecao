@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class TesteGerador : MonoBehaviour {
     public GameObject npcPrefab;
     public Transform pontoSpawn;
+    public SomDePapel somDePapel; // arrasta o PapelMesaPH_0 aqui no Inspector
 
     private GeradorDeIndividuos geradorDeIndividuos;
 
@@ -20,7 +21,6 @@ public class TesteGerador : MonoBehaviour {
     void GerarNovoNPC() {
         GameObject npc = Instantiate(npcPrefab, pontoSpawn.position, Quaternion.identity);
 
-        // 👇 AQUI É O LUGAR CERTO
         NPCControle controle = npc.GetComponent<NPCControle>();
         controle.pontoParada = GameObject.Find("PontoParada").transform;
         controle.pontoSaida = GameObject.Find("PontoSaida").transform;
@@ -29,6 +29,7 @@ public class TesteGerador : MonoBehaviour {
         aparencia.GerarAparenciaAleatoria();
 
         Individuo individuo = geradorDeIndividuos.GerarIndividuo();
+        somDePapel.DefinirIndividuo(individuo); // passa o documento sorteado pro papel
 
         Debug.Log($"NPC criado: {individuo.codigo}");
     }
