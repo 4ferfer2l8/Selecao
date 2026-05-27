@@ -12,7 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c45386c11e7584241b93769014e444d8, type: 3}
   m_Name: BancoDeRostos
   m_EditorClassIdentifier: Assembly-CSharp::BancoDeRostos
-  corpos: []
-  olhos: []
-  narizes: []
-  bocas: []
+  corpos:
+  - {fileID: 21300000, guid: 7313ae9437539cc4b92beb458ab50044, type: 3}
+  - {fileID: 21300000, guid: a2c8c2d5ead903243b67cf82d45dbfed, type: 3}
+  - {fileID: 21300000, guid: c008e33ad29371c42a9ff93e34bb0138, type: 3}
+  olhos:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  narizes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  bocas:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

@@ -1,42 +1,36 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class TesteGerador : MonoBehaviour
-{
-    private GeradorDeAparencia geradorDeAparencia;
+public class TesteGerador : MonoBehaviour {
+    public GameObject npcPrefab;
+    public Transform pontoSpawn;
+    public SomDePapel somDePapel; // arrasta o PapelMesaPH_0 aqui no Inspector
+
     private GeradorDeIndividuos geradorDeIndividuos;
 
-    private void Start()
-    {
-        geradorDeAparencia  = GetComponent<GeradorDeAparencia>();
+    void Start() {
         geradorDeIndividuos = GetComponent<GeradorDeIndividuos>();
-
         GerarNovoNPC();
     }
 
-    private void Update()
-    {
+    void Update() {
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
             GerarNovoNPC();
     }
 
-    private void GerarNovoNPC()
-    {
-        // gera dados
+    void GerarNovoNPC() {
+        GameObject npc = Instantiate(npcPrefab, pontoSpawn.position, Quaternion.identity);
+
+        NPCControle controle = npc.GetComponent<NPCControle>();
+        controle.pontoParada = GameObject.Find("PontoParada").transform;
+        controle.pontoSaida = GameObject.Find("PontoSaida").transform;
+
+        GeradorDeAparencia aparencia = npc.GetComponent<GeradorDeAparencia>();
+        aparencia.GerarAparenciaAleatoria();
+
         Individuo individuo = geradorDeIndividuos.GerarIndividuo();
+        somDePapel.DefinirIndividuo(individuo); // passa o documento sorteado pro papel
 
-        // gera aparência
-        geradorDeAparencia.GerarAparenciaAleatoria();
-
-        // loga os dados no console
-        Debug.Log("─────────────────────────────");
-        Debug.Log("NOVO INDIVÍDUO GERADO");
-        Debug.Log("─────────────────────────────");
-        Debug.Log($"Código:                {individuo.codigo}");
-        Debug.Log($"Índice de Crescimento: {individuo.indiceCrescimento}");
-        Debug.Log($"Efic. Metabólica:      {individuo.eficienciaMetabolica}");
-        Debug.Log($"Taxa de Cooperação:    {individuo.taxaCooperacao}");
-        Debug.Log($"Potencial Proteico:    {individuo.potencialProteico}");
-        Debug.Log("─────────────────────────────");
+        Debug.Log($"NPC criado: {individuo.codigo}");
     }
 }
