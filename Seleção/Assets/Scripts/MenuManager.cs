@@ -3,8 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    public GameObject tutorialPanel;
-
     public void Start()
     {
     }
@@ -15,7 +13,6 @@ public class MenuManager : MonoBehaviour
 
     public void Sair()
     {
-
         Application.Quit();
     }
 
