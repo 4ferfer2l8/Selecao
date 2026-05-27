@@ -1,13 +1,12 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 using FMODUnity;
 
-public class SomDePapel : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
-{
+public class SomDePapel : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler {
     [Header("Eventos FMOD")]
-    [SerializeField] private string eventoHover = "event:/Papel_Pegar_1";
-    [SerializeField] private string eventoAbrir = "event:/Papel_Pegar_2";
+    [SerializeField] private string eventoHover = "event:/Seleção_Audios/SFX/Papel_Cartão_Mouse/Papel_Pegar_1";
+    [SerializeField] private string eventoAbrir = "event:/Seleção_Audios/SFX/Papel_Cartão_Mouse/Papel_Pegar_2";
+    [SerializeField] private string eventoFechar = "event:/Seleção_Audios/SFX/Papel_Cartão_Mouse/Cartão_Pegar_1";
 
     [Header("Documento Expandido")]
     [SerializeField] private GameObject painelDocumento;
@@ -22,15 +21,12 @@ public class SomDePapel : MonoBehaviour, IPointerEnterHandler, IPointerClickHand
         estaAberto = false;
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
+    public void OnPointerEnter(PointerEventData eventData) {
         RuntimeManager.PlayOneShot(eventoHover);
     }
 
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        if (!estaAberto)
-        {
+    public void OnPointerClick(PointerEventData eventData) {
+        if (!estaAberto) {
             estaAberto = true;
             RuntimeManager.PlayOneShot(eventoAbrir);
             AbrirDocumento();
