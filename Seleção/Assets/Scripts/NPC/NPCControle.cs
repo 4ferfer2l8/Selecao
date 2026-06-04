@@ -7,7 +7,9 @@ public class NPCControle : MonoBehaviour {
     public Transform pontoSaida;
     private bool liberado = false;
     private bool chegouNaParada = false;
-    public Document documento;
+    private Document documento;
+   
+    
     void Update() {
         if (!chegouNaParada) {
             MoverPara(pontoParada.position);
@@ -39,5 +41,10 @@ public class NPCControle : MonoBehaviour {
 
     public void Liberar() {
         liberado = true;
+    }
+    void Awake() {
+        pontoParada = GameObject.Find("PontoParada").transform;
+        pontoSaida = GameObject.Find("PontoSaida").transform;
+        documento = FindObjectOfType<Document>(true);
     }
 }

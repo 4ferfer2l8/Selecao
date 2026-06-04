@@ -1,17 +1,11 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
-public class StampSelector : MonoBehaviour {
+public class StampSelector : MonoBehaviour, IPointerClickHandler {
     public StampType stampType;
 
-    void Update() {
-        if (Mouse.current.leftButton.wasPressedThisFrame) {
-            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-            Collider2D hit = Physics2D.OverlapPoint(mousePos);
-
-            if (hit != null && hit.gameObject == gameObject) {
-                StampManager.instance.SelectStamp(stampType);
-            }
-        }
+    public void OnPointerClick(PointerEventData eventData) {
+        StampManager.instance.SelectStamp(stampType);
+        Debug.Log("Carimbo selecionado: " + stampType);
     }
 }
