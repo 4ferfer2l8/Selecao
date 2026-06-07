@@ -36,7 +36,7 @@ public class NPCControle : MonoBehaviour {
         else
         {
             MoverPara(pontoSaida.position);
-            Destroy(gameObject, 8f);
+            Destroy(gameObject, 5f);
         }
     }
 
