@@ -7,7 +7,7 @@ public class TesteGerador : MonoBehaviour {
     public SomDePapel somDePapel;
 
     private GeradorDeIndividuos geradorDeIndividuos;
-    private GameObject npcAtual; // NOVO
+    private GameObject npcAtual;
 
     void Start() {
         geradorDeIndividuos = GetComponent<GeradorDeIndividuos>();
@@ -18,12 +18,12 @@ public class TesteGerador : MonoBehaviour {
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             if (npcAtual == null)
-            { // só spawna se não tiver nenhum
+            {
                 GerarNovoNPC();
             }
             else
             {
-                Debug.Log("Aguarde o NPC atual sair!");
+                NotificacaoUI.instance.Mostrar("Aguarde o NPC atual sair!");
             }
         }
     }
