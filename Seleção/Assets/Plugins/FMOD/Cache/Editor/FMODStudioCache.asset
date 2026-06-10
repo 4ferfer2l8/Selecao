@@ -182,7 +182,11 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+<<<<<<< Updated upstream
 --- !u!114 &-3379238724335453793
+=======
+--- !u!114 &-2459900458524042973
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,6 +196,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< Updated upstream
   m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Colocar_1"
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
   Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Colocar_1"
@@ -229,6 +234,18 @@ MonoBehaviour:
     Data4: -839522438
   Banks:
   - {fileID: 4215501030711953605}
+=======
+  m_Name: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/PopUpsA
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/PopUpsA
+  Guid:
+    Data1: -1675977040
+    Data2: 1118442057
+    Data3: 1183920283
+    Data4: -1904039638
+  Banks:
+  - {fileID: 8370397729736838212}
+>>>>>>> Stashed changes
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -251,10 +268,14 @@ MonoBehaviour:
   Path: FMODFINALPORRA/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
+<<<<<<< Updated upstream
   lastModified: 639154487394821235
+=======
+  lastModified: 639166960120247282
+>>>>>>> Stashed changes
   FileSizes:
   - Name: 
-    Value: 1582
+    Value: 1584
   Exists: 1
 --- !u!114 &-1997367588313217767
 MonoBehaviour:
@@ -283,6 +304,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+<<<<<<< Updated upstream
 --- !u!114 &-1830650233660641609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,6 +333,9 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 --- !u!114 &-693020332439358637
+=======
+--- !u!114 &-696089069920351352
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -329,7 +354,11 @@ MonoBehaviour:
     Data3: 1009447830
     Data4: -184702943
   Banks:
+<<<<<<< Updated upstream
   - {fileID: 8370397729736838212}
+=======
+  - {fileID: -156847632989105906}
+>>>>>>> Stashed changes
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -337,6 +366,27 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+<<<<<<< Updated upstream
+=======
+--- !u!114 &-156847632989105906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX2.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: FMOD2/Desktop/SFX2.bank
+  Name: SFX2
+  StudioPath: bank:/SFX2
+  lastModified: 639152454587242407
+  FileSizes: []
+  Exists: 1
+>>>>>>> Stashed changes
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,29 +404,33 @@ MonoBehaviour:
   - {fileID: 6699604527642459097}
   - {fileID: 8370397729736838212}
   EditorEvents:
-  - {fileID: 8639852178928590479}
   - {fileID: 4180492838292351020}
   - {fileID: -1997367588313217767}
-  - {fileID: 4754413608776334521}
   - {fileID: 1774850522160021809}
   - {fileID: 701901121654777441}
   - {fileID: 3285825878629883338}
   - {fileID: -6615258603509673655}
   - {fileID: 6503114841170745269}
   - {fileID: 5319641970199717144}
-  - {fileID: -1830650233660641609}
   - {fileID: 4388416284699656813}
-  - {fileID: -693020332439358637}
   - {fileID: -3880603833823697814}
   - {fileID: 8029994070507481173}
   - {fileID: 599832682308884344}
+  - {fileID: 4702960795342838582}
+  - {fileID: 641994573592026909}
+  - {fileID: -2459900458524042973}
+  - {fileID: 4882518446575693047}
   EditorParameters: []
   MasterBanks:
   - {fileID: 6699604527642459097}
   StringsBanks:
   - {fileID: -2247423041040536555}
   cacheVersion: 131859
+<<<<<<< Updated upstream
   cacheTime: 639154487397363078
+=======
+  cacheTime: 639166960123214860
+>>>>>>> Stashed changes
   SerializableEventsDict:
   - key: event:/Audios Jogo/SFX/Esteira_Grito/PopUpsB
     index: 0
@@ -433,6 +487,33 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &641994573592026909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Click"
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Click"
+  Guid:
+    Data1: -402317720
+    Data2: 1204023512
+    Data3: 2015132330
+    Data4: 1388853579
+  Banks:
+  - {fileID: 8370397729736838212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -716,7 +797,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &4754413608776334521
+--- !u!114 &4702960795342838582
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -726,14 +807,41 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Click_1.1"
+  m_Name: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/PopUpsB
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Click_1.1"
+  Path: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/PopUpsB
   Guid:
-    Data1: 92594727
-    Data2: 1323378925
-    Data3: 1815699848
-    Data4: 1852647916
+    Data1: 987570946
+    Data2: 1080512365
+    Data3: 1774890888
+    Data4: -2069625082
+  Banks:
+  - {fileID: 8370397729736838212}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4882518446575693047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/Esteira_1
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/Esteira_1
+  Guid:
+    Data1: 1224236217
+    Data2: 1249587087
+    Data3: 1009447830
+    Data4: -184702943
   Banks:
   - {fileID: 8370397729736838212}
   IsStream: 0
@@ -839,7 +947,11 @@ MonoBehaviour:
   Path: FMODFINALPORRA/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
+<<<<<<< Updated upstream
   lastModified: 639154487394760741
+=======
+  lastModified: 639166960120195690
+>>>>>>> Stashed changes
   FileSizes: []
   Exists: 1
 --- !u!114 &8029994070507481173
@@ -884,6 +996,7 @@ MonoBehaviour:
   Path: FMODFINALPORRA/Desktop/SFX2.bank
   Name: SFX2
   StudioPath: bank:/SFX2
+<<<<<<< Updated upstream
   lastModified: 639154487397363078
   FileSizes: []
   Exists: 1
@@ -942,6 +1055,12 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 --- !u!114 &8668977084421373805
+=======
+  lastModified: 639166960123214860
+  FileSizes: []
+  Exists: 1
+--- !u!114 &8689564920925626727
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
