@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 7747167}
   - component: {fileID: 7747166}
   - component: {fileID: 7747165}
+  - component: {fileID: 7747168}
   m_Layer: 5
   m_Name: MenuBarButton
   m_TagString: Untagged
@@ -213,6 +214,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7747168}
+        m_TargetAssemblyTypeName: PopUpButtonSound, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7747166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,6 +264,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7747163}
   m_CullTransparentMesh: 1
+--- !u!114 &7747168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7747163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a294d01830a1418448c1645d5b3880cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PopUpButtonSound
+  clickSound:
+    Guid:
+      Data1: -402317720
+      Data2: 1204023512
+      Data3: 2015132330
+      Data4: 1388853579
+    Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Click"
 --- !u!1 &65320992
 GameObject:
   m_ObjectHideFlags: 0
@@ -1645,6 +1677,7 @@ GameObject:
   - component: {fileID: 519420030}
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
+  - component: {fileID: 519420035}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1792,6 +1825,24 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_MaxRayIntersections: 0
+--- !u!114 &519420035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioBankLoader
+  LoadEvent: 1
+  UnloadEvent: 0
+  Banks:
+  - SFX2
+  CollisionTag: 
+  PreloadSamples: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2445,6 +2496,7 @@ GameObject:
   - component: {fileID: 690349210}
   - component: {fileID: 690349209}
   - component: {fileID: 690349208}
+  - component: {fileID: 690349211}
   m_Layer: 5
   m_Name: "Bot\xE3oFechar"
   m_TagString: Untagged
@@ -2527,6 +2579,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 690349211}
+        m_TargetAssemblyTypeName: PopUpButtonSound, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &690349209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2565,6 +2629,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690349206}
   m_CullTransparentMesh: 1
+--- !u!114 &690349211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690349206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a294d01830a1418448c1645d5b3880cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PopUpButtonSound
+  clickSound:
+    Guid:
+      Data1: 987570946
+      Data2: 1080512365
+      Data3: 1774890888
+      Data4: -2069625082
+    Path: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/PopUpsB
 --- !u!1 &725382139
 GameObject:
   m_ObjectHideFlags: 0
@@ -2577,6 +2660,7 @@ GameObject:
   - component: {fileID: 725382143}
   - component: {fileID: 725382142}
   - component: {fileID: 725382141}
+  - component: {fileID: 725382144}
   m_Layer: 5
   m_Name: OptionsButton
   m_TagString: Untagged
@@ -2647,7 +2731,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 725382142}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 725382144}
+        m_TargetAssemblyTypeName: PopUpButtonSound, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &725382142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2686,6 +2782,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 725382139}
   m_CullTransparentMesh: 1
+--- !u!114 &725382144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725382139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a294d01830a1418448c1645d5b3880cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PopUpButtonSound
+  clickSound:
+    Guid:
+      Data1: -1675977040
+      Data2: 1118442057
+      Data3: 1183920283
+      Data4: -1904039638
+    Path: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/PopUpsA
 --- !u!1 &795342424
 GameObject:
   m_ObjectHideFlags: 0
@@ -2883,6 +2998,7 @@ GameObject:
   - component: {fileID: 848401133}
   - component: {fileID: 848401132}
   - component: {fileID: 848401131}
+  - component: {fileID: 848401134}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -3004,6 +3120,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 848401129}
   m_CullTransparentMesh: 1
+--- !u!114 &848401134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848401129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a294d01830a1418448c1645d5b3880cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PopUpButtonSound
+  clickSound:
+    Guid:
+      Data1: -1318214645
+      Data2: 1207279157
+      Data3: 445999502
+      Data4: 1546000426
+    Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Mouse_Pronto_1"
 --- !u!1 &856110736
 GameObject:
   m_ObjectHideFlags: 0
@@ -3016,6 +3151,7 @@ GameObject:
   - component: {fileID: 856110740}
   - component: {fileID: 856110739}
   - component: {fileID: 856110738}
+  - component: {fileID: 856110741}
   m_Layer: 5
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -3099,6 +3235,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 856110741}
+        m_TargetAssemblyTypeName: PopUpButtonSound, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &856110739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3137,6 +3285,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 856110736}
   m_CullTransparentMesh: 1
+--- !u!114 &856110741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856110736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a294d01830a1418448c1645d5b3880cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PopUpButtonSound
+  clickSound:
+    Guid:
+      Data1: -1318214645
+      Data2: 1207279157
+      Data3: 445999502
+      Data4: 1546000426
+    Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Mouse_Pronto_1"
 --- !u!1 &937404379
 GameObject:
   m_ObjectHideFlags: 0
@@ -4629,6 +4796,7 @@ GameObject:
   - component: {fileID: 1678071964}
   - component: {fileID: 1678071963}
   - component: {fileID: 1678071962}
+  - component: {fileID: 1678071965}
   m_Layer: 5
   m_Name: TutorialButton
   m_TagString: Untagged
@@ -4712,6 +4880,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1678071965}
+        m_TargetAssemblyTypeName: PopUpButtonSound, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1678071963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4750,6 +4930,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1678071960}
   m_CullTransparentMesh: 1
+--- !u!114 &1678071965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678071960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a294d01830a1418448c1645d5b3880cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PopUpButtonSound
+  clickSound:
+    Guid:
+      Data1: -1675977040
+      Data2: 1118442057
+      Data3: 1183920283
+      Data4: -1904039638
+    Path: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/PopUpsA
 --- !u!1 &1726753613
 GameObject:
   m_ObjectHideFlags: 0
@@ -4793,6 +4992,7 @@ GameObject:
   - component: {fileID: 1744326709}
   - component: {fileID: 1744326708}
   - component: {fileID: 1744326707}
+  - component: {fileID: 1744326710}
   m_Layer: 5
   m_Name: CloseMenuBar
   m_TagString: Untagged
@@ -4875,6 +5075,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1744326710}
+        m_TargetAssemblyTypeName: PopUpButtonSound, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1744326708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4913,6 +5125,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1744326705}
   m_CullTransparentMesh: 1
+--- !u!114 &1744326710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1744326705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a294d01830a1418448c1645d5b3880cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PopUpButtonSound
+  clickSound:
+    Guid:
+      Data1: -1318214645
+      Data2: 1207279157
+      Data3: 445999502
+      Data4: 1546000426
+    Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Mouse_Pronto_1"
 --- !u!1 &1744494824
 GameObject:
   m_ObjectHideFlags: 0
@@ -6126,3 +6357,4 @@ SceneRoots:
   - {fileID: 1449848747}
   - {fileID: 116796286}
   - {fileID: 633157257}
+  - {fileID: 1044911413}

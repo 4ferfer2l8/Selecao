@@ -8,7 +8,7 @@ public class Document : MonoBehaviour, IPointerClickHandler {
     public GameObject seloRejeitado;
 
     [Header("Som do Carimbo")]
-    [SerializeField] private string eventoCarimbo = "event:/Seleção_Audios/SFX/Papel_Cartão_Mouse/Papel_Pegar_1";
+    [SerializeField] private string eventoCarimbo = "event:/Audios Jogo/SFX/Mouse_Papel_Cartão_Teclado/Carimbo_Click";
 
     public void OnPointerClick(PointerEventData eventData) {
         if (!StampManager.instance.jaCarimbou) {
@@ -36,4 +36,5 @@ public class Document : MonoBehaviour, IPointerClickHandler {
         seloRejeitado.SetActive(false);
         StampManager.instance.jaCarimbou = false;
     }
+
 }
