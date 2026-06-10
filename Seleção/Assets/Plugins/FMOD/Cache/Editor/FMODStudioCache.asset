@@ -27,6 +27,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-9184363366193353768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Pegar_1"
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Pegar_1"
+  Guid:
+    Data1: -1876320589
+    Data2: 1237702230
+    Data3: -136703560
+    Data4: -1031116036
+  Banks:
+  - {fileID: -156847632989105906}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-8870689165641157187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,6 +128,18 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-7749576327427521882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &-7749576327427521882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,6 +234,7 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 --- !u!114 &-3880603833823697814
+--- !u!114 &-3880603833823697814
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -205,14 +245,21 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Rasgar_R\xE1pido_1"
+  m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Rasgar_R\xE1pido_1"
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Rasgar_R\xE1pido_1"
   Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Rasgar_R\xE1pido_1"
   Guid:
     Data1: 652874953
     Data2: 1233762992
     Data3: -770411088
     Data4: 1297547440
+    Data1: 652874953
+    Data2: 1233762992
+    Data3: -770411088
+    Data4: 1297547440
   Banks:
+  - {fileID: 8370397729736838212}
   - {fileID: 8370397729736838212}
   IsStream: 0
   Is3D: 0
@@ -521,6 +568,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &780418160842556689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Colocar_1"
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Colocar_1"
+  Guid:
+    Data1: 547360297
+    Data2: 1272004010
+    Data3: 1979616424
+    Data4: -2109553547
+  Banks:
+  - {fileID: -156847632989105906}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &989872859230405112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -540,6 +614,7 @@ MonoBehaviour:
   FileSizes: []
   Exists: 1
 --- !u!114 &997033172272729386
+--- !u!114 &997033172272729386
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -550,9 +625,15 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Mouse_Pronto_1"
+  m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Mouse_Pronto_1"
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
   Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Mouse_Pronto_1"
+  Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Mouse_Pronto_1"
   Guid:
+    Data1: -1318214645
+    Data2: 1207279157
+    Data3: 445999502
+    Data4: 1546000426
     Data1: -1318214645
     Data2: 1207279157
     Data3: 445999502
@@ -567,6 +648,7 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 --- !u!114 &1745439268618342306
+--- !u!114 &1745439268618342306
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -577,14 +659,21 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Pegar_1"
+  m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Pegar_1"
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Pegar_1"
   Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Pegar_1"
   Guid:
     Data1: -809417842
     Data2: 1118138530
     Data3: -1284586594
     Data4: -1035456546
+    Data1: -809417842
+    Data2: 1118138530
+    Data3: -1284586594
+    Data4: -1035456546
   Banks:
+  - {fileID: -156847632989105906}
   - {fileID: -156847632989105906}
   IsStream: 0
   Is3D: 0
@@ -848,6 +937,7 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 --- !u!114 &6503114841170745269
+--- !u!114 &6503114841170745269
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -858,14 +948,21 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Pegar_1"
+  m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Pegar_1"
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Pegar_1"
   Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Pegar_1"
   Guid:
     Data1: -809417842
     Data2: 1118138530
     Data3: -1284586594
     Data4: -1035456546
+    Data1: -809417842
+    Data2: 1118138530
+    Data3: -1284586594
+    Data4: -1035456546
   Banks:
+  - {fileID: 8370397729736838212}
   - {fileID: 8370397729736838212}
   IsStream: 0
   Is3D: 0
@@ -874,6 +971,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &6675750438971974166
 --- !u!114 &6675750438971974166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -885,14 +983,21 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Click_1.1"
+  m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Click_1.1"
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Click_1.1"
   Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Click_1.1"
   Guid:
     Data1: 92594727
     Data2: 1323378925
     Data3: 1815699848
     Data4: 1852647916
+    Data1: 92594727
+    Data2: 1323378925
+    Data3: 1815699848
+    Data4: 1852647916
   Banks:
+  - {fileID: -156847632989105906}
   - {fileID: -156847632989105906}
   IsStream: 0
   Is3D: 0
@@ -920,6 +1025,7 @@ MonoBehaviour:
   FileSizes: []
   Exists: 1
 --- !u!114 &7284935527227133800
+--- !u!114 &7284935527227133800
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -930,9 +1036,15 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Amassar_1"
+  m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Amassar_1"
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
   Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Amassar_1"
+  Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Amassar_1"
   Guid:
+    Data1: 1182932376
+    Data2: 1341635838
+    Data3: 1729817775
+    Data4: 596135953
     Data1: 1182932376
     Data2: 1341635838
     Data3: 1729817775
@@ -940,11 +1052,16 @@ MonoBehaviour:
   Banks:
   - {fileID: -156847632989105906}
   IsStream: 0
+  - {fileID: -156847632989105906}
+  IsStream: 0
   Is3D: 0
+  IsOneShot: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
+  Length: 0
+--- !u!114 &7532009108500658144
   Length: 0
 --- !u!114 &7532009108500658144
 MonoBehaviour:
@@ -957,9 +1074,15 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Rasgar_Lento_1"
+  m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Rasgar_Lento_1"
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
   Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Rasgar_Lento_1"
+  Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Rasgar_Lento_1"
   Guid:
+    Data1: -325262352
+    Data2: 1215478602
+    Data3: -383148620
+    Data4: -2006362587
     Data1: -325262352
     Data2: 1215478602
     Data3: -383148620
@@ -974,6 +1097,7 @@ MonoBehaviour:
   MaxDistance: 20
   Length: 0
 --- !u!114 &8029994070507481173
+--- !u!114 &8029994070507481173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -984,9 +1108,15 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/Audios Jogo/Ambiencia_TrilhaSonora/Menu_Estatica
+  m_Name: event:/Audios Jogo/Ambiencia_TrilhaSonora/Menu_Estatica
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
   Path: event:/Audios Jogo/Ambiencia_TrilhaSonora/Menu_Estatica
+  Path: event:/Audios Jogo/Ambiencia_TrilhaSonora/Menu_Estatica
   Guid:
+    Data1: -68593941
+    Data2: 1078286028
+    Data3: -1865160007
+    Data4: -642162513
     Data1: -68593941
     Data2: 1078286028
     Data3: -1865160007
@@ -994,7 +1124,9 @@ MonoBehaviour:
   Banks:
   - {fileID: 8370397729736838212}
   IsStream: 1
+  IsStream: 1
   Is3D: 0
+  IsOneShot: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
@@ -1029,14 +1161,21 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
   m_Name: event:/Audios Jogo/SFX/Esteira_Grito/PopUpsB
+  m_Name: event:/Audios Jogo/SFX/Esteira_Grito/PopUpsB
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Audios Jogo/SFX/Esteira_Grito/PopUpsB
   Path: event:/Audios Jogo/SFX/Esteira_Grito/PopUpsB
   Guid:
     Data1: 987570946
     Data2: 1080512365
     Data3: 1774890888
     Data4: -2069625082
+    Data1: 987570946
+    Data2: 1080512365
+    Data3: 1774890888
+    Data4: -2069625082
   Banks:
+  - {fileID: 8370397729736838212}
   - {fileID: 8370397729736838212}
   IsStream: 0
   Is3D: 0

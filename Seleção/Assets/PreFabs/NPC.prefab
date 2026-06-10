@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b35001c58d7a72b4eb7f26d723630502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCControle
-  velocidade: 2
+  velocidade: 3
   pontoParada: {fileID: 0}
   pontoSaida: {fileID: 0}
 --- !u!212 &4752212567157617872

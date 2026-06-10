@@ -7,25 +7,36 @@ public class NPCControle : MonoBehaviour {
     public Transform pontoSaida;
     private bool liberado = false;
     private bool chegouNaParada = false;
-    public Document documento;
+    private Document documento;
+
     void Update() {
-        if (!chegouNaParada) {
+        if (!chegouNaParada)
+        {
             MoverPara(pontoParada.position);
-            if (Vector2.Distance(transform.position, pontoParada.position) < 0.1f) {
+            if (Vector2.Distance(transform.position, pontoParada.position) < 0.1f)
+            {
                 chegouNaParada = true;
                 documento.ResetarCarimbo();
             }
-        } else if (!liberado) {
-            if (Keyboard.current.eKey.wasPressedThisFrame) {
-                if (StampManager.instance.jaCarimbou) {
+        }
+        else if (!liberado)
+        {
+            if (Keyboard.current.eKey.wasPressedThisFrame)
+            {
+                if (StampManager.instance.jaCarimbou)
+                {
                     Liberar();
-                } else {
-                    Debug.Log("Carimbe o documento primeiro!");
+                }
+                else
+                {
+                    NotificacaoUI.instance.Mostrar("Carimbe o documento primeiro!");
                 }
             }
-        } else {
+        }
+        else
+        {
             MoverPara(pontoSaida.position);
-            Destroy(gameObject, 8f); // destrói o NPC após 5 segundos para evitar acúmulo
+            Destroy(gameObject, 5f);
         }
     }
 
@@ -39,5 +50,11 @@ public class NPCControle : MonoBehaviour {
 
     public void Liberar() {
         liberado = true;
+    }
+
+    void Awake() {
+        pontoParada = GameObject.Find("PontoParada").transform;
+        pontoSaida = GameObject.Find("PontoSaida").transform;
+        documento = FindObjectOfType<Document>(true);
     }
 }
