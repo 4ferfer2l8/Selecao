@@ -561,6 +561,7 @@ GameObject:
   - component: {fileID: 466358396}
   - component: {fileID: 466358395}
   - component: {fileID: 466358394}
+  - component: {fileID: 466358397}
   m_Layer: 5
   m_Name: OptionButton
   m_TagString: Untagged
@@ -644,6 +645,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 466358397}
+        m_TargetAssemblyTypeName: PopUpButtonSound, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &466358395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -682,6 +695,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 466358392}
   m_CullTransparentMesh: 1
+--- !u!114 &466358397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466358392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a294d01830a1418448c1645d5b3880cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PopUpButtonSound
+  clickSound:
+    Guid:
+      Data1: -1675977040
+      Data2: 1118442057
+      Data3: 1183920283
+      Data4: -1904039638
+    Path: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/PopUpsA
 --- !u!1 &551667840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,6 +1271,7 @@ GameObject:
   - component: {fileID: 1391929854}
   - component: {fileID: 1391929853}
   - component: {fileID: 1391929852}
+  - component: {fileID: 1391929855}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -1322,6 +1355,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1391929855}
+        m_TargetAssemblyTypeName: PopUpButtonSound, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1391929853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1360,6 +1405,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1391929850}
   m_CullTransparentMesh: 1
+--- !u!114 &1391929855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391929850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a294d01830a1418448c1645d5b3880cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PopUpButtonSound
+  clickSound:
+    Guid:
+      Data1: -1318214645
+      Data2: 1207279157
+      Data3: 445999502
+      Data4: 1546000426
+    Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Mouse_Pronto_1"
 --- !u!1 &1471905952
 GameObject:
   m_ObjectHideFlags: 0
@@ -1563,6 +1627,7 @@ GameObject:
   - component: {fileID: 1599816283}
   - component: {fileID: 1599816282}
   - component: {fileID: 1599816281}
+  - component: {fileID: 1599816284}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -1646,6 +1711,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1599816284}
+        m_TargetAssemblyTypeName: PopUpButtonSound, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1599816282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1684,6 +1761,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1599816279}
   m_CullTransparentMesh: 1
+--- !u!114 &1599816284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599816279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a294d01830a1418448c1645d5b3880cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PopUpButtonSound
+  clickSound:
+    Guid:
+      Data1: -1318214645
+      Data2: 1207279157
+      Data3: 445999502
+      Data4: 1546000426
+    Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Mouse_Pronto_1"
 --- !u!1 &1733542742
 GameObject:
   m_ObjectHideFlags: 0
@@ -1696,6 +1792,7 @@ GameObject:
   - component: {fileID: 1733542746}
   - component: {fileID: 1733542745}
   - component: {fileID: 1733542744}
+  - component: {fileID: 1733542747}
   m_Layer: 5
   m_Name: CloseOptions
   m_TagString: Untagged
@@ -1778,6 +1875,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1733542747}
+        m_TargetAssemblyTypeName: PopUpButtonSound, Assembly-CSharp
+        m_MethodName: PlayClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1733542745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1816,6 +1925,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733542742}
   m_CullTransparentMesh: 1
+--- !u!114 &1733542747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733542742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a294d01830a1418448c1645d5b3880cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PopUpButtonSound
+  clickSound:
+    Guid:
+      Data1: 987570946
+      Data2: 1080512365
+      Data3: 1774890888
+      Data4: -2069625082
+    Path: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/PopUpsB
 --- !u!1 &1922278135
 GameObject:
   m_ObjectHideFlags: 0
@@ -1999,6 +2127,8 @@ GameObject:
   - component: {fileID: 1983887565}
   - component: {fileID: 1983887564}
   - component: {fileID: 1983887567}
+  - component: {fileID: 1983887568}
+  - component: {fileID: 1983887569}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2124,6 +2254,55 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &1983887568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983887563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -68593941
+      Data2: 1078286028
+      Data3: -1865160007
+      Data4: -642162513
+    Path: event:/Audios Jogo/Ambiencia_TrilhaSonora/Menu_Estatica
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1983887569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983887563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioBankLoader
+  LoadEvent: 1
+  UnloadEvent: 0
+  Banks:
+  - SFX2
+  CollisionTag: 
+  PreloadSamples: 0
 --- !u!1 &2065132818
 GameObject:
   m_ObjectHideFlags: 0
