@@ -2,14 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-/// <summary>
-/// Coloque este script no GameObject do documento fechado na mesa.
-/// 
-/// IMPORTANTE — convivência com SomDePapel:
-/// Este script NÃO implementa IPointerClickHandler para não conflitar com
-/// SomDePapel (que já trata o clique). Em vez disso, exponha OnDocumentClicked()
-/// e chame-o de dentro do SomDePapel (veja instrução abaixo).
-/// </summary>
+
 [RequireComponent(typeof(Image))]
 public class DocumentDisplay : MonoBehaviour
 {
@@ -35,12 +28,7 @@ public class DocumentDisplay : MonoBehaviour
             closedDocumentImage = GetComponent<Image>();
     }
 
-    // ─── API Pública ────────────────────────────────────────────────────────
 
-    /// <summary>
-    /// Chamado pelo DocumentManager ao sortear um novo documento.
-    /// O visual do documento FECHADO não muda — apenas armazena o dado.
-    /// </summary>
     public void SetDocument(DocumentData data)
     {
         _assignedDocument = data;
@@ -54,9 +42,7 @@ public class DocumentDisplay : MonoBehaviour
             documentPopup.PrepareDocument(data);
     }
 
-    /// <summary>
-    /// Remove o documento atual (fim de atendimento).
-    /// </summary>
+
     public void ClearDocument()
     {
         _assignedDocument = null;
@@ -71,15 +57,7 @@ public class DocumentDisplay : MonoBehaviour
 
     // ─── Interação ──────────────────────────────────────────────────────────
 
-    /// <summary>
-    /// Chame este método de dentro do SomDePapel.OnPointerClick(),
-    /// logo após a lógica de som existente.
-    ///
-    /// Em SomDePapel, adicione:
-    ///   [SerializeField] private DocumentDisplay documentDisplay;
-    ///   // no OnPointerClick(), após o RuntimeManager.PlayOneShot():
-    ///   documentDisplay?.OnDocumentClicked();
-    /// </summary>
+
     public void OnDocumentClicked()
     {
         if (!interactable || !_hasDocument || documentPopup == null) return;

@@ -2,11 +2,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-/// <summary>
-/// Singleton. Coloque em um GameObject vazio na cena.
-/// Quando um novo Individuo for gerado, chame:
-///     DocumentManager.Instance.OnNovoIndividuo(individuo);
-/// </summary>
 public class DocumentManager : MonoBehaviour
 {
     public static DocumentManager Instance { get; private set; }
@@ -40,11 +35,7 @@ public class DocumentManager : MonoBehaviour
         Instance = this;
     }
 
-    // ─── API Pública ─────────────────────────────────────────────────────────
 
-    /// <summary>
-    /// Chame quando um novo Individuo for gerado.
-    /// </summary>
     public void OnNovoIndividuo(Individuo individuo)
     {
         _individuoAtual  = individuo;
@@ -69,9 +60,6 @@ public class DocumentManager : MonoBehaviour
                   $"| Indivíduo: {individuo.codigo}");
     }
 
-    /// <summary>
-    /// Chame ao finalizar o atendimento do indivíduo atual.
-    /// </summary>
     public void LimparDocumento()
     {
         _documentoAtual = null;

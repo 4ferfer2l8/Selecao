@@ -11,6 +11,8 @@ public class GeradorDeAparencia : MonoBehaviour
     public SpriteRenderer camadaNariz;
     public SpriteRenderer camadaBoca;
 
+    public bool UltimoEhMulher { get; private set; }
+
     public void GerarAparenciaAleatoria()
     {
         if (bancoDeRostos == null)
@@ -19,9 +21,19 @@ public class GeradorDeAparencia : MonoBehaviour
             return;
         }
 
-        camadaCorpo.sprite = bancoDeRostos.GetAleatorio(bancoDeRostos.corpos);
-        camadaOlhos.sprite = bancoDeRostos.GetAleatorio(bancoDeRostos.olhos);
-        camadaNariz.sprite = bancoDeRostos.GetAleatorio(bancoDeRostos.narizes);
-        camadaBoca.sprite  = bancoDeRostos.GetAleatorio(bancoDeRostos.bocas);
+        // sorteia o gênero
+        bool ehMulher = Random.value < 0.5f;
+        UltimoEhMulher = ehMulher;
+
+        // seleciona as listas do gênero sorteado
+        var corpos  = ehMulher ? bancoDeRostos.corposFemininos   : bancoDeRostos.corposMasculinos;
+        var olhos   = ehMulher ? bancoDeRostos.olhosFemininos    : bancoDeRostos.olhosMasculinos;
+        var narizes = ehMulher ? bancoDeRostos.narizesFemininos  : bancoDeRostos.narizesMasculinos;
+        var bocas   = ehMulher ? bancoDeRostos.bocasFemininas    : bancoDeRostos.bocasMasculinas;
+
+        camadaCorpo.sprite = bancoDeRostos.GetAleatorio(corpos);
+        camadaOlhos.sprite = bancoDeRostos.GetAleatorio(olhos);
+        camadaNariz.sprite = bancoDeRostos.GetAleatorio(narizes);
+        camadaBoca.sprite  = bancoDeRostos.GetAleatorio(bocas);
     }
 }

@@ -1,10 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
+using System.Collections;
 
-/// <summary>
-/// Controla o popup expandido do documento.
-/// Coloque no GameObject raiz do painel de popup.
-/// </summary>
 public class DocumentPopup : MonoBehaviour
 {
     [Header("Imagem Principal")]
@@ -21,13 +19,15 @@ public class DocumentPopup : MonoBehaviour
     [Header("Overlay")]
     [SerializeField] private GameObject overlay;
 
-    // ─── Estado ─────────────────────────────────────────────────────────────
+    [Header("Fechar ao Carimbar")]
+    [SerializeField] private float delayParaFechar = 0.8f; // espera antes de fechar sozinho
+
     private DocumentData _preparedDocument;
     private bool _isOpen = false;
+    private bool _fechandoPorCarimbo = false;
 
     public bool IsOpen => _isOpen;
 
-    // ─── Unity ──────────────────────────────────────────────────────────────
     private void Awake()
     {
         gameObject.SetActive(false);
@@ -37,22 +37,29 @@ public class DocumentPopup : MonoBehaviour
 
     private void Update()
     {
-        if (_isOpen && Input.GetKeyDown(KeyCode.Escape))
+        if (_isOpen && Keyboard.current.escapeKey.wasPressedThisFrame)
             Close();
+
+        // fecha sozinho depois de carimbar (aprovar ou reprovar)
+        if (_isOpen && !_fechandoPorCarimbo &&
+            StampManager.instance != null && StampManager.instance.jaCarimbou)
+        {
+            _fechandoPorCarimbo = true;
+            StartCoroutine(FecharComDelay());
+        }
     }
 
-    // ─── API Pública ────────────────────────────────────────────────────────
+    private IEnumerator FecharComDelay()
+    {
+        yield return new WaitForSeconds(delayParaFechar);
+        Close();
+        _fechandoPorCarimbo = false;
+    }
 
-    /// <summary>
-    /// Pré-carrega o sprite sem abrir o popup.
-    /// Chamado pelo DocumentDisplay quando um novo indivíduo chega.
-    /// </summary>
     public void PrepareDocument(DocumentData data)
     {
         _preparedDocument = data;
-
         if (data == null) return;
-
         if (documentImage != null)
             documentImage.sprite = data.documentSprite;
     }

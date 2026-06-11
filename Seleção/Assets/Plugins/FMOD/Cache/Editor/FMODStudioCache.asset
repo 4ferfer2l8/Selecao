@@ -177,7 +177,7 @@ MonoBehaviour:
   Path: FMODFINALPORRA/Desktop/SFX2.bank
   Name: SFX2
   StudioPath: bank:/SFX2
-  lastModified: 639167101607338054
+  lastModified: 639167764411186808
   FileSizes: []
   Exists: 1
 --- !u!114 &11400000
@@ -219,39 +219,39 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 6606780357238325581}
   cacheVersion: 131859
-  cacheTime: 639167101607338054
+  cacheTime: 639167764411186808
   SerializableEventsDict:
-  - key: event:/Audios Jogo/SFX/Esteira_Grito/PopUpsB
-    index: 0
   - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Mouse_Pronto_1"
-    index: 1
+    index: 0
   - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Pegar_3"
-    index: 2
-  - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Click_1.1"
-    index: 3
+    index: 1
   - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Colocar_1"
-    index: 4
+    index: 2
   - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Pegar_2"
-    index: 5
+    index: 3
   - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Teclado_1"
-    index: 6
+    index: 4
   - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Cart\xE3o_Pegar_1"
-    index: 7
+    index: 5
   - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Pegar_1"
-    index: 8
+    index: 6
   - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Amassar_1"
-    index: 9
-  - key: event:/Audios Jogo/SFX/Esteira_Grito/PopUpsA
-    index: 10
+    index: 7
   - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Pegar_1"
-    index: 11
-  - key: event:/Audios Jogo/SFX/Esteira_Grito/Esteira_1
-    index: 12
+    index: 8
   - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Rasgar_R\xE1pido_1"
-    index: 13
+    index: 9
   - key: event:/Audios Jogo/Ambiencia_TrilhaSonora/Menu_Estatica
-    index: 14
+    index: 10
   - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Rasgar_Lento_1"
+    index: 11
+  - key: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/PopUpsB
+    index: 12
+  - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Click"
+    index: 13
+  - key: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/PopUpsA
+    index: 14
+  - key: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/Esteira_1
     index: 15
 --- !u!114 &221767962673065237
 MonoBehaviour:
@@ -511,7 +511,7 @@ MonoBehaviour:
   Path: FMODFINALPORRA/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639167101604061229
+  lastModified: 639167764411052013
   FileSizes:
   - Name: 
     Value: 1584
@@ -558,6 +558,6 @@ MonoBehaviour:
   Path: FMODFINALPORRA/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639167101604010525
+  lastModified: 639154698900539507
   FileSizes: []
   Exists: 1

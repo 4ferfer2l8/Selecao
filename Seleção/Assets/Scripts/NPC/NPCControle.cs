@@ -1,12 +1,17 @@
 ﻿using UnityEngine;
-using UnityEngine.InputSystem;
+using System.Collections;
 
 public class NPCControle : MonoBehaviour {
     public float velocidade = 2f;
     public Transform pontoParada;
     public Transform pontoSaida;
+
+    [Header("Delay (segundos)")]
+    [SerializeField] private float delayAntesDeSair = 1f; // espera antes do NPC ir embora
+
     private bool liberado = false;
     private bool chegouNaParada = false;
+    private bool processandoSaida = false;
     private Document documento;
 
     void Update() {
@@ -21,23 +26,24 @@ public class NPCControle : MonoBehaviour {
         }
         else if (!liberado)
         {
-            if (Keyboard.current.eKey.wasPressedThisFrame)
+            // assim que carimbar (aprovar OU reprovar), libera sozinho — sem tecla E
+            if (!processandoSaida && StampManager.instance.jaCarimbou)
             {
-                if (StampManager.instance.jaCarimbou)
-                {
-                    Liberar();
-                }
-                else
-                {
-                    NotificacaoUI.instance.Mostrar("Carimbe o documento primeiro!");
-                }
+                processandoSaida = true;
+                StartCoroutine(SequenciaDeSaida());
             }
         }
         else
         {
             MoverPara(pontoSaida.position);
-            Destroy(gameObject, 5f);
         }
+    }
+
+    private IEnumerator SequenciaDeSaida()
+    {
+        yield return new WaitForSeconds(delayAntesDeSair);
+        Liberar();
+        Destroy(gameObject, 5f); // remove depois de sair de cena
     }
 
     void MoverPara(Vector2 destino) {

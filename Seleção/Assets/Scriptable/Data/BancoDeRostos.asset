@@ -12,25 +12,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c45386c11e7584241b93769014e444d8, type: 3}
   m_Name: BancoDeRostos
   m_EditorClassIdentifier: Assembly-CSharp::BancoDeRostos
-  corpos:
+  corposMasculinos:
+  - {fileID: 21300000, guid: 976f7607722f702468b586f95e6c6c9d, type: 3}
+  - {fileID: 21300000, guid: 0e0c56addf9b78a44a450d0f4233c1ad, type: 3}
+  - {fileID: 21300000, guid: 7e159530ee4e2f2449ff5b5af170bdae, type: 3}
+  - {fileID: 21300000, guid: e2e86a05d06b8e842893b5b865f587e0, type: 3}
+  - {fileID: 21300000, guid: 17287144ed5ee8e46ace4d82fd8fc92e, type: 3}
+  olhosMasculinos:
+  - {fileID: 21300000, guid: c0d985657918c5640a4e784e4f408780, type: 3}
+  - {fileID: 21300000, guid: 52e1d9aefedac1744ab27bc7cba03f07, type: 3}
+  - {fileID: 21300000, guid: b486627269105de4d9757c9a1f2e15c1, type: 3}
+  - {fileID: 21300000, guid: eca7a83ecebd9ba42ba5c95d4db8d221, type: 3}
+  - {fileID: 21300000, guid: 477cc12c7cf5375469179cf4573df0c9, type: 3}
+  narizesMasculinos:
+  - {fileID: 21300000, guid: c693a0bfd83937e43ae40fb947f564c3, type: 3}
+  - {fileID: 21300000, guid: 1e024ec281e3e9448aa6acb827e83645, type: 3}
+  - {fileID: 21300000, guid: ce53d0e39f9a32f459fbc7da87656675, type: 3}
+  - {fileID: 21300000, guid: 7c3a83c2e4d9449418d8941fc5925e73, type: 3}
+  - {fileID: 21300000, guid: 13cf0c02babe5d64ba72d8972df8e66b, type: 3}
+  bocasMasculinas:
+  - {fileID: 21300000, guid: da2c8bb3d92b4f9449cddd9f6e1304f6, type: 3}
+  - {fileID: 21300000, guid: 0dff3f248b279b94f8c4b3cbac2d148e, type: 3}
+  - {fileID: 21300000, guid: 87df425dae42cf944ab06250ec1a6d33, type: 3}
+  - {fileID: 21300000, guid: b78d33bb72960a84dae96b81a1a15a19, type: 3}
+  - {fileID: 21300000, guid: ffacb883393b2004fb5e1cea1d4e33a1, type: 3}
+  corposFemininos:
   - {fileID: 21300000, guid: 7313ae9437539cc4b92beb458ab50044, type: 3}
   - {fileID: 21300000, guid: a2c8c2d5ead903243b67cf82d45dbfed, type: 3}
   - {fileID: 21300000, guid: c008e33ad29371c42a9ff93e34bb0138, type: 3}
   - {fileID: 21300000, guid: 51bf746cb946a4a4c8d4fa02a6cd13f3, type: 3}
   - {fileID: 21300000, guid: fb4575efc754b5146862e14d54f25ff1, type: 3}
-  olhos:
+  olhosFemininos:
   - {fileID: 21300000, guid: dc61d51dc5e5f9b4c8d5960da3b3a11f, type: 3}
   - {fileID: 21300000, guid: c68171ee1d78e96479b24e0ff2da66c6, type: 3}
   - {fileID: 21300000, guid: 3471bf4e4233dbd44aac0a427cfda6be, type: 3}
   - {fileID: 21300000, guid: df60753f1b5d5f040894fee8427541c2, type: 3}
   - {fileID: 21300000, guid: 2ba00ab2ce8c83a419e841e4fcbc79d6, type: 3}
-  narizes:
+  narizesFemininos:
   - {fileID: 21300000, guid: 27af8f6efca4e6c43bf90d276e3c49f0, type: 3}
   - {fileID: 21300000, guid: 3e96dd1de55f50546af69ff893bd888d, type: 3}
   - {fileID: 21300000, guid: 36045237ae8d3304b809a50c0ff76ccf, type: 3}
   - {fileID: 21300000, guid: 6b34d2bd2b7517e47b9f7cbf1fd3090d, type: 3}
   - {fileID: 21300000, guid: ddd1b8d05119c4043b2b3ffda6532bb4, type: 3}
-  bocas:
+  bocasFemininas:
   - {fileID: 21300000, guid: 2733a244c8077d64ea3a73c2bc913e6f, type: 3}
   - {fileID: 21300000, guid: d42bd7c8149d41141bea3bf041f24f98, type: 3}
   - {fileID: 21300000, guid: 77e90114f061ad640ada4fe475f93dd9, type: 3}

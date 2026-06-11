@@ -4,11 +4,17 @@ using System.Collections.Generic;
 [CreateAssetMenu(fileName = "BancoDeRostos", menuName = "Selecao/Banco de Rostos")]
 public class BancoDeRostos : ScriptableObject
 {
-    [Header("Sprites por Categoria")]
-    public List<Sprite> corpos;
-    public List<Sprite> olhos;
-    public List<Sprite> narizes;
-    public List<Sprite> bocas;
+    [Header("Partes Masculinas")]
+    public List<Sprite> corposMasculinos;
+    public List<Sprite> olhosMasculinos;
+    public List<Sprite> narizesMasculinos;
+    public List<Sprite> bocasMasculinas;
+
+    [Header("Partes Femininas")]
+    public List<Sprite> corposFemininos;
+    public List<Sprite> olhosFemininos;
+    public List<Sprite> narizesFemininos;
+    public List<Sprite> bocasFemininas;
 
     public Sprite GetAleatorio(List<Sprite> categoria)
     {
