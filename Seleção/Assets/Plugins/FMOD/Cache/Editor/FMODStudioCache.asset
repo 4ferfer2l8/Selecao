@@ -177,9 +177,36 @@ MonoBehaviour:
   Path: FMODFINALPORRA/Desktop/SFX2.bank
   Name: SFX2
   StudioPath: bank:/SFX2
-  lastModified: 639167764411186808
+  lastModified: 639168132642400888
   FileSizes: []
   Exists: 1
+--- !u!114 &-433434509076877670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Audios Jogo/Ambiencia_TrilhaSonora/Ambiencia
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Audios Jogo/Ambiencia_TrilhaSonora/Ambiencia
+  Guid:
+    Data1: -32772510
+    Data2: 1334768291
+    Data3: 751412148
+    Data4: 1006512812
+  Banks:
+  - {fileID: -1554788032169780702}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 43701
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,13 +240,14 @@ MonoBehaviour:
   - {fileID: 2369230740751035397}
   - {fileID: -7492859407665221013}
   - {fileID: -4911284883713550608}
+  - {fileID: -433434509076877670}
   EditorParameters: []
   MasterBanks:
   - {fileID: 9122442560003845504}
   StringsBanks:
   - {fileID: 6606780357238325581}
   cacheVersion: 131859
-  cacheTime: 639167764411186808
+  cacheTime: 639168132642400888
   SerializableEventsDict:
   - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Mouse_Pronto_1"
     index: 0
@@ -253,6 +281,8 @@ MonoBehaviour:
     index: 14
   - key: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/Esteira_1
     index: 15
+  - key: event:/Audios Jogo/Ambiencia_TrilhaSonora/Ambiencia
+    index: 16
 --- !u!114 &221767962673065237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,7 +386,7 @@ MonoBehaviour:
   - {fileID: -1554788032169780702}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -511,10 +541,10 @@ MonoBehaviour:
   Path: FMODFINALPORRA/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639167764411052013
+  lastModified: 639168132411056659
   FileSizes:
   - Name: 
-    Value: 1584
+    Value: 1636
   Exists: 1
 --- !u!114 &6881155611880631586
 MonoBehaviour:
@@ -558,6 +588,6 @@ MonoBehaviour:
   Path: FMODFINALPORRA/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639154698900539507
+  lastModified: 639168132411029116
   FileSizes: []
   Exists: 1

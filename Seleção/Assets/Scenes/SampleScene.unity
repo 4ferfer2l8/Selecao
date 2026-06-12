@@ -598,6 +598,7 @@ GameObject:
   - component: {fileID: 164693556}
   - component: {fileID: 164693555}
   - component: {fileID: 164693557}
+  - component: {fileID: 164693558}
   m_Layer: 5
   m_Name: BotaoCarmboAprovar
   m_TagString: Untagged
@@ -672,6 +673,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StampSelector
   stampType: 0
+--- !u!114 &164693558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164693553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62bcea8dfc9657b43a362b79261423d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SomDeCarimbo
+  eventoPegar: "event:/Sele\xE7\xE3o_Audios/SFX/Carimbo/Carimbo_Pegar_1"
+  eventoCarimbar: "event:/Sele\xE7\xE3o_Audios/SFX/Carimbo/Carimbo_Click_1.1"
+  eventoPosar: "event:/Sele\xE7\xE3o_Audios/SFX/Carimbo/Carimbo_Colocar_1"
 --- !u!1 &218626720
 GameObject:
   m_ObjectHideFlags: 0
@@ -2410,6 +2426,7 @@ GameObject:
   - component: {fileID: 682468233}
   - component: {fileID: 682468232}
   - component: {fileID: 682468234}
+  - component: {fileID: 682468235}
   m_Layer: 5
   m_Name: BotaoCarmboRejetar
   m_TagString: Untagged
@@ -2484,6 +2501,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StampSelector
   stampType: 1
+--- !u!114 &682468235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682468230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62bcea8dfc9657b43a362b79261423d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SomDeCarimbo
+  eventoPegar: "event:/Sele\xE7\xE3o_Audios/SFX/Carimbo/Carimbo_Pegar_1"
+  eventoCarimbar: "event:/Sele\xE7\xE3o_Audios/SFX/Carimbo/Carimbo_Click_1.1"
+  eventoPosar: "event:/Sele\xE7\xE3o_Audios/SFX/Carimbo/Carimbo_Colocar_1"
 --- !u!1 &690349206
 GameObject:
   m_ObjectHideFlags: 0
