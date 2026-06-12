@@ -1164,7 +1164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SomDePapel
   eventoHover: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Pegar_1"
   eventoAbrir: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Pegar_2"
-  eventoFechar: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Cart\xE3o_Pegar_1"
+  eventoFechar: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Cart\xE3o_Pegar_1"
   painelDocumento: {fileID: 2032200323}
   imagemDocumento: {fileID: 1650652636}
 --- !u!61 &338776938
@@ -4815,7 +4815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Document
   seloAprovado: {fileID: 108951001}
   seloRejeitado: {fileID: 1587058455}
-  eventoCarimbo: "event:/Sele\xE7\xE3o_Audios/SFX/Papel_Cart\xE3o_Mouse/Papel_Pegar_1"
+  eventoCarimbo: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Click"
 --- !u!1 &1678071960
 GameObject:
   m_ObjectHideFlags: 0

@@ -53,6 +53,7 @@ public class SomDePapel : MonoBehaviour, IPointerEnterHandler, IPointerClickHand
     public void NotificarFechamento()
     {
         estaAberto = false;
+        RuntimeManager.PlayOneShot(eventoFechar);
         Debug.Log("Documento fechado");
     }
 }
