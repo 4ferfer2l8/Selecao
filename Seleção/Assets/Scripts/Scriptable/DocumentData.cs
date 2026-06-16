@@ -17,5 +17,5 @@ public class DocumentData : ScriptableObject
 public enum DocumentCategory
 {
     Positive,   // Documentos que aprovam o indivíduo
-    Negative,   // Documentos que reprovam / alertam
+    Negative   // Documentos que reprovam / alertam
 }

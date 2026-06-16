@@ -29,18 +29,21 @@ public class TesteGerador : MonoBehaviour {
     }
 
     void GerarNovoNPC() {
-        npcAtual = Instantiate(npcPrefab, pontoSpawn.position, Quaternion.identity);
+    npcAtual = Instantiate(npcPrefab, pontoSpawn.position, Quaternion.identity);
 
-        NPCControle controle = npcAtual.GetComponent<NPCControle>();
-        controle.pontoParada = GameObject.Find("PontoParada").transform;
-        controle.pontoSaida = GameObject.Find("PontoSaida").transform;
+    NPCControle controle = npcAtual.GetComponent<NPCControle>();
+    controle.pontoParada = GameObject.Find("PontoParada").transform;
+    controle.pontoSaida = GameObject.Find("PontoSaida").transform;
 
-        GeradorDeAparencia aparencia = npcAtual.GetComponent<GeradorDeAparencia>();
-        aparencia.GerarAparenciaAleatoria();
+    GeradorDeAparencia aparencia = npcAtual.GetComponent<GeradorDeAparencia>();
+    aparencia.GerarAparenciaAleatoria();
 
-        Individuo individuo = geradorDeIndividuos.GerarIndividuo();
-        somDePapel.DefinirIndividuo(individuo);
+    Individuo individuo = geradorDeIndividuos.GerarIndividuo();
+    somDePapel.DefinirIndividuo(individuo);
 
-        Debug.Log($"NPC criado: {individuo.codigo}");
-    }
+    // ─── avisa o DocumentManager pra sortear o documento e exibir ───
+    DocumentManager.Instance.OnNovoIndividuo(individuo);
+
+    Debug.Log($"NPC criado: {individuo.codigo}");
+}
 }

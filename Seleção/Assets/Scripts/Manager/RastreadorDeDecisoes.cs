@@ -59,23 +59,23 @@ public class RastreadorDeDecisoes : MonoBehaviour
         Debug.Log($"Decisão: {destinoEscolhido} | Correto: {destinoCorreto} | Acertou: {correta}");
     }
 
-    public TipoFinal CalcularFinal()
+    public sim CalcularFinal()
     {
-        if (totalDecisoes == 0) return TipoFinal.Neutro;
+        if (totalDecisoes == 0) return sim.Neutro;
 
         float taxaAcerto = (float)decisoesCorretas / totalDecisoes;
         float taxaHesitacao = (float)hesitacoes / totalDecisoes;
 
         // jogador obedeceu o sistema quase sempre
         if (taxaAcerto >= 0.7f && taxaHesitacao < 0.3f)
-            return TipoFinal.Conformista;
+            return sim.Conformista;
 
         // jogador errou muito ou hesitou muito — resistiu de alguma forma
         if (taxaAcerto < 0.4f || taxaHesitacao >= 0.5f)
-            return TipoFinal.Resistente;
+            return sim.Resistente;
 
         // ficou no meio — nem obedeceu nem resistiu de verdade
-        return TipoFinal.Neutro;
+        return sim.Neutro;
     }
 
     // getters pro relatório de eficiência
@@ -85,7 +85,9 @@ public class RastreadorDeDecisoes : MonoBehaviour
     public int GetHesitacoes()         => hesitacoes;
 }
 
-public enum TipoFinal
+//MUDAR OS "sim" PRA "TipoFinal" DEPOIS, SÓ PRA TESTAR UM OUTRO SCRIPT
+
+public enum sim
 {
     Conformista, // obedeceu o sistema
     Resistente,  // resistiu de alguma forma
