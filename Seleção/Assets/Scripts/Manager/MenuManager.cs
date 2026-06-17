@@ -8,12 +8,13 @@ public class MenuManager : MonoBehaviour
 
     public void Start()
     {
-        Time.timeScale = 1f; // Garantir que o tempo esteja normal ao iniciar o menu
+        Time.timeScale = 1f;
         OptionsPanel.SetActive(false);
     }
+
     public void Jogar()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Cutscenes 1"); // muda pro nome exato da sua cena de cutscene
     }
 
     public void Sair()
@@ -30,5 +31,4 @@ public class MenuManager : MonoBehaviour
     {
         OptionsPanel.SetActive(false);
     }
-
 }
