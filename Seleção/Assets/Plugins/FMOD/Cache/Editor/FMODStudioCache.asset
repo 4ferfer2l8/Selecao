@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: FMODFINALPORRA/Desktop/SFX2.bank
   Name: SFX2
   StudioPath: bank:/SFX2
-  lastModified: 639172446254111945
+  lastModified: 639172605736389166
   FileSizes: []
   Exists: 1
 --- !u!114 &-7341617455896470284
@@ -330,7 +330,7 @@ MonoBehaviour:
   Path: FMODFINALPORRA/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639168132411029116
+  lastModified: 639172605709336470
   FileSizes: []
   Exists: 1
 --- !u!114 &-514096283718033210
@@ -421,13 +421,14 @@ MonoBehaviour:
   - {fileID: -4436199486272953303}
   - {fileID: -6859238567438802913}
   - {fileID: -8902326620361971112}
+  - {fileID: 2413536005561338061}
   EditorParameters: []
   MasterBanks:
   - {fileID: -745811997011568764}
   StringsBanks:
   - {fileID: 3193562129507961108}
   cacheVersion: 131859
-  cacheTime: 639172446254111945
+  cacheTime: 639172605736389166
   SerializableEventsDict:
   - key: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/PopUpsB
     index: 0
@@ -463,6 +464,35 @@ MonoBehaviour:
     index: 15
   - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Rasgar_Lento_1"
     index: 16
+  - key: event:/Audios Jogo/Ambiencia_TrilhaSonora/MusicaPlaceHolder
+    index: 17
+--- !u!114 &2413536005561338061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Audios Jogo/Ambiencia_TrilhaSonora/MusicaPlaceHolder
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Audios Jogo/Ambiencia_TrilhaSonora/MusicaPlaceHolder
+  Guid:
+    Data1: 214041806
+    Data2: 1328175482
+    Data3: 504991116
+    Data4: 982872517
+  Banks:
+  - {fileID: -8261932545847630001}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 54000
 --- !u!114 &2986098334141531753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -505,10 +535,10 @@ MonoBehaviour:
   Path: FMODFINALPORRA/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639168132411056659
+  lastModified: 639172605709383009
   FileSizes:
   - Name: 
-    Value: 1636
+    Value: 1696
   Exists: 1
 --- !u!114 &7568374180433766122
 MonoBehaviour:
