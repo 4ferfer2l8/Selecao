@@ -8,6 +8,7 @@ public class MenuManager : MonoBehaviour
 
     public void Start()
     {
+        Time.timeScale = 1f; // Garantir que o tempo esteja normal ao iniciar o menu
         OptionsPanel.SetActive(false);
     }
     public void Jogar()

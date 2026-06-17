@@ -23,7 +23,7 @@ public class TesteGerador : MonoBehaviour {
             }
             else
             {
-                NotificacaoUI.instance.Mostrar("Aguarde o NPC atual sair!");
+                NotificacaoUI.instance.Mostrar("Aguarde o candidato atual sair!");
             }
         }
     }

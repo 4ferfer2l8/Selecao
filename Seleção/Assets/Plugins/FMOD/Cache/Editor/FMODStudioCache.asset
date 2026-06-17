@@ -177,7 +177,7 @@ MonoBehaviour:
   Path: FMODFINALPORRA/Desktop/SFX2.bank
   Name: SFX2
   StudioPath: bank:/SFX2
-  lastModified: 639168565542252491
+  lastModified: 639172510939063332
   FileSizes: []
   Exists: 1
 --- !u!114 &-433434509076877670
@@ -247,7 +247,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 6606780357238325581}
   cacheVersion: 131859
-  cacheTime: 639168565542252491
+  cacheTime: 639172510939063332
   SerializableEventsDict:
   - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Mouse_Pronto_1"
     index: 0
@@ -541,7 +541,7 @@ MonoBehaviour:
   Path: FMODFINALPORRA/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639168139589985671
+  lastModified: 639172510939010533
   FileSizes:
   - Name: 
     Value: 1636
@@ -588,6 +588,6 @@ MonoBehaviour:
   Path: FMODFINALPORRA/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639168139589960454
+  lastModified: 639172510939010533
   FileSizes: []
   Exists: 1
