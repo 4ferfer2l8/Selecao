@@ -11,13 +11,12 @@ public class SomDePapel : MonoBehaviour, IPointerEnterHandler, IPointerClickHand
 
     [Header("Documento Expandido")]
     [SerializeField] private GameObject painelDocumento;
-    [SerializeField] private Image imagemDocumento; // arrasta o ImagemDocumento aqui
+    [SerializeField] private Image imagemDocumento;
 
     private bool estaAberto = false;
     private Individuo individuoAtual;
 
-    public void DefinirIndividuo(Individuo individuo)
-    {
+    public void DefinirIndividuo(Individuo individuo) {
         individuoAtual = individuo;
         estaAberto = false;
     }
@@ -27,16 +26,20 @@ public class SomDePapel : MonoBehaviour, IPointerEnterHandler, IPointerClickHand
     }
 
     public void OnPointerClick(PointerEventData eventData) {
-        if (!estaAberto) {
+        if (!estaAberto)
+        {
             estaAberto = true;
             RuntimeManager.PlayOneShot(eventoAbrir);
             AbrirDocumento();
             eventData.Use();
+
+            // inicia tutorial ao abrir o doc pela primeira vez
+            if (TutorialManager.instance != null)
+                TutorialManager.instance.IniciarTutorial();
         }
     }
 
-    private void AbrirDocumento()
-    {
+    private void AbrirDocumento() {
         if (individuoAtual == null)
         {
             Debug.LogWarning("Nenhum indivíduo definido ainda!");
@@ -50,8 +53,7 @@ public class SomDePapel : MonoBehaviour, IPointerEnterHandler, IPointerClickHand
         Debug.Log("Documento aberto: " + individuoAtual.codigo);
     }
 
-    public void NotificarFechamento()
-    {
+    public void NotificarFechamento() {
         estaAberto = false;
         RuntimeManager.PlayOneShot(eventoFechar);
         Debug.Log("Documento fechado");

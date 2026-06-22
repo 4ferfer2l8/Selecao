@@ -13,7 +13,8 @@ public class Document : MonoBehaviour, IPointerClickHandler {
     [SerializeField] private string eventoCarimbo = "event:/Audios Jogo/SFX/Mouse_Papel_Cart�o_Teclado/Carimbo_Click";
 
     public void OnPointerClick(PointerEventData eventData) {
-        if (!StampManager.instance.jaCarimbou) {
+        if (!StampManager.instance.jaCarimbou)
+        {
             AplicarCarimbo();
         }
     }
@@ -21,6 +22,16 @@ public class Document : MonoBehaviour, IPointerClickHandler {
     void AplicarCarimbo() {
     StampManager.instance.jaCarimbou = true;
 
+        if (StampManager.instance.currentStamp == StampType.Approved)
+        {
+            seloAprovado.SetActive(true);
+            seloRejeitado.SetActive(false);
+        }
+        else
+        {
+            seloRejeitado.SetActive(true);
+            seloAprovado.SetActive(false);
+        }
     bool aprovou = StampManager.instance.currentStamp == StampType.Approved;
 
     if (aprovou) {
@@ -48,5 +59,4 @@ public class Document : MonoBehaviour, IPointerClickHandler {
         seloRejeitado.SetActive(false);
         StampManager.instance.jaCarimbou = false;
     }
-
 }
