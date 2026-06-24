@@ -1,34 +1,34 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-
+/// <summary>
+/// Rastreia a balança moral do jogador ao longo do jogo.
+/// Valores positivos pesam pro final bom, negativos pro final ruim.
+/// </summary>
 public class GerenciadorDeProgressao : MonoBehaviour
 {
     public static GerenciadorDeProgressao instance;
 
     [Header("Balança Moral")]
-    [SerializeField] private int balanca = 0;
+    [SerializeField] private int balanca = 0; // sobe = bom, desce = ruim
 
     [Header("Contadores")]
     [SerializeField] private int acertos = 0;
     [SerializeField] private int erros = 0;
     [SerializeField] private int totalDecisoes = 0;
 
-    [Header("Limite da Fase")]
-    [SerializeField] private int limiteDecisoes = 5; // quantos NPCs até acabar a fase
-
-    [Header("Tela de Final")]
-    [SerializeField] private GameObject painelFinal;
-
     void Awake()
     {
         instance = this;
     }
 
+
+    /// <param name="aprovou">true se aprovou, false se reprovou</param>
+    /// <param name="documentoPositivo">true se o documento era positivo</param>
     public void RegistrarDecisao(bool aprovou, bool documentoPositivo)
     {
         totalDecisoes++;
 
+        // acerto = aprovar positivo OU reprovar negativo
         bool acertou = (aprovou && documentoPositivo) || (!aprovou && !documentoPositivo);
 
         if (acertou)
@@ -47,11 +47,6 @@ public class GerenciadorDeProgressao : MonoBehaviour
         MostrarEstadoAtual();
     }
 
-    public bool FaseAcabou()
-    {
-        return totalDecisoes >= limiteDecisoes;
-    }
-
     private void MostrarEstadoAtual()
     {
         string tendencia;
@@ -63,18 +58,9 @@ public class GerenciadorDeProgressao : MonoBehaviour
         Debug.Log($"─── Progressão: {tendencia} (balança={balanca}, acertos={acertos}, erros={erros}, total={totalDecisoes}) ───");
     }
 
-    public void FinalizarFase()
-    {
-        TipoFinal final = CalcularFinal();
-
-        Debug.Log($"═══════════════════════════════");
-        Debug.Log($"FIM DA FASE — Final alcançado: {final}");
-        Debug.Log($"═══════════════════════════════");
-
-        if (painelFinal != null)
-            painelFinal.SetActive(true);
-    }
-
+    /// <summary>
+    /// Calcula qual final o jogador vai ver. Chamado no fim do jogo.
+    /// </summary>
     public TipoFinal CalcularFinal()
     {
         if (balanca > 2)       return TipoFinal.Bom;

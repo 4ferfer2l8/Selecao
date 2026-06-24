@@ -41,6 +41,7 @@ public class TesteGerador : MonoBehaviour {
     Individuo individuo = geradorDeIndividuos.GerarIndividuo();
     somDePapel.DefinirIndividuo(individuo);
 
+    // ─── avisa o DocumentManager pra sortear o documento e exibir ───
     DocumentManager.Instance.OnNovoIndividuo(individuo);
 
     Debug.Log($"NPC criado: {individuo.codigo}");
