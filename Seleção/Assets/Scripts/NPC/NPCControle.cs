@@ -43,7 +43,18 @@ public class NPCControle : MonoBehaviour {
     {
         yield return new WaitForSeconds(delayAntesDeSair);
         Liberar();
-        Destroy(gameObject, 5f); // remove depois de sair de cena
+
+        // espera o NPC chegar no ponto de saída antes de checar o final
+        yield return new WaitForSeconds(5f);
+
+        // se esse era o último NPC da fase, dispara o final
+        if (GerenciadorDeProgressao.instance != null &&
+            GerenciadorDeProgressao.instance.FaseAcabou())
+        {
+            GerenciadorDeProgressao.instance.FinalizarFase();
+        }
+
+        Destroy(gameObject);
     }
 
     void MoverPara(Vector2 destino) {
