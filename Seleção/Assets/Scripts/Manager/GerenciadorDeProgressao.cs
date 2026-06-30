@@ -17,8 +17,8 @@ public class GerenciadorDeProgressao : MonoBehaviour
     [Header("Limite da Fase")]
     [SerializeField] private int limiteDecisoes = 5; // quantos NPCs até acabar a fase
 
-    [Header("Tela de Final")]
-    [SerializeField] private GameObject painelFinal;
+    [Header("Cena Final")]
+    [SerializeField] private string SegundaFase;
 
     void Awake()
     {
@@ -71,8 +71,8 @@ public class GerenciadorDeProgressao : MonoBehaviour
         Debug.Log($"FIM DA FASE — Final alcançado: {final}");
         Debug.Log($"═══════════════════════════════");
 
-        if (painelFinal != null)
-            painelFinal.SetActive(true);
+        if (!string.IsNullOrEmpty(SegundaFase))
+            SceneManager.LoadScene(SegundaFase);
     }
 
     public TipoFinal CalcularFinal()
