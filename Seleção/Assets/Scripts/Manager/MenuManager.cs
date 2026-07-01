@@ -25,6 +25,11 @@ public class MenuManager : MonoBehaviour
     public void ToggleOptions()
     {
         OptionsPanel.SetActive(!OptionsPanel.activeSelf);
+
+        if (OptionsPanel.activeSelf)
+        {
+            Canvas.ForceUpdateCanvases(); // força recalcular o layout assim que o painel abre
+        }
     }
 
     public void CloseOptions()
