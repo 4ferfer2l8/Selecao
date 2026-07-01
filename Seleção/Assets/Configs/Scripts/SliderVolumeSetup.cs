@@ -22,6 +22,14 @@ public class SliderVolumeSetup : MonoBehaviour, IPointerUpHandler
         AplicarVolumeAtual();
     }
 
+    // Chamado pelo gamepad (D-pad esquerda/direita) pra subir/descer o volume aos poucos
+    public void AjustarVolumeGamepad(float delta)
+    {
+        float novoValor = Mathf.Clamp01(slider.value + delta);
+        slider.SetValueWithoutNotify(novoValor);
+        AplicarVolumeAtual();
+    }
+
     private void AplicarVolumeAtual()
     {
         float valor = slider.value;

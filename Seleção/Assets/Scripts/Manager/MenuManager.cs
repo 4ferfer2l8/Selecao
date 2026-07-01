@@ -6,6 +6,9 @@ public class MenuManager : MonoBehaviour
     [Header("Panels")]
     public GameObject OptionsPanel;
 
+    [Header("Foco Gamepad")]
+    public FocoMenuGamepad focoMenuGamepad; // arraste o FocoMenuGamepad do menu principal aqui
+
     public void Start()
     {
         Time.timeScale = 1f;
@@ -30,10 +33,17 @@ public class MenuManager : MonoBehaviour
         {
             Canvas.ForceUpdateCanvases(); // força recalcular o layout assim que o painel abre
         }
+
+        // desliga o foco do menu principal enquanto as opções estão abertas
+        if (focoMenuGamepad != null)
+            focoMenuGamepad.enabled = !OptionsPanel.activeSelf;
     }
 
     public void CloseOptions()
     {
         OptionsPanel.SetActive(false);
+
+        if (focoMenuGamepad != null)
+            focoMenuGamepad.enabled = true;
     }
 }

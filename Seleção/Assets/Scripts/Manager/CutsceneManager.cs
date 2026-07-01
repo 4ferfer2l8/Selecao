@@ -15,7 +15,10 @@ public class CutsceneManager : MonoBehaviour
 
     void Update()
     {
-        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        bool pediuPular = Keyboard.current.escapeKey.wasPressedThisFrame ||
+                           (Gamepad.current != null && Gamepad.current.buttonEast.wasPressedThisFrame); // B
+
+        if (pediuPular)
         {
             SceneManager.LoadScene("SampleScene"); // nome exato da cena do jogo
         }
