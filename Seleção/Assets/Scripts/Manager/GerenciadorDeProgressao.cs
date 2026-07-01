@@ -1,24 +1,13 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
-
 
 public class GerenciadorDeProgressao : MonoBehaviour
 {
     public static GerenciadorDeProgressao instance;
 
-    [Header("Balança Moral")]
-    [SerializeField] private int balanca = 0;
-
-    [Header("Contadores")]
-    [SerializeField] private int acertos = 0;
-    [SerializeField] private int erros = 0;
-    [SerializeField] private int totalDecisoes = 0;
-
     [Header("Limite da Fase")]
-    [SerializeField] private int limiteDecisoes = 5; // quantos NPCs até acabar a fase
+    [SerializeField] private int limiteDecisoes = 5;
 
-    [Header("Cena Final")]
-    [SerializeField] private string SegundaFase;
+    private int decisoesNaFase = 0;
 
     void Awake()
     {
@@ -27,60 +16,28 @@ public class GerenciadorDeProgressao : MonoBehaviour
 
     public void RegistrarDecisao(bool aprovou, bool documentoPositivo)
     {
-        totalDecisoes++;
+        decisoesNaFase++;
 
         bool acertou = (aprovou && documentoPositivo) || (!aprovou && !documentoPositivo);
 
-        if (acertou)
-        {
-            balanca++;
-            acertos++;
-            Debug.Log($"✓ Decisão CERTA — balança subiu pra {balanca}");
-        }
-        else
-        {
-            balanca--;
-            erros++;
-            Debug.Log($"✗ Decisão ERRADA — balança desceu pra {balanca}");
-        }
+        // repassa pro placar acumulado que sobrevive entre fases
+        if (ControladorDeFases.instance != null)
+            ControladorDeFases.instance.RegistrarDecisao(acertou);
 
-        MostrarEstadoAtual();
+        Debug.Log(acertou ? "✓ Decisão CERTA nesta fase" : "✗ Decisão ERRADA nesta fase");
     }
 
     public bool FaseAcabou()
     {
-        return totalDecisoes >= limiteDecisoes;
-    }
-
-    private void MostrarEstadoAtual()
-    {
-        string tendencia;
-
-        if (balanca > 2)        tendencia = "tendendo ao FINAL BOM";
-        else if (balanca < -2)  tendencia = "tendendo ao FINAL RUIM";
-        else                    tendencia = "MEIO TERMO";
-
-        Debug.Log($"─── Progressão: {tendencia} (balança={balanca}, acertos={acertos}, erros={erros}, total={totalDecisoes}) ───");
+        return decisoesNaFase >= limiteDecisoes;
     }
 
     public void FinalizarFase()
     {
-        TipoFinal final = CalcularFinal();
-
-        Debug.Log($"═══════════════════════════════");
-        Debug.Log($"FIM DA FASE — Final alcançado: {final}");
-        Debug.Log($"═══════════════════════════════");
-
-        if (!string.IsNullOrEmpty(SegundaFase))
-            SceneManager.LoadScene(SegundaFase);
+        Debug.Log("─── Fim da fase, entregando ao controlador ───");
+        if (ControladorDeFases.instance != null)
+            ControladorDeFases.instance.ConcluirFase();
     }
 
-    public TipoFinal CalcularFinal()
-    {
-        if (balanca > 2)       return TipoFinal.Bom;
-        else if (balanca < -2) return TipoFinal.Ruim;
-        else                   return TipoFinal.Neutro;
-    }
+    public enum TipoFinal { Bom, Neutro, Ruim }
 }
-
-public enum TipoFinal { Bom, Neutro, Ruim }
