@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using FMODUnity;
 
-public class Document : MonoBehaviour, IPointerClickHandler {
+public class Document : MonoBehaviour, IPointerClickHandler, IAcaoGamepad {
     [Header("Selos Visuais")]
     public GameObject seloAprovado;
     public GameObject seloRejeitado;
@@ -10,7 +10,7 @@ public class Document : MonoBehaviour, IPointerClickHandler {
     private DocumentData doc;
 
     [Header("Som do Carimbo")]
-    [SerializeField] private string eventoCarimbo = "event:/Audios Jogo/SFX/Mouse_Papel_Cart�o_Teclado/Carimbo_Click";
+    [SerializeField] private string eventoCarimbo = "event:/Audios Jogo/SFX/Mouse_Papel_Cartão_Teclado/Carimbo_Click";
 
     public void OnPointerClick(PointerEventData eventData) {
         if (!StampManager.instance.jaCarimbou)
@@ -19,40 +19,36 @@ public class Document : MonoBehaviour, IPointerClickHandler {
         }
     }
 
-    void AplicarCarimbo() {
-    StampManager.instance.jaCarimbou = true;
+    public void AcionarGamepad() {
+        if (!StampManager.instance.jaCarimbou) {
+            AplicarCarimbo();
+        }
+    }
 
-        if (StampManager.instance.currentStamp == StampType.Approved)
-        {
+    void AplicarCarimbo() {
+        StampManager.instance.jaCarimbou = true;
+
+        bool aprovou = StampManager.instance.currentStamp == StampType.Approved;
+
+        if (aprovou) {
             seloAprovado.SetActive(true);
             seloRejeitado.SetActive(false);
-        }
-        else
-        {
+        } else {
             seloRejeitado.SetActive(true);
             seloAprovado.SetActive(false);
         }
-    bool aprovou = StampManager.instance.currentStamp == StampType.Approved;
 
-    if (aprovou) {
-        seloAprovado.SetActive(true);
-        seloRejeitado.SetActive(false);
-    } else {
-        seloRejeitado.SetActive(true);
-        seloAprovado.SetActive(false);
+        // ─── Registra a decisão na progressão ───
+        doc = DocumentManager.Instance.DocumentoAtual;
+        if (doc != null && GerenciadorDeProgressao.instance != null)
+        {
+            bool ehPositivo = doc.category == DocumentCategory.Positive;
+            GerenciadorDeProgressao.instance.RegistrarDecisao(aprovou, ehPositivo);
+        }
+
+        RuntimeManager.PlayOneShot(eventoCarimbo);
+        Debug.Log("Carimbou com: " + StampManager.instance.currentStamp);
     }
-
-    // ─── Registra a decisão na progressão ───
-    doc = DocumentManager.Instance.DocumentoAtual;
-    if (doc != null && GerenciadorDeProgressao.instance != null)
-    {
-        bool ehPositivo = doc.category == DocumentCategory.Positive;
-        GerenciadorDeProgressao.instance.RegistrarDecisao(aprovou, ehPositivo);
-    }
-
-    RuntimeManager.PlayOneShot(eventoCarimbo);
-    Debug.Log("Carimbou com: " + StampManager.instance.currentStamp);
-}
 
     public void ResetarCarimbo() {
         seloAprovado.SetActive(false);

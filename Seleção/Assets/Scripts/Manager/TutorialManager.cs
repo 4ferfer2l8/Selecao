@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 using TMPro;
 
 public class TutorialManager : MonoBehaviour {
@@ -21,6 +22,16 @@ public class TutorialManager : MonoBehaviour {
     void Start() {
         painelTutorial.SetActive(false);
         botaoProximo.onClick.AddListener(ProximaEtapa);
+    }
+
+    void Update() {
+        if (!tutorialAtivo) return;
+
+        var gp = Gamepad.current;
+        if (gp != null && gp.buttonEast.wasPressedThisFrame) // B
+        {
+            ProximaEtapa();
+        }
     }
 
     public void IniciarTutorial() {

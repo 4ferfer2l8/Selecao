@@ -15,7 +15,10 @@ public class TesteGerador : MonoBehaviour {
     }
 
     void Update() {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        bool pediuProximo = Keyboard.current.spaceKey.wasPressedThisFrame ||
+                             (Gamepad.current != null && Gamepad.current.leftShoulder.wasPressedThisFrame); // L1
+
+        if (pediuProximo)
         {
             if (npcAtual == null)
             {
@@ -29,20 +32,20 @@ public class TesteGerador : MonoBehaviour {
     }
 
     void GerarNovoNPC() {
-    npcAtual = Instantiate(npcPrefab, pontoSpawn.position, Quaternion.identity);
+        npcAtual = Instantiate(npcPrefab, pontoSpawn.position, Quaternion.identity);
 
-    NPCControle controle = npcAtual.GetComponent<NPCControle>();
-    controle.pontoParada = GameObject.Find("PontoParada").transform;
-    controle.pontoSaida = GameObject.Find("PontoSaida").transform;
+        NPCControle controle = npcAtual.GetComponent<NPCControle>();
+        controle.pontoParada = GameObject.Find("PontoParada").transform;
+        controle.pontoSaida = GameObject.Find("PontoSaida").transform;
 
-    GeradorDeAparencia aparencia = npcAtual.GetComponent<GeradorDeAparencia>();
-    aparencia.GerarAparenciaAleatoria();
+        GeradorDeAparencia aparencia = npcAtual.GetComponent<GeradorDeAparencia>();
+        aparencia.GerarAparenciaAleatoria();
 
-    Individuo individuo = geradorDeIndividuos.GerarIndividuo();
-    somDePapel.DefinirIndividuo(individuo);
+        Individuo individuo = geradorDeIndividuos.GerarIndividuo();
+        somDePapel.DefinirIndividuo(individuo);
 
-    DocumentManager.Instance.OnNovoIndividuo(individuo);
+        DocumentManager.Instance.OnNovoIndividuo(individuo);
 
-    Debug.Log($"NPC criado: {individuo.codigo}");
-}
+        Debug.Log($"NPC criado: {individuo.codigo}");
+    }
 }

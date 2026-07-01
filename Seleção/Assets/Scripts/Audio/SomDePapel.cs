@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 using FMODUnity;
 using UnityEngine.UI;
 
-public class SomDePapel : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler {
+public class SomDePapel : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler, IAcaoGamepad {
     [Header("Eventos FMOD")]
     [SerializeField] private string eventoHover = "event:/Seleção_Audios/SFX/Papel_Cartão_Mouse/Papel_Pegar_1";
     [SerializeField] private string eventoAbrir = "event:/Seleção_Audios/SFX/Papel_Cartão_Mouse/Papel_Pegar_2";
@@ -33,7 +33,18 @@ public class SomDePapel : MonoBehaviour, IPointerEnterHandler, IPointerClickHand
             AbrirDocumento();
             eventData.Use();
 
-            // inicia tutorial ao abrir o doc pela primeira vez
+            if (TutorialManager.instance != null)
+                TutorialManager.instance.IniciarTutorial();
+        }
+    }
+
+    public void AcionarGamepad() {
+        if (!estaAberto)
+        {
+            estaAberto = true;
+            RuntimeManager.PlayOneShot(eventoAbrir);
+            AbrirDocumento();
+
             if (TutorialManager.instance != null)
                 TutorialManager.instance.IniciarTutorial();
         }
