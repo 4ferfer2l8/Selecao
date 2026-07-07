@@ -8,6 +8,7 @@ public class ComputerUIManager : MonoBehaviour
     public GameObject computerUI;
     public GameObject tutorialPopup;
     public GameObject topBarPanel;
+    public GameObject OptionPanel;
 
     [Header("Player")]
     public GameObject playerController;
@@ -19,6 +20,7 @@ public class ComputerUIManager : MonoBehaviour
         computerUI.SetActive(false);
         tutorialPopup.SetActive(false);
         topBarPanel.SetActive(false);
+        OptionPanel.SetActive(false);
     }
 
     void Update()
@@ -83,6 +85,16 @@ public class ComputerUIManager : MonoBehaviour
     public void CloseTopBar()
     {
         topBarPanel.SetActive(false);
+    }
+
+    public void ToggleOptions()
+    {
+        OptionPanel.SetActive(!OptionPanel.activeSelf);
+    }
+
+    public void CloseOptions()
+    {
+        OptionPanel.SetActive(false);
     }
 
     public void BackToGame()
