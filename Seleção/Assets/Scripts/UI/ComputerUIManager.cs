@@ -13,6 +13,11 @@ public class ComputerUIManager : MonoBehaviour
     [Header("Player")]
     public GameObject playerController;
 
+    [Header("Foco Gamepad")]
+    public FocoMenuGamepad focoTelaIcones; // Tutorial + Setinha (tela inicial)
+    public FocoMenuGamepad focoMenuBar;    // Voltar / Opções / Menu (dentro da barra)
+    public FocoGamepadFora focoForaJogo;   // o foco do papel na mesa (do jogo, fora do computador)
+
     private bool isOpen = false;
 
     void Start()
@@ -25,7 +30,10 @@ public class ComputerUIManager : MonoBehaviour
 
     void Update()
     {
-        if (Keyboard.current.escapeKey.wasPressedThisFrame)
+        bool pediuAbrirFechar = Keyboard.current.escapeKey.wasPressedThisFrame ||
+                                 (Gamepad.current != null && Gamepad.current.startButton.wasPressedThisFrame);
+
+        if (pediuAbrirFechar)
         {
             if (isOpen)
             {
@@ -44,11 +52,14 @@ public class ComputerUIManager : MonoBehaviour
 
         computerUI.SetActive(true);
 
-        // Desativa o player
         if (playerController != null)
         {
             playerController.SetActive(false);
         }
+
+        // desliga o foco do jogo (papel na mesa) enquanto o computador tá aberto
+        if (focoForaJogo != null)
+            focoForaJogo.enabled = false;
     }
 
     public void CloseComputer()
@@ -60,11 +71,14 @@ public class ComputerUIManager : MonoBehaviour
 
         computerUI.SetActive(false);
 
-        // Reativa o player
         if (playerController != null)
         {
             playerController.SetActive(true);
         }
+
+        // religa o foco do jogo quando o computador fecha
+        if (focoForaJogo != null)
+            focoForaJogo.enabled = true;
     }
 
     public void ToggleTutorial()
@@ -80,21 +94,34 @@ public class ComputerUIManager : MonoBehaviour
     public void ToggleTopBar()
     {
         topBarPanel.SetActive(!topBarPanel.activeSelf);
+
+        // desliga o foco dos ícones (Tutorial/Setinha) enquanto a barra estiver aberta
+        if (focoTelaIcones != null)
+            focoTelaIcones.enabled = !topBarPanel.activeSelf;
     }
 
     public void CloseTopBar()
     {
         topBarPanel.SetActive(false);
+
+        if (focoTelaIcones != null)
+            focoTelaIcones.enabled = true;
     }
 
     public void ToggleOptions()
     {
         OptionPanel.SetActive(!OptionPanel.activeSelf);
+
+        if (focoMenuBar != null)
+            focoMenuBar.enabled = !OptionPanel.activeSelf;
     }
 
     public void CloseOptions()
     {
         OptionPanel.SetActive(false);
+
+        if (focoMenuBar != null)
+            focoMenuBar.enabled = true;
     }
 
     public void BackToGame()

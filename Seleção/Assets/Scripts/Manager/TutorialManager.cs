@@ -11,6 +11,9 @@ public class TutorialManager : MonoBehaviour {
     public TextMeshProUGUI textoMensagem;
     public Button botaoProximo;
 
+    [Header("Foco Gamepad (desliga durante o tutorial pra não carimbar sozinho)")]
+    public FocoGamepadDocumento focoDocumento;
+
     private int etapaAtual = 0;
     private bool tutorialAtivo = false;
     private bool tutorialJaFeito = false;
@@ -40,6 +43,11 @@ public class TutorialManager : MonoBehaviour {
         tutorialAtivo = true;
         etapaAtual = 0;
         painelTutorial.SetActive(true);
+
+        // desliga o foco do documento enquanto o tutorial estiver rolando
+        if (focoDocumento != null)
+            focoDocumento.enabled = false;
+
         MostrarEtapa();
     }
 
@@ -75,6 +83,10 @@ public class TutorialManager : MonoBehaviour {
         painelTutorial.SetActive(false);
         tutorialAtivo = false;
         tutorialJaFeito = true;
+
+        // religa o foco do documento quando o tutorial termina
+        if (focoDocumento != null)
+            focoDocumento.enabled = true;
     }
 
     public void EsconderPainel() {

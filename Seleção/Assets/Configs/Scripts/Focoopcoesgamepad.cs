@@ -18,12 +18,16 @@ public class FocoOpcoesGamepad : MonoBehaviour {
 
     void OnEnable() {
         indiceFoco = 0;
-        AtualizarIndicador();
+        if (indicadorFoco != null)
+            indicadorFoco.SetActive(false);
+    }
+
+    void OnDisable() {
+        if (indicadorFoco != null)
+            indicadorFoco.SetActive(false);
     }
 
     void Update() {
-        // impede o EventSystem padrão do Unity de "selecionar" botões sozinho
-        // e disparar clique fantasma quando a gente aperta B
         if (EventSystem.current != null && EventSystem.current.currentSelectedGameObject != null)
             EventSystem.current.SetSelectedGameObject(null);
 
@@ -48,10 +52,12 @@ public class FocoOpcoesGamepad : MonoBehaviour {
             if (gp.dpad.right.wasPressedThisFrame)
             {
                 sliderVolume.AjustarVolumeGamepad(passoVolume);
+                AtualizarIndicador();
             }
             else if (gp.dpad.left.wasPressedThisFrame)
             {
                 sliderVolume.AjustarVolumeGamepad(-passoVolume);
+                AtualizarIndicador();
             }
         }
     }

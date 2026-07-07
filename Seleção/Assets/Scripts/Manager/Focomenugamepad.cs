@@ -13,16 +13,11 @@ public class FocoMenuGamepad : MonoBehaviour {
     private int indiceFoco = 0;
 
     void OnEnable() {
-        AtualizarIndicador();
-    }
-
-    void Start() {
-        AtualizarIndicador();
+        if (indicadorFoco != null)
+            indicadorFoco.SetActive(false);
     }
 
     void Update() {
-        // impede o EventSystem padrão do Unity de "selecionar" botões sozinho
-        // e disparar clique fantasma quando a gente aperta B
         if (EventSystem.current != null && EventSystem.current.currentSelectedGameObject != null)
             EventSystem.current.SetSelectedGameObject(null);
 
@@ -49,6 +44,7 @@ public class FocoMenuGamepad : MonoBehaviour {
     void AtualizarIndicador() {
         if (indicadorFoco == null) return;
         indicadorFoco.SetActive(true);
+        indicadorFoco.transform.SetAsLastSibling(); // garante que renderiza por cima de tudo
         indicadorFoco.transform.position = botoes[indiceFoco].transform.position;
     }
 }

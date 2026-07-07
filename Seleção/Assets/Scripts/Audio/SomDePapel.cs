@@ -13,6 +13,9 @@ public class SomDePapel : MonoBehaviour, IPointerEnterHandler, IPointerClickHand
     [SerializeField] private GameObject painelDocumento;
     [SerializeField] private Image imagemDocumento;
 
+    [Header("Foco Gamepad (de fora)")]
+    [SerializeField] private FocoGamepadFora focoFora;
+
     private bool estaAberto = false;
     private Individuo individuoAtual;
 
@@ -61,6 +64,10 @@ public class SomDePapel : MonoBehaviour, IPointerEnterHandler, IPointerClickHand
             imagemDocumento.sprite = individuoAtual.documento;
 
         painelDocumento.SetActive(true);
+
+        if (focoFora != null)
+            focoFora.enabled = false;
+
         Debug.Log("Documento aberto: " + individuoAtual.codigo);
     }
 
@@ -68,5 +75,11 @@ public class SomDePapel : MonoBehaviour, IPointerEnterHandler, IPointerClickHand
         estaAberto = false;
         RuntimeManager.PlayOneShot(eventoFechar);
         Debug.Log("Documento fechado");
+
+        if (focoFora != null)
+            focoFora.enabled = true;
+
+        if (NotificacaoUI.instance != null)
+            NotificacaoUI.instance.Mostrar("Aperte Espaço ou L1 para chamar o próximo candidato!");
     }
 }

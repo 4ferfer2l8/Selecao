@@ -1,35 +1,42 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class FocoGamepad : MonoBehaviour {
-    [Header("Ordem do foco: Papel -> Documento -> Carimbo de cima -> Carimbo de baixo")]
+public class FocoGamepadDocumento : MonoBehaviour {
+    [Header("Ordem: Documento -> Carimbo Aprovar -> Carimbo Rejeitar")]
     public Transform[] alvosFoco;
 
-    [Header("Indicador visual (luz/partícula) que acompanha o foco")]
+    [Header("Indicador visual que passeia entre documento e carimbos")]
     public GameObject indicadorFoco;
 
     private int indiceFoco = 0;
 
-    void Start() {
-        AtualizarIndicador();
+    void OnEnable() {
+        indiceFoco = 0;
+        if (indicadorFoco != null)
+            indicadorFoco.SetActive(false);
+    }
+
+    void OnDisable() {
+        if (indicadorFoco != null)
+            indicadorFoco.SetActive(false);
     }
 
     void Update() {
         var gp = Gamepad.current;
         if (gp == null || alvosFoco.Length == 0) return;
 
-        if (gp.rightShoulder.wasPressedThisFrame)
+        if (gp.rightShoulder.wasPressedThisFrame) // R1
         {
             indiceFoco = (indiceFoco + 1) % alvosFoco.Length;
             AtualizarIndicador();
         }
-        else if (gp.rightTrigger.wasPressedThisFrame)
+        else if (gp.rightTrigger.wasPressedThisFrame) // R2
         {
             indiceFoco = (indiceFoco - 1 + alvosFoco.Length) % alvosFoco.Length;
             AtualizarIndicador();
         }
 
-        if (gp.buttonEast.wasPressedThisFrame)
+        if (gp.buttonEast.wasPressedThisFrame) // B
         {
             var alvo = alvosFoco[indiceFoco];
             var acao = alvo.GetComponent<IAcaoGamepad>();
@@ -43,17 +50,6 @@ public class FocoGamepad : MonoBehaviour {
     void AtualizarIndicador() {
         if (indicadorFoco == null) return;
         indicadorFoco.SetActive(true);
-
-        Transform alvo = alvosFoco[indiceFoco];
-
-        if (alvo.GetComponent<RectTransform>() != null)
-        {
-            indicadorFoco.transform.position = alvo.position;
-        }
-        else
-        {
-            Vector3 posTela = Camera.main.WorldToScreenPoint(alvo.position);
-            indicadorFoco.transform.position = posTela;
-        }
+        indicadorFoco.transform.position = alvosFoco[indiceFoco].position;
     }
 }
