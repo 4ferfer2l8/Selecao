@@ -42,6 +42,9 @@ public class SomDeCarimbo : MonoBehaviour, IPointerEnterHandler, IPointerDownHan
     {
         if (eventData.button == PointerEventData.InputButton.Right) return;
 
+        if (GerenciadorDeCursor.instance != null)
+            GerenciadorDeCursor.instance.ComecouArrastar();
+        
         estaSendoSeguro = true;
         RuntimeManager.PlayOneShot(eventoPegar);
         Debug.Log("Carimbo pegado");
@@ -65,6 +68,9 @@ public class SomDeCarimbo : MonoBehaviour, IPointerEnterHandler, IPointerDownHan
         if (eventData.button == PointerEventData.InputButton.Right) return;
     
         if (!estaSendoSeguro) return;
+
+        if (GerenciadorDeCursor.instance != null)
+            GerenciadorDeCursor.instance.ParouArrastar();
 
         estaSendoSeguro = false;
         RuntimeManager.PlayOneShot(eventoPosar);
