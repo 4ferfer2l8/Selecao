@@ -20,6 +20,9 @@ public class SettingsUI : MonoBehaviour
 
     private GameSettingsManager manager;
 
+    [Header("Brilho")]
+    public Slider sliderBrilho;
+
     private void Start()
     {
         manager = GameSettingsManager.Instance;
@@ -64,6 +67,9 @@ public class SettingsUI : MonoBehaviour
 
         dropdownCorCursor.value = dados.indiceCorCursor;
         dropdownCorCursor.RefreshShownValue();
+
+        // brilho
+        sliderBrilho.value = manager.Dados.brilho;
     }
 
     private void RegistrarListeners()
@@ -76,5 +82,8 @@ public class SettingsUI : MonoBehaviour
         // acessibilidade
         dropdownTamanhoUI.onValueChanged.AddListener(manager.AplicarTamanhoUI);
         dropdownCorCursor.onValueChanged.AddListener(manager.AplicarCorCursor);
+
+        // brilho
+        sliderBrilho.onValueChanged.AddListener(manager.AplicarBrilho);
     }
 }

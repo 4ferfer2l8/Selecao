@@ -1,89 +1,72 @@
 using UnityEngine;
 
+/// <summary>
+/// Observa o desempenho do jogador e influencia o próximo documento.
+/// Quando o jogador acerta demais seguido, força vir um documento que
+/// quebra o padrão, pra tirá-lo do "piloto automático".
+/// </summary>
 public class SistemaAdaptativo : MonoBehaviour
 {
-    [Header("Histórico de Decisões")]
-    private int totalDecisoes = 0;
-    private int descartes = 0;
-    private int reproducoes = 0;
-    private int reprocessamentos = 0;
+    public static SistemaAdaptativo instance;
 
-    [Header("Configurações")]
-    [Range(0f, 1f)] public float sensibilidade = 0.3f;
-    // quanto o sistema reage às suas decisões
+    [Header("Configuração")]
+    [Tooltip("Quantos acertos seguidos até o sistema intervir")]
+    [SerializeField] private int limiteSequencia = 3;
 
-    private GeradorDeIndividuos gerador;
+    [Tooltip("Chance de intervir quando o limite é atingido (0 a 1)")]
+    [Range(0f, 1f)]
+    [SerializeField] private float chanceDeIntervir = 0.7f;
 
-    private void Start()
+    // estado interno
+    private int acertosSeguidos = 0;
+    private bool ultimoDocEraPositivo = true;
+
+    void Awake()
     {
-        gerador = GetComponent<GeradorDeIndividuos>();
+        instance = this;
     }
 
-    public void RegistrarDecisao(string destino)
+    /// <summary>
+    /// Chamado a cada decisão do jogador, pra atualizar a sequência.
+    /// </summary>
+    public void RegistrarResultado(bool acertou, bool documentoEraPositivo)
     {
-        totalDecisoes++;
-
-        switch (destino)
-        {
-            case "Descarte":        descartes++;        break;
-            case "Reproducao":      reproducoes++;      break;
-            case "Reprocessamento": reprocessamentos++; break;
-        }
-
-        AtualizarPesos();
-    }
-
-    private void AtualizarPesos()
-    {
-        if (totalDecisoes < 3) return;
-        // espera pelo menos 3 decisões antes de adaptar
-
-        float taxaDescarte = (float)descartes / totalDecisoes;
-        float taxaReproducao = (float)reproducoes / totalDecisoes;
-
-        // se jogador tá descartando muito - gera mais casos ambíguos
-        // pra forçar ele a pensar antes de descartar
-        if (taxaDescarte > 0.6f)
-        {
-            gerador.pesoAmbiguidade = Mathf.Min(
-                gerador.pesoAmbiguidade + sensibilidade * 0.1f, 
-                0.9f
-            );
-            Debug.Log("Sistema: aumentando ambiguidade. Taxa de descarte alta.");
-        }
-
-        // se jogador tá sendo muito generoso com reprodução - pressiona com regras
-        else if (taxaReproducao > 0.6f)
-        {
-            gerador.pesoAmbiguidade = Mathf.Min(
-                gerador.pesoAmbiguidade + sensibilidade * 0.1f,
-                0.9f
-            );
-            Debug.Log("Sistema: aumentando ambiguidade. Taxa de reprodução alta.");
-        }
-
-        // se jogador tá equilibrado - reduz ambiguidade levemente
+        if (acertou)
+            acertosSeguidos++;
         else
-        {
-            gerador.pesoAmbiguidade = Mathf.Max(
-                gerador.pesoAmbiguidade - sensibilidade * 0.05f,
-                0.1f
-            );
-            Debug.Log("Sistema: reduzindo ambiguidade. Jogador equilibrado.");
-        }
+            acertosSeguidos = 0; // errou, zera a maré
+
+        ultimoDocEraPositivo = documentoEraPositivo;
+
+        Debug.Log($"[Adaptativo] Acertos seguidos: {acertosSeguidos}");
     }
 
-    public float GetTaxaDescarte()
+    /// <summary>
+    /// O DocumentManager pergunta: devo forçar um tipo específico agora?
+    /// Retorna true se o sistema quer intervir, e devolve o tipo via 'out'.
+    /// </summary>
+    public bool DeveForcarTipo(out bool forcarPositivo)
     {
-        if (totalDecisoes == 0) return 0f;
-        return (float)descartes / totalDecisoes;
-    }
+        forcarPositivo = true;
 
-    public float GetTaxaReproducao()
-    {
-        if (totalDecisoes == 0) return 0f;
-        return (float)reproducoes / totalDecisoes;
-    }
+        // só intervém se o jogador está numa sequência boa
+        if (acertosSeguidos < limiteSequencia)
+            return false;
 
-    public int GetTotalDecisoes() => totalDecisoes;
+        // e mesmo assim, só às vezes (pra não ser previsível)
+        if (Random.value > chanceDeIntervir)
+            return false;
+
+        // quebra o padrão: manda o OPOSTO do último documento
+        // se ele vinha lidando com positivos, manda um negativo, e vice-versa
+        forcarPositivo = !ultimoDocEraPositivo;
+
+        Debug.Log($"[Adaptativo] INTERVINDO! Forçando documento " +
+                  $"{(forcarPositivo ? "POSITIVO" : "NEGATIVO")} pra quebrar o padrão.");
+
+        // depois de intervir, reseta a contagem pra dar um respiro
+        acertosSeguidos = 0;
+
+        return true;
+    }
 }

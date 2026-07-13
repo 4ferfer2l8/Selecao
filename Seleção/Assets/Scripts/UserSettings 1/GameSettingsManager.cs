@@ -24,9 +24,15 @@ public class GameSettingsManager : MonoBehaviour
     [SerializeField] private ConjuntoCursor[] cursores; // um por cor
     [SerializeField] private Vector2 hotspotCursor = Vector2.zero;
 
+    [Header("Brilho")]
+    [SerializeField] private UnityEngine.UI.Image overlayBrilho;
+
     private const string CHAVE_TAM_UI      = "indiceTamanhoUI";
     private const string CHAVE_TAM_CURSOR  = "indiceTamanhoCursor";
     private const string CHAVE_COR_CURSOR  = "indiceCorCursor";
+    private const string CHAVE_BRILHO = "brilho";
+
+    
 
     private void Awake()
     {
@@ -49,6 +55,7 @@ public class GameSettingsManager : MonoBehaviour
         Dados.vsync          = PlayerPrefs.GetInt(CHAVE_VSYNC, 1) == 1;
         Dados.fullScreen     = PlayerPrefs.GetInt(CHAVE_FULLSCREEN, 1) == 1;
         Dados.indiceResolucao = PlayerPrefs.GetInt(CHAVE_RESOLUCAO, resolucoesDisponiveis.Length - 1);
+        Dados.brilho = PlayerPrefs.GetFloat(CHAVE_BRILHO, 1f);
 
         AplicarTodasConfiguracoes();
     }
@@ -58,6 +65,7 @@ public class GameSettingsManager : MonoBehaviour
         PlayerPrefs.SetInt(CHAVE_VSYNC,      Dados.vsync ? 1 : 0);
         PlayerPrefs.SetInt(CHAVE_FULLSCREEN, Dados.fullScreen ? 1 : 0);
         PlayerPrefs.SetInt(CHAVE_RESOLUCAO,  Dados.indiceResolucao);
+        PlayerPrefs.SetFloat(CHAVE_BRILHO, Dados.brilho);
         PlayerPrefs.Save();
         Debug.Log("Configurações salvas.");
     }
@@ -67,6 +75,7 @@ public class GameSettingsManager : MonoBehaviour
         AplicarVsync(Dados.vsync);
         AplicarFullScreen(Dados.fullScreen);
         AplicarResolucao(Dados.indiceResolucao);
+        AplicarBrilho(Dados.brilho);
     }
 
     // ─── MÉTODOS DE APLICAR ───
@@ -145,6 +154,23 @@ public class GameSettingsManager : MonoBehaviour
 
         if (textura != null)
             Cursor.SetCursor(textura, hotspotCursor, CursorMode.Auto);
+    }
+
+    public void AplicarBrilho(float valor)
+    {
+        Dados.brilho = valor;
+
+        if (overlayBrilho != null)
+        {
+            // valor 1 = transparente (tela normal), valor baixo = mais escuro
+            // invertendo: quanto menor o brilho, maior o alpha do preto
+            float alpha = 1f - valor;
+            Color c = overlayBrilho.color;
+            c.a = Mathf.Clamp01(alpha);
+            overlayBrilho.color = c;
+        }
+
+        Debug.Log($"Brilho: {valor}");
     }
 }
 

@@ -75,8 +75,19 @@ public class DocumentManager : MonoBehaviour
 
     private DocumentData SortearDocumento()
     {
-        // 50/50 entre positivo e negativo
-        bool sortearPositivo = Random.value >= 0.5f;
+        bool sortearPositivo;
+
+        // pergunta ao sistema adaptativo se ele quer forçar um tipo
+        if (SistemaAdaptativo.instance != null &&
+            SistemaAdaptativo.instance.DeveForcarTipo(out bool forcarPositivo))
+        {
+            sortearPositivo = forcarPositivo;
+        }
+        else
+        {
+            // comportamento normal: 50/50
+            sortearPositivo = Random.value >= 0.5f;
+        }
 
         if (sortearPositivo && documentosPositivos.Count > 0)
             return Aleatorio(documentosPositivos);

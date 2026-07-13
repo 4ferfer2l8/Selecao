@@ -9,7 +9,8 @@ public class GameSettingsData
     // Vídeo
     public bool vsync            = true;
     public bool fullScreen       = true;
-    public int indiceResolucao   = 0;   // índice na lista de resoluções disponíveis
+    public int indiceResolucao   = 0;  
+    public float brilho           = 1.0f; // 0.0 a 1.0
 
     
     // Acessibilidade

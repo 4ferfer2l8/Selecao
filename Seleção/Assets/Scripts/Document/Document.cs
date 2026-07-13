@@ -46,6 +46,15 @@ public class Document : MonoBehaviour, IPointerClickHandler, IAcaoGamepad {
             GerenciadorDeProgressao.instance.RegistrarDecisao(aprovou, ehPositivo);
         }
 
+        // alimenta o sistema adaptativo
+        if (doc != null && SistemaAdaptativo.instance != null)
+        {
+            bool acertou = (aprovou && doc.category == DocumentCategory.Positive) ||
+                        (!aprovou && doc.category == DocumentCategory.Negative);
+            bool eraPositivo = doc.category == DocumentCategory.Positive;
+            SistemaAdaptativo.instance.RegistrarResultado(acertou, eraPositivo);
+        }
+
         RuntimeManager.PlayOneShot(eventoCarimbo);
         Debug.Log("Carimbou com: " + StampManager.instance.currentStamp);
     }
