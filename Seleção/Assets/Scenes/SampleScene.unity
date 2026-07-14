@@ -6808,17 +6808,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GerenciadorDeCursor
   cores:
   - nomeCor: Normal
-    apontando: {fileID: 2800000, guid: 88028311d4f8fba42b922f3e96769c6e, type: 3}
-    aberto: {fileID: 2800000, guid: 034d6cfae27628547bc7cdf0350f83a2, type: 3}
-    fechado: {fileID: 2800000, guid: 96c32301b68a0dd4ea734c7cbeaa6def, type: 3}
+    tamanhoDefault:
+      apontando: {fileID: 2800000, guid: 88028311d4f8fba42b922f3e96769c6e, type: 3}
+      aberto: {fileID: 2800000, guid: 034d6cfae27628547bc7cdf0350f83a2, type: 3}
+      fechado: {fileID: 2800000, guid: 96c32301b68a0dd4ea734c7cbeaa6def, type: 3}
+    tamanhoGrande:
+      apontando: {fileID: 2800000, guid: 7c3d08e89921c39448d67c72b9787040, type: 3}
+      aberto: {fileID: 2800000, guid: 58f4a2e5685d083498b6662cb495e62a, type: 3}
+      fechado: {fileID: 2800000, guid: cf3a7d259aff60c42a9d5baeaba6ef9b, type: 3}
   - nomeCor: Verde
-    apontando: {fileID: 2800000, guid: 782b61be5497c5349923e9906243f78e, type: 3}
-    aberto: {fileID: 2800000, guid: c6e01403f8873cc4c97b598d61e6db80, type: 3}
-    fechado: {fileID: 2800000, guid: acce012b61bda144a931d00a7465f8a6, type: 3}
+    tamanhoDefault:
+      apontando: {fileID: 2800000, guid: 782b61be5497c5349923e9906243f78e, type: 3}
+      aberto: {fileID: 2800000, guid: c6e01403f8873cc4c97b598d61e6db80, type: 3}
+      fechado: {fileID: 2800000, guid: acce012b61bda144a931d00a7465f8a6, type: 3}
+    tamanhoGrande:
+      apontando: {fileID: 2800000, guid: 3454609ebc1f95b42b2f205d93f64c53, type: 3}
+      aberto: {fileID: 2800000, guid: bfb91bb607b23594894063db45f23b5d, type: 3}
+      fechado: {fileID: 2800000, guid: 0163a46bf5551dd4ea6f59502a6771f9, type: 3}
   - nomeCor: Rosa
-    apontando: {fileID: 2800000, guid: 7773435647af6ca45a69100752447b4b, type: 3}
-    aberto: {fileID: 2800000, guid: c82dcfef15877df459b08cd64b1763f4, type: 3}
-    fechado: {fileID: 2800000, guid: e6815f6a3047861479fa273d990ea689, type: 3}
+    tamanhoDefault:
+      apontando: {fileID: 2800000, guid: 7773435647af6ca45a69100752447b4b, type: 3}
+      aberto: {fileID: 2800000, guid: c82dcfef15877df459b08cd64b1763f4, type: 3}
+      fechado: {fileID: 2800000, guid: e6815f6a3047861479fa273d990ea689, type: 3}
+    tamanhoGrande:
+      apontando: {fileID: 2800000, guid: a4c312adea1baf14e90e2a43227a0839, type: 3}
+      aberto: {fileID: 2800000, guid: 184628d8b906dc94b9aa8296b9d66d8e, type: 3}
+      fechado: {fileID: 2800000, guid: 18cab9b5091d39f41bc40129e8d52dc0, type: 3}
   hotspot: {x: 0, y: 0}
 --- !u!4 &845739934
 Transform:
@@ -9219,13 +9234,10 @@ MonoBehaviour:
   m_MultiSelect: 0
   m_Options:
     m_Options:
-    - m_Text: Option A
+    - m_Text: Default
       m_Image: {fileID: 0}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Option B
-      m_Image: {fileID: 0}
-      m_Color: {r: 1, g: 1, b: 1, a: 1}
-    - m_Text: Option C
+    - m_Text: Grande
       m_Image: {fileID: 0}
       m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_OnValueChanged:
@@ -13835,8 +13847,6 @@ MonoBehaviour:
   - 0.5
   - 0.8
   - 1
-  cursores: []
-  hotspotCursor: {x: 0, y: 0}
   overlayBrilho: {fileID: 989366680}
 --- !u!114 &1867495506
 MonoBehaviour:
@@ -13855,6 +13865,7 @@ MonoBehaviour:
   toggleFullScreen: {fileID: 1032236469}
   dropdownTamanhoUI: {fileID: 1437793500}
   dropdownCorCursor: {fileID: 1369519538}
+  dropdownTamanhoCursor: {fileID: 1056963078}
   sliderBrilho: {fileID: 1856715142}
 --- !u!1 &1867536756
 GameObject:

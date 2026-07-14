@@ -20,10 +20,6 @@ public class GameSettingsManager : MonoBehaviour
     [SerializeField] private CanvasScaler canvasScaler;
     [SerializeField] private float[] escalasUI = { 0.8f, 1f, 1.2f };
 
-    [Header("Cursor")]
-    [SerializeField] private ConjuntoCursor[] cursores; // um por cor
-    [SerializeField] private Vector2 hotspotCursor = Vector2.zero;
-
     [Header("Brilho")]
     [SerializeField] private UnityEngine.UI.Image overlayBrilho;
 
@@ -133,27 +129,11 @@ public class GameSettingsManager : MonoBehaviour
     public void AplicarTamanhoCursor(int indice)
     {
         Dados.indiceTamanhoCursor = indice;
-        AtualizarCursor();
+
+        if (GerenciadorDeCursor.instance != null)
+            GerenciadorDeCursor.instance.DefinirTamanho(indice == 1); // 1 = grande
+
         Debug.Log($"Tamanho do cursor: índice {indice}");
-    }
-
-    /// <summary>
-    /// Combina cor + tamanho pra achar a textura certa e aplica.
-    /// </summary>
-    private void AtualizarCursor()
-    {
-        if (cursores == null || cursores.Length == 0) return;
-
-        int cor = Mathf.Clamp(Dados.indiceCorCursor, 0, cursores.Length - 1);
-        ConjuntoCursor conjunto = cursores[cor];
-
-        if (conjunto.tamanhos == null || conjunto.tamanhos.Length == 0) return;
-
-        int tam = Mathf.Clamp(Dados.indiceTamanhoCursor, 0, conjunto.tamanhos.Length - 1);
-        Texture2D textura = conjunto.tamanhos[tam];
-
-        if (textura != null)
-            Cursor.SetCursor(textura, hotspotCursor, CursorMode.Auto);
     }
 
     public void AplicarBrilho(float valor)
@@ -172,20 +152,4 @@ public class GameSettingsManager : MonoBehaviour
 
         Debug.Log($"Brilho: {valor}");
     }
-}
-
-[System.Serializable]
-public class ConjuntoCursor
-{
-    public string nomeCor; // só pra identificar no Inspector (ex: "Normal", "Verde", "Rosa")
-    public Texture2D[] tamanhos; // 0=pequeno, 1=normal, 2=grande
-}
-
-[System.Serializable]
-public class ConjuntoDeCor
-{
-    public string nomeCor; // "Normal", "Verde", "Rosa" — só pra identificar no Inspector
-    public Texture2D apontando;
-    public Texture2D aberto;
-    public Texture2D fechado;
 }

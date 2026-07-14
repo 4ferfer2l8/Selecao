@@ -17,6 +17,7 @@ public class SettingsUI : MonoBehaviour
     [Header("Acessibilidade")]
     public TMP_Dropdown dropdownTamanhoUI;
     public TMP_Dropdown dropdownCorCursor;
+    public TMP_Dropdown dropdownTamanhoCursor;
 
     private GameSettingsManager manager;
 
@@ -67,6 +68,7 @@ public class SettingsUI : MonoBehaviour
 
         dropdownCorCursor.value = dados.indiceCorCursor;
         dropdownCorCursor.RefreshShownValue();
+        dropdownTamanhoCursor.value = dados.indiceTamanhoCursor;
 
         // brilho
         sliderBrilho.value = manager.Dados.brilho;
@@ -82,6 +84,7 @@ public class SettingsUI : MonoBehaviour
         // acessibilidade
         dropdownTamanhoUI.onValueChanged.AddListener(manager.AplicarTamanhoUI);
         dropdownCorCursor.onValueChanged.AddListener(manager.AplicarCorCursor);
+        dropdownTamanhoCursor.onValueChanged.AddListener(manager.AplicarTamanhoCursor);
 
         // brilho
         sliderBrilho.onValueChanged.AddListener(manager.AplicarBrilho);
