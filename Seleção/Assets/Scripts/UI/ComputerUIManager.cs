@@ -9,6 +9,8 @@ public class ComputerUIManager : MonoBehaviour
     public GameObject tutorialPopup;
     public GameObject topBarPanel;
     public GameObject OptionPanel;
+    public GameObject EmailPanel;
+    public GameObject MensagemPanel;
 
     [Header("Player")]
     public GameObject playerController;
@@ -26,6 +28,8 @@ public class ComputerUIManager : MonoBehaviour
         tutorialPopup.SetActive(false);
         topBarPanel.SetActive(false);
         OptionPanel.SetActive(false);
+        EmailPanel.SetActive(false);
+        MensagemPanel.SetActive(false);
     }
 
     void Update()
@@ -120,6 +124,33 @@ public class ComputerUIManager : MonoBehaviour
     {
         OptionPanel.SetActive(false);
 
+        if (focoMenuBar != null)
+            focoMenuBar.enabled = true;
+    }
+
+    public void ToggleEmail()
+    {
+        EmailPanel.SetActive(!EmailPanel.activeSelf);
+        if (focoMenuBar != null)
+            focoMenuBar.enabled = !EmailPanel.activeSelf;
+    }
+
+    public void CloseEmail()
+    {
+        EmailPanel.SetActive(false);
+        if (focoMenuBar != null)
+            focoMenuBar.enabled = true;
+    }
+
+    public void ToggleMensagem()
+    {
+        MensagemPanel.SetActive(!MensagemPanel.activeSelf);
+        if (focoMenuBar != null)
+            focoMenuBar.enabled = !MensagemPanel.activeSelf;
+    }
+    public void CloseMensagem()
+    {
+        MensagemPanel.SetActive(false);
         if (focoMenuBar != null)
             focoMenuBar.enabled = true;
     }
