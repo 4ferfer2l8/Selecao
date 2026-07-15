@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b795739ae9331d54d9abbdc172e73f57, type: 3}
   m_Name: DocPos4
   m_EditorClassIdentifier: Assembly-CSharp::DocumentData
-  documentID: 482.193.750-14
-  documentSprite: {fileID: -4578934741714108115, guid: 3aa437ffcb450d849901b6351f8559c0, type: 3}
+  documentID: 442.718.905-13
+  documentSprite: {fileID: -855298285791758126, guid: 674b6d3519ca0974ab976cf61c2fe466, type: 3}
   category: 0

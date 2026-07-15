@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: DocNeg2
   m_EditorClassIdentifier: Assembly-CSharp::DocumentData
   documentID: 490.223.178-54
-  documentSprite: {fileID: 7842000531215667113, guid: 6bd53d1adfd753f44b8bf53f8b647e6b, type: 3}
+  documentSprite: {fileID: 6937817954938267909, guid: 89df77f48a6042545b412f249e270d8f, type: 3}
   category: 1

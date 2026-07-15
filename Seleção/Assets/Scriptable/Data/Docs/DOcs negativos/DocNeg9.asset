@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b795739ae9331d54d9abbdc172e73f57, type: 3}
-  m_Name: DocPos9
+  m_Name: DocNeg9
   m_EditorClassIdentifier: Assembly-CSharp::DocumentData
-  documentID: 804.115.332-67
-  documentSprite: {fileID: -6470460504253458178, guid: dbfa7c963be1243478be922d0d1ca899, type: 3}
-  category: 0
+  documentID: 384.520.971-42
+  documentSprite: {fileID: 4113829005332862926, guid: cad215bff5375ce4f94fbcdbc5952136, type: 3}
+  category: 1

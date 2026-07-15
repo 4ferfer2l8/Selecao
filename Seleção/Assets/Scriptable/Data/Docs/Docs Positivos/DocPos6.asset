@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: DocPos6
   m_EditorClassIdentifier: Assembly-CSharp::DocumentData
   documentID: 482.193.750-14
-  documentSprite: {fileID: -4578934741714108115, guid: 3aa437ffcb450d849901b6351f8559c0, type: 3}
+  documentSprite: {fileID: 4113829005332862926, guid: b342395f486e04f468435f84a4b32140, type: 3}
   category: 0
