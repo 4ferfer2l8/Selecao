@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Cérebro da fase única. Conta NPCs e atos de desobediência,
@@ -18,9 +19,9 @@ public class GerenciadorDeProgressao : MonoBehaviour
     [SerializeField] private int desobedienciasParaEmail = 5;
     [SerializeField] private int especiaisNecessarios = 5;
 
-    [Header("Telas de Final")]
-    [SerializeField] private GameObject painelFinalBom;
-    [SerializeField] private GameObject painelFinalRuim;
+    [Header("Cenas de Final")]
+    [SerializeField] private string cenaFinalBom = "FinalBom";
+    [SerializeField] private string cenaFinalRuim = "FinalRuim";
 
     [Header("Email")]
     [SerializeField] private ComputerUIManager computador;
@@ -123,10 +124,7 @@ public class GerenciadorDeProgressao : MonoBehaviour
         Debug.Log($"Email enviado: {emailEnviado} | Especiais aprovados: {especiaisAprovados}/{especiaisNecessarios}");
         Debug.Log("═══════════════════════════════");
 
-        if (finalBom && painelFinalBom != null)
-            painelFinalBom.SetActive(true);
-        else if (!finalBom && painelFinalRuim != null)
-            painelFinalRuim.SetActive(true);
+        SceneManager.LoadScene(finalBom ? cenaFinalBom : cenaFinalRuim);
     }
 
     private void OnValidate()

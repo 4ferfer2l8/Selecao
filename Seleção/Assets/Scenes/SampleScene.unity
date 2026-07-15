@@ -7370,7 +7370,6 @@ GameObject:
   m_Component:
   - component: {fileID: 612206722}
   - component: {fileID: 612206721}
-  - component: {fileID: 612206723}
   m_Layer: 0
   m_Name: GerenciadorProgressao
   m_TagString: Untagged
@@ -7394,8 +7393,8 @@ MonoBehaviour:
   prazoEmail: 10
   desobedienciasParaEmail: 5
   especiaisNecessarios: 5
-  painelFinalBom: {fileID: 1881124785}
-  painelFinalRuim: {fileID: 1881124785}
+  cenaFinalBom: Final Bom
+  cenaFinalRuim: Final Ruim
   computador: {fileID: 824000726}
   delayEmail: 3
 --- !u!4 &612206722
@@ -7413,24 +7412,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &612206723
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 612206720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2cc946d45e051741a492efd91069eb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ControladorDeFases
-  cenasFases: []
-  cenaFinalBom: FinalBom
-  cenaFinalNeutro: FinalNeutro
-  cenaFinalRuim: FinalRuim
-  limiteFinalBom: 3
-  limiteFinalRuim: -3
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
