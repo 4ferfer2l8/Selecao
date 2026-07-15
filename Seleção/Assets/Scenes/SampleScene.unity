@@ -5214,7 +5214,8 @@ MonoBehaviour:
   especiaisNecessarios: 5
   painelFinalBom: {fileID: 1881124785}
   painelFinalRuim: {fileID: 1881124785}
-  painelEmail: {fileID: 103874318}
+  computador: {fileID: 824000726}
+  delayEmail: 3
 --- !u!4 &612206722
 Transform:
   m_ObjectHideFlags: 0
@@ -8048,6 +8049,7 @@ MonoBehaviour:
   focoTelaIcones: {fileID: 814937910}
   focoMenuBar: {fileID: 1670136821}
   focoForaJogo: {fileID: 28409827}
+  emailIcon: {fileID: 225369534}
 --- !u!4 &824000727
 Transform:
   m_ObjectHideFlags: 0
@@ -8120,7 +8122,7 @@ MonoBehaviour:
       apontando: {fileID: 2800000, guid: a4c312adea1baf14e90e2a43227a0839, type: 3}
       aberto: {fileID: 2800000, guid: 184628d8b906dc94b9aa8296b9d66d8e, type: 3}
       fechado: {fileID: 2800000, guid: 18cab9b5091d39f41bc40129e8d52dc0, type: 3}
-  hotspot: {x: 0, y: 0}
+  hotspot: {x: 55, y: -6}
 --- !u!4 &845739934
 Transform:
   m_ObjectHideFlags: 0
@@ -14322,8 +14324,8 @@ Transform:
   m_GameObject: {fileID: 1619313404}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.05, y: 0.34, z: 0}
-  m_LocalScale: {x: 0.5728055, y: 0.35117525, z: 0.46551812}
+  m_LocalPosition: {x: 0.0297, y: 0.34, z: 0}
+  m_LocalScale: {x: 0.5804427, y: 0.35117525, z: 0.46551812}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
