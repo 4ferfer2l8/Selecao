@@ -38,25 +38,21 @@ public class Document : MonoBehaviour, IPointerClickHandler, IAcaoGamepad {
             seloAprovado.SetActive(false);
         }
 
-        // ─── Registra a decisão na progressão ───
-        doc = DocumentManager.Instance.DocumentoAtual;
-        if (doc != null && GerenciadorDeProgressao.instance != null)
+        DocumentData doc = DocumentManager.Instance.DocumentoAtual;
+        if (doc != null)
         {
-            bool ehPositivo = doc.category == DocumentCategory.Positive;
-            GerenciadorDeProgressao.instance.RegistrarDecisao(aprovou, ehPositivo);
-        }
+            if (GerenciadorDeProgressao.instance != null)
+                GerenciadorDeProgressao.instance.RegistrarDecisao(aprovou, doc);
 
-        // alimenta o sistema adaptativo
-        if (doc != null && SistemaAdaptativo.instance != null)
-        {
-            bool acertou = (aprovou && doc.category == DocumentCategory.Positive) ||
-                        (!aprovou && doc.category == DocumentCategory.Negative);
-            bool eraPositivo = doc.category == DocumentCategory.Positive;
-            SistemaAdaptativo.instance.RegistrarResultado(acertou, eraPositivo);
+            if (SistemaAdaptativo.instance != null)
+            {
+                bool obedeceu = (aprovou && doc.category == DocumentCategory.Positive) ||
+                                (!aprovou && doc.category == DocumentCategory.Negative);
+                SistemaAdaptativo.instance.RegistrarResultado(obedeceu, doc.category == DocumentCategory.Positive);
+            }
         }
 
         RuntimeManager.PlayOneShot(eventoCarimbo);
-        Debug.Log("Carimbou com: " + StampManager.instance.currentStamp);
     }
 
     public void ResetarCarimbo() {

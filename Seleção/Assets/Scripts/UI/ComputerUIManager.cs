@@ -20,6 +20,9 @@ public class ComputerUIManager : MonoBehaviour
     public FocoMenuGamepad focoMenuBar;    // Voltar / Opções / Menu (dentro da barra)
     public FocoGamepadFora focoForaJogo;   // o foco do papel na mesa (do jogo, fora do computador)
 
+    [Header("Email")]
+    public GameObject emailIcon; // o ícone do app na área de trabalho
+
     private bool isOpen = false;
 
     void Start()
@@ -30,6 +33,8 @@ public class ComputerUIManager : MonoBehaviour
         OptionPanel.SetActive(false);
         EmailPanel.SetActive(false);
         MensagemPanel.SetActive(false);
+
+        if (emailIcon != null) emailIcon.SetActive(false);
     }
 
     void Update()
@@ -72,15 +77,15 @@ public class ComputerUIManager : MonoBehaviour
 
         tutorialPopup.SetActive(false);
         topBarPanel.SetActive(false);
+        EmailPanel.SetActive(false);
+        OptionPanel.SetActive(false);
+        MensagemPanel.SetActive(false);
 
         computerUI.SetActive(false);
 
         if (playerController != null)
-        {
             playerController.SetActive(true);
-        }
 
-        // religa o foco do jogo quando o computador fecha
         if (focoForaJogo != null)
             focoForaJogo.enabled = true;
     }
@@ -163,5 +168,25 @@ public class ComputerUIManager : MonoBehaviour
     public void QuitToMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    /// <summary>
+    /// Chamado quando o email é disparado. Faz o app aparecer no computador
+    /// e abre a tela na cara do jogador.
+    /// </summary>
+    public void DesbloquearEmail()
+    {
+        if (emailIcon != null)
+            emailIcon.SetActive(true);
+
+        if (!isOpen)
+            OpenComputer();
+
+        EmailPanel.SetActive(true);
+
+        if (focoMenuBar != null)
+            focoMenuBar.enabled = false;
+
+        Debug.Log("[Computador] App de email desbloqueado e aberto.");
     }
 }

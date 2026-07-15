@@ -13,6 +13,10 @@ public class DocumentManager : MonoBehaviour
     [Header("Documentos Negativos")]
     [SerializeField] private List<DocumentData> documentosNegativos = new List<DocumentData>();
 
+    [Header("Documentos Especiais (Email)")]
+    [SerializeField] private List<DocumentData> documentosEspeciais = new List<DocumentData>();
+
+
     [Header("Configurações")]
     [SerializeField] private DocumentDisplay documentDisplay;
 
@@ -28,6 +32,9 @@ public class DocumentManager : MonoBehaviour
     public DocumentData DocumentoAtual => _documentoAtual;
     public Individuo    IndividuoAtual  => _individuoAtual;
 
+    private int contadorNPC = 0;
+    private Dictionary<int, DocumentData> slotsEspeciais = new Dictionary<int, DocumentData>();
+
     // ─── Unity ───────────────────────────────────────────────────────────────
     private void Awake()
     {
@@ -38,6 +45,8 @@ public class DocumentManager : MonoBehaviour
 
     public void OnNovoIndividuo(Individuo individuo)
     {
+        contadorNPC++; 
+
         _individuoAtual  = individuo;
         _documentoAtual  = SortearDocumento();
 
@@ -47,7 +56,6 @@ public class DocumentManager : MonoBehaviour
             return;
         }
 
-        // Vincula o documento ao indivíduo
         individuo.documentoSorteado = _documentoAtual;
 
         if (documentDisplay != null)
@@ -55,9 +63,8 @@ public class DocumentManager : MonoBehaviour
 
         onDocumentoSelecionado?.Invoke(_documentoAtual);
 
-        Debug.Log($"[DocumentManager] Documento sorteado: {_documentoAtual.documentID} " +
-                  $"| Categoria: {_documentoAtual.category} " +
-                  $"| Indivíduo: {individuo.codigo}");
+        Debug.Log($"[DocumentManager] Slot {contadorNPC} | Documento: {_documentoAtual.documentID} " +
+                $"| Categoria: {_documentoAtual.category}");
     }
 
     public void LimparDocumento()
@@ -75,9 +82,15 @@ public class DocumentManager : MonoBehaviour
 
     private DocumentData SortearDocumento()
     {
-        bool sortearPositivo;
+        // 1º — tem um especial agendado pra este slot? ele tem prioridade absoluta
+        if (slotsEspeciais.TryGetValue(contadorNPC, out DocumentData especial))
+        {
+            Debug.Log($"[DocumentManager] >>> ESPECIAL no slot {contadorNPC}: {especial.documentID}");
+            return especial;
+        }
 
-        // pergunta ao sistema adaptativo se ele quer forçar um tipo
+        // 2º — o sistema adaptativo quer intervir?
+        bool sortearPositivo;
         if (SistemaAdaptativo.instance != null &&
             SistemaAdaptativo.instance.DeveForcarTipo(out bool forcarPositivo))
         {
@@ -85,7 +98,6 @@ public class DocumentManager : MonoBehaviour
         }
         else
         {
-            // comportamento normal: 50/50
             sortearPositivo = Random.value >= 0.5f;
         }
 
@@ -95,11 +107,51 @@ public class DocumentManager : MonoBehaviour
         if (!sortearPositivo && documentosNegativos.Count > 0)
             return Aleatorio(documentosNegativos);
 
-        // fallback se uma das listas estiver vazia
         if (documentosPositivos.Count > 0) return Aleatorio(documentosPositivos);
         if (documentosNegativos.Count > 0) return Aleatorio(documentosNegativos);
 
         return null;
+    }
+
+    /// <summary>
+    /// Sorteia em quais slots restantes os 5 especiais vão cair.
+    /// Chamado pelo GerenciadorDeProgressao quando o email dispara.
+    /// </summary>
+    public void AgendarEspeciais(int totalNPCs)
+    {
+        slotsEspeciais.Clear();
+
+        List<int> disponiveis = new List<int>();
+        for (int i = contadorNPC + 1; i <= totalNPCs; i++)
+            disponiveis.Add(i);
+
+        if (disponiveis.Count < documentosEspeciais.Count)
+        {
+            Debug.LogError($"[DocumentManager] Só há {disponiveis.Count} slots restantes " +
+                        $"para {documentosEspeciais.Count} especiais! Ajuste o prazoEmail.");
+        }
+
+        // embaralha os slots disponíveis (Fisher-Yates)
+        for (int i = 0; i < disponiveis.Count; i++)
+        {
+            int j = Random.Range(i, disponiveis.Count);
+            int temp = disponiveis[i];
+            disponiveis[i] = disponiveis[j];
+            disponiveis[j] = temp;
+        }
+
+        int qtd = Mathf.Min(documentosEspeciais.Count, disponiveis.Count);
+        for (int i = 0; i < qtd; i++)
+            slotsEspeciais[disponiveis[i]] = documentosEspeciais[i];
+
+        Debug.Log($"[DocumentManager] {qtd} especiais agendados nos slots: " +
+                string.Join(", ", slotsEspeciais.Keys));
+    }
+
+    /// <summary>Retorna true se o documento é um dos 5 do email.</summary>
+    public bool EhEspecial(DocumentData doc)
+    {
+        return documentosEspeciais.Contains(doc);
     }
 
     private DocumentData Aleatorio(List<DocumentData> lista)

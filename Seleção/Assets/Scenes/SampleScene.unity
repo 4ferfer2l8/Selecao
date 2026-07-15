@@ -5208,7 +5208,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9d35fb2229d67c45833f4eab59fcb67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GerenciadorDeProgressao
-  limiteDecisoes: 5
+  totalNPCs: 15
+  prazoEmail: 10
+  desobedienciasParaEmail: 5
+  especiaisNecessarios: 5
+  painelFinalBom: {fileID: 1881124785}
+  painelFinalRuim: {fileID: 1881124785}
+  painelEmail: {fileID: 103874318}
 --- !u!4 &612206722
 Transform:
   m_ObjectHideFlags: 0
@@ -11507,6 +11513,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8f6c3f42e1b2b194cb164b1d2ece091e, type: 2}
   - {fileID: 11400000, guid: 84a45f9fec6df264c80fbaed0689794c, type: 2}
   - {fileID: 11400000, guid: f4d981d78a5676d41b7348ef801b3eff, type: 2}
+  documentosEspeciais:
+  - {fileID: 11400000, guid: 3d9e6c5039941a941b7361b887b69a19, type: 2}
+  - {fileID: 11400000, guid: e37fc0b5541599e4c8725c0d59237b27, type: 2}
+  - {fileID: 11400000, guid: 6db586083f7f5684e907218c55e6be3d, type: 2}
+  - {fileID: 11400000, guid: 05139813cc4c0b14ea693e5a1422fe3f, type: 2}
+  - {fileID: 11400000, guid: c1c0cbbd14c8d72438ad6ec5e3cbdb65, type: 2}
   documentDisplay: {fileID: 0}
   onDocumentoSelecionado:
     m_PersistentCalls:
@@ -18023,28 +18035,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GeradorDeIndividuos
   rostos: []
-  documentos:
-  - {fileID: -855298285791758126, guid: 674b6d3519ca0974ab976cf61c2fe466, type: 3}
-  - {fileID: 6937817954938267909, guid: 3caa241b2f4a4804f859430d3d68f91f, type: 3}
-  - {fileID: -6470460504253458178, guid: 5578f2c53e5c90f4b97c90d287471be9, type: 3}
-  - {fileID: -4178046375966092550, guid: be7e29e789b01e64c9d3743e50485928, type: 3}
-  - {fileID: 4130640169021434097, guid: afafbd8afbbedec45906c7e72594b674, type: 3}
-  - {fileID: 3465286685962602723, guid: bcd5222314d78374e8104104a1e89bad, type: 3}
-  - {fileID: 7028616704906629411, guid: 05099b944d17f974cb9faf305fafd398, type: 3}
-  - {fileID: 8288426215254106694, guid: 1b6faaedaeb45b940a738cd0d769bb57, type: 3}
-  - {fileID: 4113829005332862926, guid: b342395f486e04f468435f84a4b32140, type: 3}
-  - {fileID: -5099292496197868168, guid: 73da228d7e0e8334ebee31efeece66fb, type: 3}
-  - {fileID: -2966200626249415253, guid: c02217555f0d59741a0052fecb0805f2, type: 3}
-  - {fileID: -855298285791758126, guid: b39b71cfd9f2b2f4c96333709dc26088, type: 3}
-  - {fileID: 6937817954938267909, guid: 89df77f48a6042545b412f249e270d8f, type: 3}
-  - {fileID: -6470460504253458178, guid: 5c0dd2c264ae1ff47b2fd134fff3858b, type: 3}
-  - {fileID: -4178046375966092550, guid: 0b0eca3a2e571ff4882d6d0407290504, type: 3}
-  - {fileID: 4130640169021434097, guid: 9be3e1c65fe6d2a428cdfa00a6f888c7, type: 3}
-  - {fileID: 3465286685962602723, guid: c354cb252e6e05f4e92c8dc3ebe59d5a, type: 3}
-  - {fileID: 7028616704906629411, guid: 78a4c922c298b20488437217edd5a416, type: 3}
-  - {fileID: 8288426215254106694, guid: 7515d411bafacea409e5939eec3c854d, type: 3}
-  - {fileID: 4113829005332862926, guid: 3fd0bc4fa1b11c0479304efc618ea047, type: 3}
-  - {fileID: -5099292496197868168, guid: b6480148b6734ce40ba93a32153637c2, type: 3}
   pesoAmbiguidade: 0.3
 --- !u!1 &2097858293
 GameObject:

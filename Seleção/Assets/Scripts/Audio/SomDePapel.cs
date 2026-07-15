@@ -60,15 +60,22 @@ public class SomDePapel : MonoBehaviour, IPointerEnterHandler, IPointerClickHand
             return;
         }
 
-        if (individuoAtual.documento != null)
-            imagemDocumento.sprite = individuoAtual.documento;
+        // usa o documento que o DocumentManager sorteou — fonte única da verdade
+        DocumentData doc = individuoAtual.documentoSorteado;
 
+        if (doc == null)
+        {
+            Debug.LogWarning("Indivíduo sem documento sorteado! O DocumentManager rodou?");
+            return;
+        }
+
+        imagemDocumento.sprite = doc.documentSprite;
         painelDocumento.SetActive(true);
 
         if (focoFora != null)
             focoFora.enabled = false;
 
-        Debug.Log("Documento aberto: " + individuoAtual.codigo);
+        Debug.Log($"Documento aberto: {doc.documentID} | Categoria: {doc.category}");
     }
 
     public void NotificarFechamento() {
