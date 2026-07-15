@@ -22,34 +22,32 @@ public class FocoGamepadDocumento : MonoBehaviour {
     }
 
     void Update() {
-        var gp = Gamepad.current;
-        if (gp == null || alvosFoco.Length == 0) return;
+        
 
-        if (gp.rightShoulder.wasPressedThisFrame) // R1
-        {
-            indiceFoco = (indiceFoco + 1) % alvosFoco.Length;
-            AtualizarIndicador();
-        }
-        else if (gp.rightTrigger.wasPressedThisFrame) // R2
-        {
-            indiceFoco = (indiceFoco - 1 + alvosFoco.Length) % alvosFoco.Length;
-            AtualizarIndicador();
-        }
+        if (GamepadBindings.WasPressed(AcaoGamepad.AvancarFoco))
+{
+    indiceFoco = (indiceFoco + 1) % alvosFoco.Length;
+    AtualizarIndicador();
+}
+else if (GamepadBindings.WasPressed(AcaoGamepad.VoltarFoco))
+{
+    indiceFoco = (indiceFoco - 1 + alvosFoco.Length) % alvosFoco.Length;
+    AtualizarIndicador();
+}
 
-        if (gp.buttonEast.wasPressedThisFrame) // B
-        {
-            var alvo = alvosFoco[indiceFoco];
-            var acao = alvo.GetComponent<IAcaoGamepad>();
-            if (acao != null)
-            {
-                acao.AcionarGamepad();
-            }
-        }
+if (GamepadBindings.WasPressed(AcaoGamepad.Confirmar))
+{
+    var alvo = alvosFoco[indiceFoco];
+    var acao = alvo.GetComponent<IAcaoGamepad>();
+    if (acao != null)
+    {
+        acao.AcionarGamepad();
     }
+}
 
     void AtualizarIndicador() {
         if (indicadorFoco == null) return;
         indicadorFoco.SetActive(true);
         indicadorFoco.transform.position = alvosFoco[indiceFoco].position;
     }
-}
+}}

@@ -34,33 +34,32 @@ public class FocoOpcoesGamepad : MonoBehaviour {
         var gp = Gamepad.current;
         if (gp == null) return;
 
-        if (gp.rightShoulder.wasPressedThisFrame || gp.rightTrigger.wasPressedThisFrame)
-        {
-            indiceFoco = (indiceFoco == 0) ? 1 : 0;
-            AtualizarIndicador();
-        }
+        if (GamepadBindings.WasPressed(AcaoGamepad.AvancarFoco) || GamepadBindings.WasPressed(AcaoGamepad.VoltarFoco))
+{
+    indiceFoco = (indiceFoco == 0) ? 1 : 0;
+    AtualizarIndicador();
+}
 
-        if (indiceFoco == 0)
-        {
-            if (gp.buttonEast.wasPressedThisFrame)
-            {
-                botaoFechar.onClick.Invoke();
-            }
-        }
-        else
-        {
-            if (gp.dpad.right.wasPressedThisFrame)
-            {
-                sliderVolume.AjustarVolumeGamepad(passoVolume);
-                AtualizarIndicador();
-            }
-            else if (gp.dpad.left.wasPressedThisFrame)
-            {
-                sliderVolume.AjustarVolumeGamepad(-passoVolume);
-                AtualizarIndicador();
-            }
-        }
+if (indiceFoco == 0)
+{
+    if (GamepadBindings.WasPressed(AcaoGamepad.Confirmar))
+    {
+        botaoFechar.onClick.Invoke();
     }
+}
+else
+{
+    if (GamepadBindings.WasPressed(AcaoGamepad.VolumeCima))
+    {
+        sliderVolume.AjustarVolumeGamepad(passoVolume);
+        AtualizarIndicador();
+    }
+    else if (GamepadBindings.WasPressed(AcaoGamepad.VolumeBaixo))
+    {
+        sliderVolume.AjustarVolumeGamepad(-passoVolume);
+        AtualizarIndicador();
+    }
+}
 
     void AtualizarIndicador() {
         if (indicadorFoco == null) return;
@@ -68,4 +67,4 @@ public class FocoOpcoesGamepad : MonoBehaviour {
         Transform alvo = (indiceFoco == 0) ? botaoFechar.transform : sliderVolume.transform;
         indicadorFoco.transform.position = alvo.position;
     }
-}
+}}

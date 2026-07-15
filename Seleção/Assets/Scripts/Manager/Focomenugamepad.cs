@@ -21,24 +21,24 @@ public class FocoMenuGamepad : MonoBehaviour {
         if (EventSystem.current != null && EventSystem.current.currentSelectedGameObject != null)
             EventSystem.current.SetSelectedGameObject(null);
 
-        var gp = Gamepad.current;
-        if (gp == null || botoes.Length == 0) return;
+        
+        
 
-        if (gp.rightShoulder.wasPressedThisFrame) // R1
-        {
-            indiceFoco = (indiceFoco + 1) % botoes.Length;
-            AtualizarIndicador();
-        }
-        else if (gp.rightTrigger.wasPressedThisFrame) // R2
-        {
-            indiceFoco = (indiceFoco - 1 + botoes.Length) % botoes.Length;
-            AtualizarIndicador();
-        }
+        if (GamepadBindings.WasPressed(AcaoGamepad.AvancarFoco))
+{
+    indiceFoco = (indiceFoco + 1) % botoes.Length;
+    AtualizarIndicador();
+}
+else if (GamepadBindings.WasPressed(AcaoGamepad.VoltarFoco))
+{
+    indiceFoco = (indiceFoco - 1 + botoes.Length) % botoes.Length;
+    AtualizarIndicador();
+}
 
-        if (gp.buttonEast.wasPressedThisFrame) // B
-        {
-            botoes[indiceFoco].onClick.Invoke();
-        }
+if (GamepadBindings.WasPressed(AcaoGamepad.Confirmar))
+{
+    botoes[indiceFoco].onClick.Invoke();
+}
     }
 
     void AtualizarIndicador() {

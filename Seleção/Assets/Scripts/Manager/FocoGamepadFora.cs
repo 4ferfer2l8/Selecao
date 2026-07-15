@@ -25,22 +25,20 @@ public class FocoGamepadFora : MonoBehaviour {
     void Update() {
         if (Time.unscaledTime - tempoAtivado < 0.2f) return;
 
-        var gp = Gamepad.current;
-        if (gp == null || papelMesa == null) return;
+        
+        if (GamepadBindings.WasPressed(AcaoGamepad.AvancarFoco) || GamepadBindings.WasPressed(AcaoGamepad.VoltarFoco))
+{
+    AtualizarIndicador();
+}
 
-        if (gp.rightShoulder.wasPressedThisFrame || gp.rightTrigger.wasPressedThisFrame)
-        {
-            AtualizarIndicador();
-        }
-
-        if (gp.buttonEast.wasPressedThisFrame)
-        {
-            var acao = papelMesa.GetComponent<IAcaoGamepad>();
-            if (acao != null)
-            {
-                acao.AcionarGamepad();
-            }
-        }
+if (GamepadBindings.WasPressed(AcaoGamepad.Confirmar))
+{
+    var acao = papelMesa.GetComponent<IAcaoGamepad>();
+    if (acao != null)
+    {
+        acao.AcionarGamepad();
+    }
+}
     }
 
     void AtualizarIndicador() {

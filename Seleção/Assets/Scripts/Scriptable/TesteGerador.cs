@@ -16,7 +16,7 @@ public class TesteGerador : MonoBehaviour {
 
     void Update() {
         bool pediuProximo = Keyboard.current.spaceKey.wasPressedThisFrame ||
-                             (Gamepad.current != null && Gamepad.current.leftShoulder.wasPressedThisFrame); // L1
+                     GamepadBindings.WasPressed(AcaoGamepad.NovoNPC);; // L1
 
         if (pediuProximo)
         {
