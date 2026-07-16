@@ -1,32 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8902326620361971112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Rasgar_Lento_1"
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Rasgar_Lento_1"
-  Guid:
-    Data1: -325262352
-    Data2: 1215478602
-    Data3: -383148620
-    Data4: -2006362587
-  Banks:
-  - {fileID: -8261932545847630001}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-8261932545847630001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,145 +15,10 @@ MonoBehaviour:
   Path: FMODFINALPORRA/Desktop/SFX2.bank
   Name: SFX2
   StudioPath: bank:/SFX2
-  lastModified: 639177553700482993
+  lastModified: 639197514637474093
   FileSizes: []
   Exists: 1
---- !u!114 &-7341617455896470284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Cart\xE3o_Pegar_1"
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Cart\xE3o_Pegar_1"
-  Guid:
-    Data1: -449960603
-    Data2: 1079195204
-    Data3: 234199952
-    Data4: -839522438
-  Banks:
-  - {fileID: -8261932545847630001}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-6859238567438802913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Audios Jogo/Ambiencia_TrilhaSonora/Menu_Estatica
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Audios Jogo/Ambiencia_TrilhaSonora/Menu_Estatica
-  Guid:
-    Data1: -68593941
-    Data2: 1078286028
-    Data3: -1865160007
-    Data4: -642162513
-  Banks:
-  - {fileID: -8261932545847630001}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 55000
---- !u!114 &-5871646678190259135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Pegar_2"
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Pegar_2"
-  Guid:
-    Data1: 690401334
-    Data2: 1113072788
-    Data3: 1464103312
-    Data4: 1340513002
-  Banks:
-  - {fileID: -8261932545847630001}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-4436199486272953303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Rasgar_R\xE1pido_1"
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Rasgar_R\xE1pido_1"
-  Guid:
-    Data1: 652874953
-    Data2: 1233762992
-    Data3: -770411088
-    Data4: 1297547440
-  Banks:
-  - {fileID: -8261932545847630001}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-3939038398461159417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/PopUpsA
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/PopUpsA
-  Guid:
-    Data1: -1675977040
-    Data2: 1118442057
-    Data3: 1183920283
-    Data4: -1904039638
-  Banks:
-  - {fileID: -8261932545847630001}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-3707392048785898864
+--- !u!114 &-7314956590185985110
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -207,88 +45,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-3285528866858026995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Audios Jogo/Ambiencia_TrilhaSonora/Ambiencia
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Audios Jogo/Ambiencia_TrilhaSonora/Ambiencia
-  Guid:
-    Data1: -32772510
-    Data2: 1334768291
-    Data3: 751412148
-    Data4: 1006512812
-  Banks:
-  - {fileID: -8261932545847630001}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 43701
---- !u!114 &-2902160713943034376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Pegar_3"
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Pegar_3"
-  Guid:
-    Data1: -289914339
-    Data2: 1125629500
-    Data3: 1306704786
-    Data4: -459900455
-  Banks:
-  - {fileID: -8261932545847630001}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-2338099770413242981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/PopUpsB
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/PopUpsB
-  Guid:
-    Data1: 987570946
-    Data2: 1080512365
-    Data3: 1774890888
-    Data4: -2069625082
-  Banks:
-  - {fileID: -8261932545847630001}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-2046338834882100550
+--- !u!114 &-4475400622592227599
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -315,7 +72,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-745811997011568764
+--- !u!114 &-3813350035808652974
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -324,16 +81,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: FMODFINALPORRA/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 639172051793889290
-  FileSizes: []
-  Exists: 1
---- !u!114 &-514096283718033210
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Cart\xE3o_Pegar_1"
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Cart\xE3o_Pegar_1"
+  Guid:
+    Data1: -449960603
+    Data2: 1079195204
+    Data3: 234199952
+    Data4: -839522438
+  Banks:
+  - {fileID: -8261932545847630001}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2762651213742073427
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -360,7 +126,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-420201548499241139
+--- !u!114 &-1906831418214822029
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -387,6 +153,132 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-1729400286734642249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Audios Jogo/Ambiencia_TrilhaSonora/Ambiencia
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Audios Jogo/Ambiencia_TrilhaSonora/Ambiencia
+  Guid:
+    Data1: -32772510
+    Data2: 1334768291
+    Data3: 751412148
+    Data4: 1006512812
+  Banks:
+  - {fileID: -8261932545847630001}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 43701
+--- !u!114 &-1484321498739250513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Colocar_1"
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Colocar_1"
+  Guid:
+    Data1: 547360297
+    Data2: 1272004010
+    Data3: 1979616424
+    Data4: -2109553547
+  Banks:
+  - {fileID: -8261932545847630001}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-745811997011568764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: FMODFINALPORRA/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 639197514551297562
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-710550882295354689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Rasgar_Lento_1"
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Rasgar_Lento_1"
+  Guid:
+    Data1: -325262352
+    Data2: 1215478602
+    Data3: -383148620
+    Data4: -2006362587
+  Banks:
+  - {fileID: -8261932545847630001}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-271562896493496316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Audios Jogo/Ambiencia_TrilhaSonora/MusicaDistorcida
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Audios Jogo/Ambiencia_TrilhaSonora/MusicaDistorcida
+  Guid:
+    Data1: -50549199
+    Data2: 1330887370
+    Data3: -1199969128
+    Data4: -1408785624
+  Banks:
+  - {fileID: -8261932545847630001}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 40000
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,31 +296,33 @@ MonoBehaviour:
   - {fileID: -745811997011568764}
   - {fileID: -8261932545847630001}
   EditorEvents:
-  - {fileID: -2338099770413242981}
-  - {fileID: -3707392048785898864}
-  - {fileID: -2902160713943034376}
-  - {fileID: 8253498559546573212}
-  - {fileID: -5871646678190259135}
-  - {fileID: -3285528866858026995}
-  - {fileID: 7568374180433766122}
-  - {fileID: -7341617455896470284}
-  - {fileID: -514096283718033210}
-  - {fileID: 2986098334141531753}
-  - {fileID: -2046338834882100550}
-  - {fileID: -3939038398461159417}
-  - {fileID: 9185965649762464955}
-  - {fileID: -420201548499241139}
-  - {fileID: -4436199486272953303}
-  - {fileID: -6859238567438802913}
-  - {fileID: -8902326620361971112}
-  - {fileID: 2413536005561338061}
+  - {fileID: 5883621703175959919}
+  - {fileID: -7314956590185985110}
+  - {fileID: 1655100485883926207}
+  - {fileID: -1484321498739250513}
+  - {fileID: -271562896493496316}
+  - {fileID: 8312796811888713181}
+  - {fileID: 5036713947623021279}
+  - {fileID: -1729400286734642249}
+  - {fileID: 1746932257773525606}
+  - {fileID: -3813350035808652974}
+  - {fileID: -2762651213742073427}
+  - {fileID: 7137688225726967983}
+  - {fileID: -4475400622592227599}
+  - {fileID: 8632155128669683693}
+  - {fileID: 5566512427150299360}
+  - {fileID: -1906831418214822029}
+  - {fileID: 8780886087337617479}
+  - {fileID: 614905685362244901}
+  - {fileID: 8713366342809353589}
+  - {fileID: -710550882295354689}
   EditorParameters: []
   MasterBanks:
   - {fileID: -745811997011568764}
   StringsBanks:
   - {fileID: 3193562129507961108}
   cacheVersion: 131859
-  cacheTime: 639177553700482993
+  cacheTime: 639197514637474093
   SerializableEventsDict:
   - key: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/PopUpsB
     index: 0
@@ -466,7 +360,7 @@ MonoBehaviour:
     index: 16
   - key: event:/Audios Jogo/Ambiencia_TrilhaSonora/MusicaPlaceHolder
     index: 17
---- !u!114 &2413536005561338061
+--- !u!114 &614905685362244901
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -476,9 +370,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Audios Jogo/Ambiencia_TrilhaSonora/MusicaPlaceHolder
+  m_Name: event:/Audios Jogo/Ambiencia_TrilhaSonora/JorisvermeerJazzGuitarModified
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Audios Jogo/Ambiencia_TrilhaSonora/MusicaPlaceHolder
+  Path: event:/Audios Jogo/Ambiencia_TrilhaSonora/JorisvermeerJazzGuitarModified
   Guid:
     Data1: 214041806
     Data2: 1328175482
@@ -492,8 +386,8 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 54000
---- !u!114 &2986098334141531753
+  Length: 52627
+--- !u!114 &1655100485883926207
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -503,14 +397,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Pegar_1"
+  m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Pegar_3"
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Pegar_1"
+  Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Pegar_3"
   Guid:
-    Data1: -809417842
-    Data2: 1118138530
-    Data3: -1284586594
-    Data4: -1035456546
+    Data1: -289914339
+    Data2: 1125629500
+    Data3: 1306704786
+    Data4: -459900455
   Banks:
   - {fileID: -8261932545847630001}
   IsStream: 0
@@ -520,27 +414,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &3193562129507961108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
-  Path: FMODFINALPORRA/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 639177553700342683
-  FileSizes:
-  - Name: 
-    Value: 1696
-  Exists: 1
---- !u!114 &7568374180433766122
+--- !u!114 &1746932257773525606
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -567,7 +441,27 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &8253498559546573212
+--- !u!114 &3193562129507961108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorBankRef
+  Path: FMODFINALPORRA/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 639197514551319662
+  FileSizes:
+  - Name: 
+    Value: 1828
+  Exists: 1
+--- !u!114 &5036713947623021279
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -577,24 +471,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Colocar_1"
+  m_Name: event:/Audios Jogo/Ambiencia_TrilhaSonora/AlexMorganFocusStudyModifiedAmb
   m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Colocar_1"
+  Path: event:/Audios Jogo/Ambiencia_TrilhaSonora/AlexMorganFocusStudyModifiedAmb
   Guid:
-    Data1: 547360297
-    Data2: 1272004010
-    Data3: 1979616424
-    Data4: -2109553547
+    Data1: 1491843918
+    Data2: 1302727491
+    Data3: -1542046305
+    Data4: -249262017
   Banks:
   - {fileID: -8261932545847630001}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
---- !u!114 &9185965649762464955
+  Length: 236993
+--- !u!114 &5566512427150299360
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -612,6 +506,168 @@ MonoBehaviour:
     Data2: 1237702230
     Data3: -136703560
     Data4: -1031116036
+  Banks:
+  - {fileID: -8261932545847630001}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5883621703175959919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/PopUpsB
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/PopUpsB
+  Guid:
+    Data1: 987570946
+    Data2: 1080512365
+    Data3: 1774890888
+    Data4: -2069625082
+  Banks:
+  - {fileID: -8261932545847630001}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &7137688225726967983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Pegar_1"
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Pegar_1"
+  Guid:
+    Data1: -809417842
+    Data2: 1118138530
+    Data3: -1284586594
+    Data4: -1035456546
+  Banks:
+  - {fileID: -8261932545847630001}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8312796811888713181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Pegar_2"
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Pegar_2"
+  Guid:
+    Data1: 690401334
+    Data2: 1113072788
+    Data3: 1464103312
+    Data4: 1340513002
+  Banks:
+  - {fileID: -8261932545847630001}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8632155128669683693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/PopUpsA
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/PopUpsA
+  Guid:
+    Data1: -1675977040
+    Data2: 1118442057
+    Data3: 1183920283
+    Data4: -1904039638
+  Banks:
+  - {fileID: -8261932545847630001}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8713366342809353589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Audios Jogo/Ambiencia_TrilhaSonora/Menu_Estatica
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Audios Jogo/Ambiencia_TrilhaSonora/Menu_Estatica
+  Guid:
+    Data1: -68593941
+    Data2: 1078286028
+    Data3: -1865160007
+    Data4: -642162513
+  Banks:
+  - {fileID: -8261932545847630001}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 55000
+--- !u!114 &8780886087337617479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Rasgar_R\xE1pido_1"
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Rasgar_R\xE1pido_1"
+  Guid:
+    Data1: 652874953
+    Data2: 1233762992
+    Data3: -770411088
+    Data4: 1297547440
   Banks:
   - {fileID: -8261932545847630001}
   IsStream: 0
