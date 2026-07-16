@@ -20,7 +20,7 @@ public class CutsceneManager : MonoBehaviour
 
         if (pediuPular)
         {
-            SceneManager.LoadScene("MainMenu"); // nome exato da cena do jogo
+            SceneManager.LoadScene("SampleScene"); // nome exato da cena do jogo
         }
     }
 
