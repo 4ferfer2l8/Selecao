@@ -39,7 +39,11 @@ public class ComputerUIManager : MonoBehaviour
 
     void Update()
     {
-        bool pediuAbrirFechar = Keyboard.current.escapeKey.wasPressedThisFrame ||
+        // Enquanto o jogador está remapeando uma tecla, ignora completamente
+        // o Esc/Start aqui — senão o computador abre/fecha durante a captura.
+        if (KeyboardBindings.EmRemapeamento) return;
+
+        bool pediuAbrirFechar = KeyboardBindings.WasPressed(AcaoTeclado.PausarJogo) ||
                                  (Gamepad.current != null && Gamepad.current.startButton.wasPressedThisFrame);
 
         if (pediuAbrirFechar)
@@ -66,7 +70,6 @@ public class ComputerUIManager : MonoBehaviour
             playerController.SetActive(false);
         }
 
-        // desliga o foco do jogo (papel na mesa) enquanto o computador tá aberto
         if (focoForaJogo != null)
             focoForaJogo.enabled = false;
     }
@@ -104,7 +107,6 @@ public class ComputerUIManager : MonoBehaviour
     {
         topBarPanel.SetActive(!topBarPanel.activeSelf);
 
-        // desliga o foco dos ícones (Tutorial/Setinha) enquanto a barra estiver aberta
         if (focoTelaIcones != null)
             focoTelaIcones.enabled = !topBarPanel.activeSelf;
     }
@@ -170,10 +172,6 @@ public class ComputerUIManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    /// <summary>
-    /// Chamado quando o email é disparado. Faz o app aparecer no computador
-    /// e abre a tela na cara do jogador.
-    /// </summary>
     public void DesbloquearEmail()
     {
         if (emailIcon != null)

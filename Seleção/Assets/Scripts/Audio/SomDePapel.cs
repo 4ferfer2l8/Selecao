@@ -85,8 +85,5 @@ public class SomDePapel : MonoBehaviour, IPointerEnterHandler, IPointerClickHand
 
         if (focoFora != null)
             focoFora.enabled = true;
-
-        if (NotificacaoUI.instance != null)
-            NotificacaoUI.instance.Mostrar("Aperte Espaço ou L1 para chamar o próximo candidato!");
     }
 }
