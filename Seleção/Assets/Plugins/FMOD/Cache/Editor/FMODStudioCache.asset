@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: FMODFINALPORRA/Desktop/SFX2.bank
   Name: SFX2
   StudioPath: bank:/SFX2
-  lastModified: 639197595937639132
+  lastModified: 639197984839324453
   FileSizes: []
   Exists: 1
 --- !u!114 &-7314956590185985110
@@ -222,7 +222,7 @@ MonoBehaviour:
   Path: FMODFINALPORRA/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639172510939010533
+  lastModified: 639172051793889290
   FileSizes: []
   Exists: 1
 --- !u!114 &-710550882295354689
@@ -322,7 +322,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 3193562129507961108}
   cacheVersion: 131859
-  cacheTime: 639197595937639132
+  cacheTime: 639197984839324453
   SerializableEventsDict:
   - key: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/PopUpsB
     index: 0
@@ -460,7 +460,7 @@ MonoBehaviour:
   Path: FMODFINALPORRA/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639197595937292274
+  lastModified: 639197984838955037
   FileSizes:
   - Name: 
     Value: 1828
