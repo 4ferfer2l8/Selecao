@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: FMODFINALPORRA/Desktop/SFX2.bank
   Name: SFX2
   StudioPath: bank:/SFX2
-  lastModified: 639197514637474093
+  lastModified: 639197984839324453
   FileSizes: []
   Exists: 1
 --- !u!114 &-7314956590185985110
@@ -222,7 +222,7 @@ MonoBehaviour:
   Path: FMODFINALPORRA/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639197514551297562
+  lastModified: 639172051793889290
   FileSizes: []
   Exists: 1
 --- !u!114 &-710550882295354689
@@ -322,7 +322,7 @@ MonoBehaviour:
   StringsBanks:
   - {fileID: 3193562129507961108}
   cacheVersion: 131859
-  cacheTime: 639197514637474093
+  cacheTime: 639197984839324453
   SerializableEventsDict:
   - key: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/PopUpsB
     index: 0
@@ -332,34 +332,38 @@ MonoBehaviour:
     index: 2
   - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Colocar_1"
     index: 3
-  - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Pegar_2"
+  - key: event:/Audios Jogo/Ambiencia_TrilhaSonora/MusicaDistorcida
     index: 4
-  - key: event:/Audios Jogo/Ambiencia_TrilhaSonora/Ambiencia
+  - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Pegar_2"
     index: 5
-  - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Teclado_1"
+  - key: event:/Audios Jogo/Ambiencia_TrilhaSonora/AlexMorganFocusStudyModifiedAmb
     index: 6
-  - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Cart\xE3o_Pegar_1"
+  - key: event:/Audios Jogo/Ambiencia_TrilhaSonora/Ambiencia
     index: 7
-  - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Click"
+  - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Teclado_1"
     index: 8
-  - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Pegar_1"
+  - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Cart\xE3o_Pegar_1"
     index: 9
-  - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Amassar_1"
+  - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Click"
     index: 10
-  - key: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/PopUpsA
+  - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Carimbo_Pegar_1"
     index: 11
-  - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Pegar_1"
+  - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Amassar_1"
     index: 12
-  - key: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/Esteira_1
+  - key: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/PopUpsA
     index: 13
-  - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Rasgar_R\xE1pido_1"
+  - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Pegar_1"
     index: 14
-  - key: event:/Audios Jogo/Ambiencia_TrilhaSonora/Menu_Estatica
+  - key: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/Esteira_1
     index: 15
-  - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Rasgar_Lento_1"
+  - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Rasgar_R\xE1pido_1"
     index: 16
-  - key: event:/Audios Jogo/Ambiencia_TrilhaSonora/MusicaPlaceHolder
+  - key: event:/Audios Jogo/Ambiencia_TrilhaSonora/JorisvermeerJazzGuitarModified
     index: 17
+  - key: event:/Audios Jogo/Ambiencia_TrilhaSonora/Menu_Estatica
+    index: 18
+  - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Rasgar_Lento_1"
+    index: 19
 --- !u!114 &614905685362244901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -456,7 +460,7 @@ MonoBehaviour:
   Path: FMODFINALPORRA/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639197514551319662
+  lastModified: 639197984838955037
   FileSizes:
   - Name: 
     Value: 1828
