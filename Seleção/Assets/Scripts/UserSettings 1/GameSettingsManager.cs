@@ -12,6 +12,8 @@ public class GameSettingsManager : MonoBehaviour
     // resoluções disponíveis no dispositivo
     private Resolution[] resolucoesDisponiveis;
 
+    private Vector2 resolucaoBase; // referência original do canvas da cena
+
     // chaves do PlayerPrefs
     private const string CHAVE_VSYNC       = "vsync";
     private const string CHAVE_FULLSCREEN  = "fullScreen";
@@ -144,12 +146,13 @@ public class GameSettingsManager : MonoBehaviour
 
         if (canvasScaler == null)
         {
-            Debug.LogWarning("[Config] canvasScaler NULO — nada pra escalar nesta cena!");
+            Debug.LogWarning("[Config] canvasScaler NULO nesta cena!");
             return;
         }
 
-        canvasScaler.uiScaleMode = CanvasScaler.ScaleMode.ConstantPixelSize;
-        canvasScaler.scaleFactor = escalasUI[indice];
+        // mantém o modo responsivo — só muda a referência
+        canvasScaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+        canvasScaler.referenceResolution = resolucaoBase / escalasUI[indice];
     }
 
     public void AplicarCorCursor(int indice)
@@ -226,12 +229,15 @@ public class GameSettingsManager : MonoBehaviour
     private void EncontrarCanvas()
     {
         CanvasPrincipal marcador = FindFirstObjectByType<CanvasPrincipal>();
-
-        canvasScaler = marcador != null
-            ? marcador.GetComponent<CanvasScaler>()
-            : null;
+        canvasScaler = marcador != null ? marcador.GetComponent<CanvasScaler>() : null;
 
         if (canvasScaler == null)
+        {
             Debug.LogWarning("[Config] Nenhum canvas marcado com CanvasPrincipal nesta cena!");
+            return;
+        }
+
+        // guarda a referência que o pessoal desenhou a UI em cima
+        resolucaoBase = canvasScaler.referenceResolution;
     }
 }
