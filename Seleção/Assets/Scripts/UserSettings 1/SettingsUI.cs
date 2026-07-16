@@ -56,37 +56,40 @@ public class SettingsUI : MonoBehaviour
     {
         var dados = manager.Dados;
 
-        // vídeo
-        toggleVsync.isOn        = dados.vsync;
-        toggleFullScreen.isOn   = dados.fullScreen;
-        dropdownResolucao.value = dados.indiceResolucao;
-        dropdownResolucao.RefreshShownValue();
+        if (toggleVsync != null)        toggleVsync.isOn = dados.vsync;
+        if (toggleFullScreen != null)   toggleFullScreen.isOn = dados.fullScreen;
 
-        // acessibilidade
-        dropdownTamanhoUI.value = dados.indiceTamanhoUI;
-        dropdownTamanhoUI.RefreshShownValue();
-
-        dropdownCorCursor.value = dados.indiceCorCursor;
-        dropdownCorCursor.RefreshShownValue();
-        dropdownTamanhoCursor.value = dados.indiceTamanhoCursor;
-
-        // brilho
-        sliderBrilho.value = manager.Dados.brilho;
+        if (dropdownResolucao != null)
+        {
+            dropdownResolucao.value = dados.indiceResolucao;
+            dropdownResolucao.RefreshShownValue();
+        }
+        if (dropdownTamanhoUI != null)
+        {
+            dropdownTamanhoUI.value = dados.indiceTamanhoUI;
+            dropdownTamanhoUI.RefreshShownValue();
+        }
+        if (dropdownCorCursor != null)
+        {
+            dropdownCorCursor.value = dados.indiceCorCursor;
+            dropdownCorCursor.RefreshShownValue();
+        }
+        if (dropdownTamanhoCursor != null)
+        {
+            dropdownTamanhoCursor.value = dados.indiceTamanhoCursor;
+            dropdownTamanhoCursor.RefreshShownValue();
+        }
+        if (sliderBrilho != null) sliderBrilho.value = dados.brilho;
     }
 
     private void RegistrarListeners()
     {
-        // vídeo
-        toggleVsync.onValueChanged.AddListener(manager.AplicarVsync);
-        toggleFullScreen.onValueChanged.AddListener(manager.AplicarFullScreen);
-        dropdownResolucao.onValueChanged.AddListener(manager.AplicarResolucao);
-
-        // acessibilidade
-        dropdownTamanhoUI.onValueChanged.AddListener(manager.AplicarTamanhoUI);
-        dropdownCorCursor.onValueChanged.AddListener(manager.AplicarCorCursor);
-        dropdownTamanhoCursor.onValueChanged.AddListener(manager.AplicarTamanhoCursor);
-
-        // brilho
-        sliderBrilho.onValueChanged.AddListener(manager.AplicarBrilho);
+        if (toggleVsync != null)      toggleVsync.onValueChanged.AddListener(manager.AplicarVsync);
+        if (toggleFullScreen != null) toggleFullScreen.onValueChanged.AddListener(manager.AplicarFullScreen);
+        if (dropdownResolucao != null)     dropdownResolucao.onValueChanged.AddListener(manager.AplicarResolucao);
+        if (dropdownTamanhoUI != null)     dropdownTamanhoUI.onValueChanged.AddListener(manager.AplicarTamanhoUI);
+        if (dropdownCorCursor != null)     dropdownCorCursor.onValueChanged.AddListener(manager.AplicarCorCursor);
+        if (dropdownTamanhoCursor != null) dropdownTamanhoCursor.onValueChanged.AddListener(manager.AplicarTamanhoCursor);
+        if (sliderBrilho != null)          sliderBrilho.onValueChanged.AddListener(manager.AplicarBrilho);
     }
 }

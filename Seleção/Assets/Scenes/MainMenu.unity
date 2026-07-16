@@ -2069,6 +2069,7 @@ GameObject:
   - component: {fileID: 423059905}
   - component: {fileID: 423059904}
   - component: {fileID: 423059903}
+  - component: {fileID: 423059906}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2163,6 +2164,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &423059906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 423059901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 753f0e69367634d45b24e8361ce437e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CanvasPrincipal
 --- !u!1 &440538469
 GameObject:
   m_ObjectHideFlags: 0
@@ -2772,6 +2785,7 @@ GameObject:
   m_Component:
   - component: {fileID: 551667842}
   - component: {fileID: 551667841}
+  - component: {fileID: 551667843}
   m_Layer: 0
   m_Name: MenuManager (1)
   m_TagString: Untagged
@@ -2808,6 +2822,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &551667843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551667840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af1f6e383cc0c844ea8a64f735c8b11c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SettingsUI
+  dropdownResolucao: {fileID: 1566022327}
+  toggleVsync: {fileID: 534809138}
+  toggleFullScreen: {fileID: 2097644294}
+  dropdownTamanhoUI: {fileID: 1540134361}
+  dropdownCorCursor: {fileID: 293442978}
+  dropdownTamanhoCursor: {fileID: 1049563284}
+  sliderBrilho: {fileID: 1241701665}
 --- !u!1 &562966589
 GameObject:
   m_ObjectHideFlags: 0
@@ -4419,8 +4452,6 @@ GameObject:
   - component: {fileID: 787897079}
   - component: {fileID: 787897078}
   - component: {fileID: 787897077}
-  - component: {fileID: 787897076}
-  - component: {fileID: 787897075}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -4428,37 +4459,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &787897075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787897074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af1f6e383cc0c844ea8a64f735c8b11c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SettingsUI
-  dropdownResolucao: {fileID: 1566022327}
-  toggleVsync: {fileID: 534809138}
-  toggleFullScreen: {fileID: 2097644294}
-  dropdownTamanhoUI: {fileID: 1540134361}
-  dropdownCorCursor: {fileID: 293442978}
-  dropdownTamanhoCursor: {fileID: 1049563284}
-  sliderBrilho: {fileID: 1241701665}
---- !u!114 &787897076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787897074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98c44aae0ebd7db43af3ca4ca94b086a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TesteConfiguracoes
 --- !u!114 &787897077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4503,7 +4503,8 @@ Transform:
   m_LocalPosition: {x: 3.63946, y: -4.68426, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1388901447}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &828570215
@@ -4615,8 +4616,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1266, y: 572}
+  m_AnchoredPosition: {x: 19.2433, y: -6.8725}
+  m_SizeDelta: {x: 1518.9104, y: 932.1222}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &864540556
 MonoBehaviour:
@@ -5217,8 +5218,6 @@ GameObject:
   - component: {fileID: 992793863}
   - component: {fileID: 992793862}
   - component: {fileID: 992793864}
-  - component: {fileID: 992793865}
-  - component: {fileID: 992793866}
   m_Layer: 0
   m_Name: UIAudioManager
   m_TagString: Untagged
@@ -5272,43 +5271,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55ffe0fb524c2534ca09bae3160ccf79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ControleDeAudio
---- !u!114 &992793865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 992793861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af1f6e383cc0c844ea8a64f735c8b11c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SettingsUI
-  dropdownResolucao: {fileID: 1566022327}
-  toggleVsync: {fileID: 534809138}
-  toggleFullScreen: {fileID: 2097644294}
-  dropdownTamanhoUI: {fileID: 1540134361}
-  dropdownCorCursor: {fileID: 293442978}
-  dropdownTamanhoCursor: {fileID: 0}
-  sliderBrilho: {fileID: 0}
---- !u!114 &992793866
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 992793861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7072110f42790ae47b6fbd6a7e5b13c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameSettingsManager
-  canvasScaler: {fileID: 423059904}
-  escalasUI:
-  - 0.8
-  - 1
-  - 1.2
-  overlayBrilho: {fileID: 0}
 --- !u!1 &1012432304
 GameObject:
   m_ObjectHideFlags: 0
@@ -6909,7 +6871,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 864540555}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 787897079}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -10164,4 +10126,3 @@ SceneRoots:
   - {fileID: 992793863}
   - {fileID: 773081359}
   - {fileID: 787897079}
-  - {fileID: 1388901447}

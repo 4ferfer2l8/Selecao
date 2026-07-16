@@ -10750,6 +10750,7 @@ GameObject:
   m_Component:
   - component: {fileID: 824000727}
   - component: {fileID: 824000726}
+  - component: {fileID: 824000728}
   m_Layer: 0
   m_Name: ComputerUIManager
   m_TagString: Untagged
@@ -10795,6 +10796,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &824000728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824000725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af1f6e383cc0c844ea8a64f735c8b11c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SettingsUI
+  dropdownResolucao: {fileID: 912769492}
+  toggleVsync: {fileID: 594324146}
+  toggleFullScreen: {fileID: 1032236469}
+  dropdownTamanhoUI: {fileID: 1437793500}
+  dropdownCorCursor: {fileID: 1369519538}
+  dropdownTamanhoCursor: {fileID: 1056963078}
+  sliderBrilho: {fileID: 1856715142}
 --- !u!1 &845739932
 GameObject:
   m_ObjectHideFlags: 0
@@ -21360,8 +21380,6 @@ GameObject:
   - component: {fileID: 1867495503}
   - component: {fileID: 1867495502}
   - component: {fileID: 1867495505}
-  - component: {fileID: 1867495504}
-  - component: {fileID: 1867495506}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -21398,18 +21416,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1867495504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1867495501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98c44aae0ebd7db43af3ca4ca94b086a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TesteConfiguracoes
 --- !u!114 &1867495505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21428,25 +21434,6 @@ MonoBehaviour:
   - 0.8
   - 1
   overlayBrilho: {fileID: 989366680}
---- !u!114 &1867495506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1867495501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af1f6e383cc0c844ea8a64f735c8b11c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SettingsUI
-  dropdownResolucao: {fileID: 912769492}
-  toggleVsync: {fileID: 594324146}
-  toggleFullScreen: {fileID: 1032236469}
-  dropdownTamanhoUI: {fileID: 1437793500}
-  dropdownCorCursor: {fileID: 1369519538}
-  dropdownTamanhoCursor: {fileID: 1056963078}
-  sliderBrilho: {fileID: 1856715142}
 --- !u!1 &1867536756
 GameObject:
   m_ObjectHideFlags: 0
@@ -21811,6 +21798,7 @@ GameObject:
   - component: {fileID: 1905613093}
   - component: {fileID: 1905613092}
   - component: {fileID: 1905613091}
+  - component: {fileID: 1905613094}
   m_Layer: 5
   m_Name: CanvasComputador
   m_TagString: Untagged
@@ -21903,6 +21891,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1905613094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905613089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 753f0e69367634d45b24e8361ce437e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CanvasPrincipal
 --- !u!1 &1907225631
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,7 +20,12 @@ public class GerenciadorDeCursor : MonoBehaviour
 
     void Awake()
     {
+        if (instance != null && instance != this)
+            Debug.LogError($"[Cursor] DUPLICADO! Já havia um em '{instance.gameObject.name}'. " +
+                        $"Este é '{gameObject.name}'.");
+
         instance = this;
+        Debug.Log($"[Cursor] instance registrado em: '{gameObject.name}'");
     }
 
     void Start()
@@ -58,9 +63,11 @@ public class GerenciadorDeCursor : MonoBehaviour
 
     public void DefinirCor(int indiceCor)
     {
+        Debug.Log($"[Cursor] DefinirCor({indiceCor}) chegou em '{gameObject.name}' — " +
+                $"cores.Length = {(cores == null ? "NULO" : cores.Length.ToString())}");
+
         corAtual = indiceCor;
         AtualizarCursor();
-        Debug.Log($"Realce do cursor: índice {indiceCor}");
     }
 
     public void DefinirTamanho(bool grande)
@@ -74,30 +81,35 @@ public class GerenciadorDeCursor : MonoBehaviour
 
     private void AtualizarCursor()
     {
-        if (cores == null || cores.Length == 0) return;
+        if (cores == null || cores.Length == 0)
+        {
+            Debug.LogWarning("[Cursor] Array 'cores' VAZIO neste GerenciadorDeCursor!");
+            return;
+        }
 
         int cor = Mathf.Clamp(corAtual, 0, cores.Length - 1);
         ConjuntoDeCor conjunto = cores[cor];
 
-        // escolhe o conjunto de mãos do tamanho certo
-        ConjuntoDeMaos maos = tamanhoGrande
-            ? conjunto.tamanhoGrande
-            : conjunto.tamanhoDefault;
+        ConjuntoDeMaos maos = tamanhoGrande ? conjunto.tamanhoGrande : conjunto.tamanhoDefault;
 
-        if (maos == null) return;
+        if (maos == null)
+        {
+            Debug.LogWarning($"[Cursor] Conjunto de mãos nulo — cor {cor}, tamanho {(tamanhoGrande ? "grande" : "default")}");
+            return;
+        }
 
-        // dentro do tamanho, escolhe a mão pelo estado
-        // prioridade: arrastando > interativo > padrão
         Texture2D textura;
-        if (estaArrastando)
-            textura = maos.fechado;
-        else if (sobreInterativo)
-            textura = maos.aberto;
-        else
-            textura = maos.apontando;
+        if (estaArrastando)       textura = maos.fechado;
+        else if (sobreInterativo) textura = maos.aberto;
+        else                      textura = maos.apontando;
 
-        if (textura != null)
-            Cursor.SetCursor(textura, hotspot, CursorMode.Auto);
+        if (textura == null)
+        {
+            Debug.LogWarning($"[Cursor] Textura NULA — cor {cor}, tamanho {(tamanhoGrande ? "grande" : "default")}. Slot vazio no Inspector?");
+            return;
+        }
+
+        Cursor.SetCursor(textura, hotspot, CursorMode.Auto);
     }
 }
 

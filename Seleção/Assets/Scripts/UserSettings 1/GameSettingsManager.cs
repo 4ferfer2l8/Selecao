@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameSettingsManager : MonoBehaviour
 {
@@ -40,7 +41,8 @@ public class GameSettingsManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
-        resolucoesDisponiveis = Screen.resolutions;
+        MontarListaDeResolucoes();
+        EncontrarCanvas();
         CarregarConfiguracoes();
     }
 
@@ -48,22 +50,17 @@ public class GameSettingsManager : MonoBehaviour
 
     public void CarregarConfiguracoes()
     {
-        Dados.vsync          = PlayerPrefs.GetInt(CHAVE_VSYNC, 1) == 1;
-        Dados.fullScreen     = PlayerPrefs.GetInt(CHAVE_FULLSCREEN, 1) == 1;
+        Dados.vsync           = PlayerPrefs.GetInt(CHAVE_VSYNC, 1) == 1;
+        Dados.fullScreen      = PlayerPrefs.GetInt(CHAVE_FULLSCREEN, 1) == 1;
         Dados.indiceResolucao = PlayerPrefs.GetInt(CHAVE_RESOLUCAO, resolucoesDisponiveis.Length - 1);
-        Dados.brilho = PlayerPrefs.GetFloat(CHAVE_BRILHO, 1f);
+        Dados.brilho          = PlayerPrefs.GetFloat(CHAVE_BRILHO, 1f);
+
+        // as que faltavam:
+        Dados.indiceTamanhoUI     = PlayerPrefs.GetInt(CHAVE_TAM_UI, 1);
+        Dados.indiceCorCursor     = PlayerPrefs.GetInt(CHAVE_COR_CURSOR, 0);
+        Dados.indiceTamanhoCursor = PlayerPrefs.GetInt(CHAVE_TAM_CURSOR, 0);
 
         AplicarTodasConfiguracoes();
-    }
-
-    public void SalvarConfiguracoes()
-    {
-        PlayerPrefs.SetInt(CHAVE_VSYNC,      Dados.vsync ? 1 : 0);
-        PlayerPrefs.SetInt(CHAVE_FULLSCREEN, Dados.fullScreen ? 1 : 0);
-        PlayerPrefs.SetInt(CHAVE_RESOLUCAO,  Dados.indiceResolucao);
-        PlayerPrefs.SetFloat(CHAVE_BRILHO, Dados.brilho);
-        PlayerPrefs.Save();
-        Debug.Log("Configurações salvas.");
     }
 
     public void AplicarTodasConfiguracoes()
@@ -72,6 +69,11 @@ public class GameSettingsManager : MonoBehaviour
         AplicarFullScreen(Dados.fullScreen);
         AplicarResolucao(Dados.indiceResolucao);
         AplicarBrilho(Dados.brilho);
+
+        // as que faltavam:
+        AplicarTamanhoUI(Dados.indiceTamanhoUI);
+        AplicarCorCursor(Dados.indiceCorCursor);
+        AplicarTamanhoCursor(Dados.indiceTamanhoCursor);
     }
 
     // ─── MÉTODOS DE APLICAR ───
@@ -81,6 +83,7 @@ public class GameSettingsManager : MonoBehaviour
         Dados.vsync = ativo;
         QualitySettings.vSyncCount = ativo ? 1 : 0;
         Debug.Log($"Vsync: {ativo}");
+        PlayerPrefs.SetInt(CHAVE_VSYNC, ativo ? 1 : 0);
     }
 
     public void AplicarFullScreen(bool ativo)
@@ -88,6 +91,7 @@ public class GameSettingsManager : MonoBehaviour
         Dados.fullScreen = ativo;
         Screen.fullScreen = ativo;
         Debug.Log($"Full Screen: {ativo}");
+        PlayerPrefs.SetInt(CHAVE_VSYNC, ativo ? 1 : 0);
     }
 
     public void AplicarResolucao(int indice)
@@ -99,41 +103,81 @@ public class GameSettingsManager : MonoBehaviour
         Resolution r = resolucoesDisponiveis[indice];
         Screen.SetResolution(r.width, r.height, Dados.fullScreen);
         Debug.Log($"Resolução: {r.width}x{r.height}");
+        PlayerPrefs.SetInt(CHAVE_RESOLUCAO, indice);
+
     }
 
     // getter pra UI montar o dropdown de resoluções
     public Resolution[] GetResolucoesDisponiveis() => resolucoesDisponiveis;
 
+    private void MontarListaDeResolucoes()
+    {
+        Resolution[] todas = Screen.resolutions;
+        List<Resolution> unicas = new List<Resolution>();
+
+        foreach (Resolution r in todas)
+        {
+            int existente = unicas.FindIndex(x => x.width == r.width && x.height == r.height);
+
+            if (existente == -1)
+            {
+                unicas.Add(r);
+            }
+            else if (r.refreshRateRatio.value > unicas[existente].refreshRateRatio.value)
+            {
+                // mesma resolução, mas com taxa melhor — substitui
+                unicas[existente] = r;
+            }
+        }
+
+        resolucoesDisponiveis = unicas.ToArray();
+        Debug.Log($"Resoluções: {todas.Length} brutas → {unicas.Count} únicas");
+    }
+
     public void AplicarTamanhoUI(int indice)
     {
-        if (canvasScaler == null) return;
         if (indice < 0 || indice >= escalasUI.Length) return;
 
         Dados.indiceTamanhoUI = indice;
+        PlayerPrefs.SetInt(CHAVE_TAM_UI, indice);
+        Debug.Log($"[Config] Tamanho da UI: índice {indice} → escala {escalasUI[indice]}");
 
-        canvasScaler.uiScaleMode = UnityEngine.UI.CanvasScaler.ScaleMode.ConstantPixelSize;
+        if (canvasScaler == null)
+        {
+            Debug.LogWarning("[Config] canvasScaler NULO — nada pra escalar nesta cena!");
+            return;
+        }
+
+        canvasScaler.uiScaleMode = CanvasScaler.ScaleMode.ConstantPixelSize;
         canvasScaler.scaleFactor = escalasUI[indice];
-
-        Debug.Log($"Tamanho da UI: {escalasUI[indice]}");
     }
 
     public void AplicarCorCursor(int indice)
     {
-        Debug.Log($">>> AplicarCorCursor RECEBEU o índice: {indice}");
         Dados.indiceCorCursor = indice;
+        PlayerPrefs.SetInt(CHAVE_COR_CURSOR, indice);
+        Debug.Log($"[Config] Cor do cursor: índice {indice}");
 
-        if (GerenciadorDeCursor.instance != null)
-            GerenciadorDeCursor.instance.DefinirCor(indice);
+        if (GerenciadorDeCursor.instance == null)
+        {
+            Debug.LogWarning("[Config] GerenciadorDeCursor NULO nesta cena!");
+            return;
+        }
+        GerenciadorDeCursor.instance.DefinirCor(indice);
     }
 
     public void AplicarTamanhoCursor(int indice)
     {
         Dados.indiceTamanhoCursor = indice;
+        PlayerPrefs.SetInt(CHAVE_TAM_CURSOR, indice);
+        Debug.Log($"[Config] Tamanho do cursor: índice {indice}");
 
-        if (GerenciadorDeCursor.instance != null)
-            GerenciadorDeCursor.instance.DefinirTamanho(indice == 1); // 1 = grande
-
-        Debug.Log($"Tamanho do cursor: índice {indice}");
+        if (GerenciadorDeCursor.instance == null)
+        {
+            Debug.LogWarning("[Config] GerenciadorDeCursor NULO nesta cena!");
+            return;
+        }
+        GerenciadorDeCursor.instance.DefinirTamanho(indice == 1);
     }
 
     public void AplicarBrilho(float valor)
@@ -151,5 +195,43 @@ public class GameSettingsManager : MonoBehaviour
         }
 
         Debug.Log($"Brilho: {valor}");
+        PlayerPrefs.SetFloat(CHAVE_BRILHO, valor);
+    }
+
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += AoCarregarCena;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= AoCarregarCena;
+    }
+
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.Save();
+    }
+
+    private void AoCarregarCena(Scene cena, LoadSceneMode modo)
+    {
+        EncontrarCanvas();
+        AplicarTodasConfiguracoes();
+
+        Debug.Log($"[Config] Reaplicadas em {cena.name} | Canvas: " +
+                (canvasScaler != null ? canvasScaler.name : "NENHUM"));
+    }
+
+    private void EncontrarCanvas()
+    {
+        CanvasPrincipal marcador = FindFirstObjectByType<CanvasPrincipal>();
+
+        canvasScaler = marcador != null
+            ? marcador.GetComponent<CanvasScaler>()
+            : null;
+
+        if (canvasScaler == null)
+            Debug.LogWarning("[Config] Nenhum canvas marcado com CanvasPrincipal nesta cena!");
     }
 }
