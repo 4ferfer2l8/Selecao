@@ -26,6 +26,6 @@ public class CutsceneManager : MonoBehaviour
 
     void FinalizarCutscene(VideoPlayer vp)
     {
-        SceneManager.LoadScene("MainMenu"); // nome exato da cena do jogo
+        SceneManager.LoadScene("SampleScene"); // nome exato da cena do jogo
     }
 }
