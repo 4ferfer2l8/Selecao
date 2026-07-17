@@ -494,7 +494,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2072740017}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
@@ -502,11 +502,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 214041806
-      Data2: 1328175482
-      Data3: 504991116
-      Data4: 982872517
-    Path: event:/Audios Jogo/Ambiencia_TrilhaSonora/MusicaPlaceHolder
+      Data1: 1474002607
+      Data2: 1088059060
+      Data3: -815450471
+      Data4: 1231201852
+    Path: event:/Audios Jogo/Ambiencia_TrilhaSonora/FinalBomCutscene
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 2

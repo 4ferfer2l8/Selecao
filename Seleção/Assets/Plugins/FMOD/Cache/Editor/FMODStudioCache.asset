@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: FMODFINALPORRA/Desktop/SFX2.bank
   Name: SFX2
   StudioPath: bank:/SFX2
-  lastModified: 639197595937639132
+  lastModified: 639198312100654846
   FileSizes: []
   Exists: 1
 --- !u!114 &-7314956590185985110
@@ -153,6 +153,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-1872871747213572374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Audios Jogo/Ambiencia_TrilhaSonora/JorisvermeerJazzCutInicialModfied
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Audios Jogo/Ambiencia_TrilhaSonora/JorisvermeerJazzCutInicialModfied
+  Guid:
+    Data1: 214041806
+    Data2: 1328175482
+    Data3: 504991116
+    Data4: 982872517
+  Banks:
+  - {fileID: -8261932545847630001}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 54000
 --- !u!114 &-1729400286734642249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +249,7 @@ MonoBehaviour:
   Path: FMODFINALPORRA/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639172510939010533
+  lastModified: 639198312071594439
   FileSizes: []
   Exists: 1
 --- !u!114 &-710550882295354689
@@ -252,33 +279,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-271562896493496316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Audios Jogo/Ambiencia_TrilhaSonora/MusicaDistorcida
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Audios Jogo/Ambiencia_TrilhaSonora/MusicaDistorcida
-  Guid:
-    Data1: -50549199
-    Data2: 1330887370
-    Data3: -1199969128
-    Data4: -1408785624
-  Banks:
-  - {fileID: -8261932545847630001}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 40000
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,7 +300,6 @@ MonoBehaviour:
   - {fileID: -7314956590185985110}
   - {fileID: 1655100485883926207}
   - {fileID: -1484321498739250513}
-  - {fileID: -271562896493496316}
   - {fileID: 8312796811888713181}
   - {fileID: 5036713947623021279}
   - {fileID: -1729400286734642249}
@@ -313,16 +312,18 @@ MonoBehaviour:
   - {fileID: 5566512427150299360}
   - {fileID: -1906831418214822029}
   - {fileID: 8780886087337617479}
-  - {fileID: 614905685362244901}
   - {fileID: 8713366342809353589}
   - {fileID: -710550882295354689}
+  - {fileID: 3460193896242205548}
+  - {fileID: 3342846807761833177}
+  - {fileID: -1872871747213572374}
   EditorParameters: []
   MasterBanks:
   - {fileID: -745811997011568764}
   StringsBanks:
   - {fileID: 3193562129507961108}
   cacheVersion: 131859
-  cacheTime: 639197595937639132
+  cacheTime: 639198312100654846
   SerializableEventsDict:
   - key: event:/Audios Jogo/SFX/Esteira_Grito_PopUp/PopUpsB
     index: 0
@@ -364,33 +365,6 @@ MonoBehaviour:
     index: 18
   - key: "event:/Audios Jogo/SFX/Mouse_Papel_Cart\xE3o_Teclado/Papel_Rasgar_Lento_1"
     index: 19
---- !u!114 &614905685362244901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Audios Jogo/Ambiencia_TrilhaSonora/JorisvermeerJazzGuitarModified
-  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
-  Path: event:/Audios Jogo/Ambiencia_TrilhaSonora/JorisvermeerJazzGuitarModified
-  Guid:
-    Data1: 214041806
-    Data2: 1328175482
-    Data3: 504991116
-    Data4: 982872517
-  Banks:
-  - {fileID: -8261932545847630001}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 52627
 --- !u!114 &1655100485883926207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460,11 +434,65 @@ MonoBehaviour:
   Path: FMODFINALPORRA/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639197595937292274
+  lastModified: 639198312071688082
   FileSizes:
   - Name: 
-    Value: 1828
+    Value: 1892
   Exists: 1
+--- !u!114 &3342846807761833177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Audios Jogo/Ambiencia_TrilhaSonora/FinalBomCutscene
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Audios Jogo/Ambiencia_TrilhaSonora/FinalBomCutscene
+  Guid:
+    Data1: 1474002607
+    Data2: 1088059060
+    Data3: -815450471
+    Data4: 1231201852
+  Banks:
+  - {fileID: -8261932545847630001}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 24000
+--- !u!114 &3460193896242205548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Audios Jogo/Ambiencia_TrilhaSonora/MusicaDistorcidaFRuimModified
+  m_EditorClassIdentifier: FMODUnityEditor::FMODUnity.EditorEventRef
+  Path: event:/Audios Jogo/Ambiencia_TrilhaSonora/MusicaDistorcidaFRuimModified
+  Guid:
+    Data1: -50549199
+    Data2: 1330887370
+    Data3: -1199969128
+    Data4: -1408785624
+  Banks:
+  - {fileID: -8261932545847630001}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 40000
 --- !u!114 &5036713947623021279
 MonoBehaviour:
   m_ObjectHideFlags: 0

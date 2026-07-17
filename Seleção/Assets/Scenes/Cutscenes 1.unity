@@ -487,7 +487,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8209b7f0b46ac1347b8f76b57d4789e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CutsceneManager
-  teclaPular: 32
 --- !u!114 &2072740025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -507,7 +506,7 @@ MonoBehaviour:
       Data2: 1328175482
       Data3: 504991116
       Data4: 982872517
-    Path: event:/Audios Jogo/Ambiencia_TrilhaSonora/MusicaPlaceHolder
+    Path: event:/Audios Jogo/Ambiencia_TrilhaSonora/JorisvermeerJazzCutInicialModfied
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 2
